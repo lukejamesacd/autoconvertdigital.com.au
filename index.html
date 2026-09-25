@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<title>AutoConvert Digital · Coming soon</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Marketing that just works. New site coming soon.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0B0713">
+<meta property="og:title" content="AutoConvert Digital">
+<meta property="og:description" content="Marketing that just works. Every step after the click counts.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+  :root{
+    /* Night theme, copied from the audit page (v10) so the two read as one site */
+    --bg:#0B0713; --fg:#F2EFF7; --muted:#A79FB8; --faint:#6D6582; --line:#2C2342; --raise:#140D22;
+    --accent:#6E2CF4; --accent-t:#A986FF; --it:#BFA3FF;
+    --grad:linear-gradient(118deg,#2A1160 0%,#6E2CF4 62%,#8B4DFF 100%);
+    --display:"Anton",Impact,"Arial Narrow",sans-serif;
+    --serif:"Instrument Serif",Georgia,serif;
+    --body:"Manrope","Helvetica Neue",Arial,sans-serif;
+    --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+    --ease:cubic-bezier(.2,.7,.1,1);
+    --ch:12px;
+    color-scheme:dark;
+  }
+  *{box-sizing:border-box}
+  html{background:var(--bg)}
+  body{margin:0;min-height:100vh;min-height:100dvh;background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.55;
+    -webkit-font-smoothing:antialiased;display:flex;flex-direction:column;align-items:center;
+    padding:max(18px,env(safe-area-inset-top)) 20px max(28px,env(safe-area-inset-bottom));position:relative;overflow-x:hidden}
+
+  /* one soft violet glow and a faint grid, no video: this page gets opened on phones, so it has to be instant */
+  body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+    background:
+      radial-gradient(70% 45% at 50% 0%,rgba(110,44,244,.30),transparent 70%),
+      radial-gradient(55% 40% at 50% 100%,rgba(110,44,244,.14),transparent 70%)}
+  body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.35;
+    background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+    background-size:44px 44px;
+    -webkit-mask-image:radial-gradient(80% 60% at 50% 30%,#000 0%,transparent 75%);mask-image:radial-gradient(80% 60% at 50% 30%,#000 0%,transparent 75%)}
+
+  main{position:relative;z-index:1;width:100%;max-width:440px;display:flex;flex-direction:column}
+
+  /* bracket wordmark, same device as the Facebook cover */
+  .mark{align-self:center;position:relative;display:inline-block;padding:9px 18px;margin:4px 0 4px;
+    font-family:var(--display);font-size:17px;letter-spacing:.08em;text-transform:uppercase;color:var(--fg);text-decoration:none}
+  .mark b{font-weight:400;color:var(--accent-t)}
+  .mark::before,.mark::after{content:"";position:absolute;width:10px;height:10px;border-color:var(--accent-t);border-style:solid}
+  .mark::before{top:0;left:0;border-width:1.5px 0 0 1.5px}
+  .mark::after{bottom:0;right:0;border-width:0 1.5px 1.5px 0}
+
+  /* Luke, under the wordmark, rising out of MARKETING: the photo runs edge to edge
+     on a phone and the headline overlaps his chest. Sides fade so the photo's own
+     background never shows as a box; the bottom is hidden behind the word. */
+  /* --ph is the photo size: full width on a phone, but capped by the visible screen
+     height (svh) so the audit button always lands above the fold, even inside
+     Instagram's in-app browser. The headline overlap scales with it. */
+  .me{--ph:min(100vw,480px,48svh);position:relative;z-index:0;align-self:center;flex:none;
+    width:var(--ph);height:var(--ph);margin:0 0 calc(var(--ph) * -.27)}
+  .me::before{content:"";position:absolute;inset:14% 16% 10%;border-radius:50%;z-index:-1;
+    background:radial-gradient(closest-side,rgba(110,44,244,.5),transparent 100%);filter:blur(24px)}
+  .me img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 30%;
+    -webkit-mask-image:radial-gradient(46% 74% at 50% 60%,#000 58%,transparent 100%);
+            mask-image:radial-gradient(46% 74% at 50% 60%,#000 58%,transparent 100%)}
+
+  h1{position:relative;z-index:1;margin:0;text-align:center;font-weight:400;line-height:.9;text-shadow:0 6px 28px rgba(11,7,19,.55)}
+  h1 .caps{display:block;font-family:var(--display);font-size:clamp(46px,min(19vw,9.6svh),92px);letter-spacing:.01em;text-transform:uppercase}
+  h1 .it{display:block;font-family:var(--serif);font-style:italic;font-size:clamp(28px,min(11vw,5.8svh),54px);line-height:1.05;color:var(--it);margin-top:4px}
+
+  .sub{margin:12px 0 20px;text-align:center;text-wrap:balance;font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+
+  .soon{display:flex;flex-direction:column;gap:14px}
+  .soon-h{margin:0;text-align:center;font-family:var(--display);font-size:24px;letter-spacing:.05em;text-transform:uppercase}
+  .soon-d{margin:-6px 0 4px;text-align:center;color:var(--muted);font-size:15px}
+  .lk .d{word-break:break-word}
+
+  /* primary: the audit. Chamfered on two corners only, per the shape kit */
+  .lk{display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--fg);min-height:64px;padding:16px 20px;
+    clip-path:polygon(var(--ch) 0,100% 0,100% calc(100% - var(--ch)),calc(100% - var(--ch)) 100%,0 100%,0 var(--ch));
+    transition:transform .25s var(--ease),filter .25s var(--ease),box-shadow .25s var(--ease),background-color .25s var(--ease)}
+  .lk .txt{flex:1;min-width:0}
+  .lk .t{display:block;text-wrap:balance;font-family:var(--display);font-size:19px;letter-spacing:.05em;text-transform:uppercase;line-height:1.15}
+  .lk .d{display:block;margin-top:4px;font-size:14px;line-height:1.4;color:var(--muted)}
+  .lk .arr{flex:none;font-family:var(--display);font-size:20px;transition:transform .25s var(--ease)}
+  .lk:hover .arr,.lk:focus-visible .arr{transform:translateX(4px)}
+
+  .lk.pri{background:var(--accent);background-image:var(--grad);color:#fff;padding:18px 22px;min-height:76px}
+  .lk.pri .t{font-size:22px}
+  .lk.pri .d{color:rgba(255,255,255,.82)}
+  .lk.pri:hover{transform:translateY(-2px);filter:brightness(1.12) saturate(1.05)}
+
+  /* border drawn as a 1px inset panel, because clip-path cuts a box-shadow off at the chamfers */
+  .lk.sec{position:relative;isolation:isolate;background:var(--line)}
+  .lk.sec::before{content:"";position:absolute;inset:1px;z-index:-1;background:var(--raise);
+    clip-path:polygon(calc(var(--ch) - .4px) 0,100% 0,100% calc(100% - var(--ch) + .4px),calc(100% - var(--ch) + .4px) 100%,0 100%,0 calc(var(--ch) - .4px))}
+  .lk.sec:hover{background:var(--accent-t);transform:translateY(-2px)}
+
+  .lk.ter{min-height:52px;padding:12px 4px;justify-content:center;clip-path:none;gap:10px}
+  .lk.ter .t{font-family:var(--body);font-size:15px;font-weight:600;letter-spacing:0;text-transform:none;color:var(--accent-t)}
+  .lk.ter .arr{font-family:var(--body);font-size:15px;color:var(--accent-t)}
+  .lk.ter .txt{flex:none}
+  .lk.ter:hover .t{text-decoration:underline;text-underline-offset:4px}
+
+  .lk:focus-visible{outline:2px solid var(--accent-t);outline-offset:3px}
+  .lk.pri:focus-visible{clip-path:none}
+  .lk.sec:focus-visible{clip-path:none}
+
+  footer{position:relative;z-index:1;width:100%;max-width:440px;margin-top:56px;text-align:center;
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);line-height:2}
+  footer a{color:var(--muted);text-decoration:none}
+  footer a:hover{color:var(--fg)}
+
+  @media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<main>
+  <span class="mark">AutoConvert <b>Digital</b></span>
+
+  <div class="me"><img src="/assets/people/luke-avatar-full.jpg" alt="Luke Wade, founder of AutoConvert Digital" width="1100" height="1100" fetchpriority="high"></div>
+
+  <h1><span class="caps">Marketing</span><span class="it">that just works.</span></h1>
+  <p class="sub">Every step after the click counts.</p>
+
+  <div class="soon">
+    <p class="soon-h">New site coming soon.</p>
+    <p class="soon-d">Until then, the quickest way to reach me:</p>
+    <a class="lk pri" href="mailto:sales@autoconvertdigital.com.au">
+      <span class="txt">
+        <span class="t">Email Luke</span>
+        <span class="d">sales@autoconvertdigital.com.au</span>
+      </span>
+      <span class="arr" aria-hidden="true">→</span>
+    </a>
+    <a class="lk sec" href="https://ig.me/m/autoconvertdigital" target="_blank" rel="noopener">
+      <span class="txt">
+        <span class="t">Message on Instagram</span>
+        <span class="d">@autoconvertdigital</span>
+      </span>
+      <span class="arr" aria-hidden="true">→</span>
+    </a>
+  </div>
+</main>
+
+<footer>
+  Gold Coast · Australia-wide
+</footer>
+
+</body>
+</html>
