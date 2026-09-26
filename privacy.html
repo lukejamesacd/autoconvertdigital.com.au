@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<!-- DRAFT 2026.09.24 — written from a template, not legal advice. Have it checked before relying on it. -->
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — AutoConvert Digital</title>
+<meta name="description" content="How AutoConvert Digital collects, uses, stores and protects your personal information under the Privacy Act 1988 (Cth).">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+  :root{
+    /* THEME 1 · NIGHT — plum black ground, purple gradient (G2) */
+    --dk-bg:#0B0713; --dk-fg:#F2EFF7; --dk-muted:#A79FB8; --dk-faint:#6D6582; --dk-line:#2C2342; --dk-raise:#140D22;
+    --lt-bg:#F6F5F8; --lt-fg:#111111; --lt-muted:#5C5568; --lt-faint:#8A8398; --lt-line:#E0DCE8; --lt-raise:#FFFFFF;
+    --accent:#6E2CF4; --accent-t:#A986FF;
+    --grad:linear-gradient(118deg,#2A1160 0%,#6E2CF4 62%,#8B4DFF 100%);
+    --grad-soft:radial-gradient(85% 70% at 78% 12%,rgba(110,44,244,.26),transparent 62%),radial-gradient(60% 50% at 8% 92%,rgba(110,44,244,.13),transparent 66%);
+    --next-grad:linear-gradient(118deg,#FF3D00,#FF6A1A 45%,#FFB84D 100%);
+    --btn-fg:#FFFFFF;
+    --it-dk:#BFA3FF; --it-lt:#7A3CFF;
+    /* the bridge stage is a full-screen colour block, and the scorecard is an
+       instrument panel: both were hardcoded Night purple, so neither followed a
+       theme change. They read from these now. */
+    --bridge:#150929;
+    --film-bg:#0B0713; --film-fg:#F2EFF7; --film-muted:#A79FB8; --film-faint:#6D6582; --film-line:#2C2342; --film-raise:#140D22;
+    --sc-bg:#0F0A1C; --sc-fg:#F2EFF7; --sc-muted:#A79FB8; --sc-line:#2C2342; --sc-track:#1B1330;
+    --display:"Anton",Impact,"Arial Narrow",sans-serif;
+    --serif:"Instrument Serif",Georgia,serif;
+    --body:"Manrope","Helvetica Neue",Arial,sans-serif;
+    --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+    --ease:cubic-bezier(.2,.7,.1,1);
+    --ch:14px;
+    --gut:clamp(20px,5vw,80px);
+    color-scheme:dark;
+  }
+
+  *,*::before,*::after{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{margin:0;background:var(--dk-bg);color:var(--dk-fg);font:400 16.5px/1.7 var(--body);overflow-x:hidden}
+  body::before{content:"";position:absolute;inset:0 0 auto 0;height:620px;background:var(--grad-soft);-webkit-mask-image:linear-gradient(#000 55%,transparent);mask-image:linear-gradient(#000 55%,transparent);pointer-events:none;z-index:0}
+  a{color:var(--accent-t);text-underline-offset:3px;text-decoration-thickness:1px}
+  a:hover{text-decoration-thickness:2px}
+  a:focus-visible{outline:2px solid var(--accent-t);outline-offset:3px;border-radius:2px}
+  .skip{position:absolute;left:-9999px;top:8px;background:var(--dk-fg);color:var(--dk-bg);padding:8px 12px;z-index:10}
+  .skip:focus{left:16px}
+  .site-hd{position:relative;z-index:1;border-bottom:1px solid var(--dk-line)}
+  .site-hd .in{max-width:1100px;margin:0 auto;padding:18px var(--gut);display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .wordmark{font-family:var(--display);font-size:20px;letter-spacing:.04em;text-transform:uppercase;color:var(--dk-fg);text-decoration:none;line-height:1}
+  .wordmark span{color:var(--accent-t)}
+  .site-hd nav a{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--dk-muted);text-decoration:none}
+  .site-hd nav a:hover{color:var(--dk-fg)}
+  main{position:relative;z-index:1;max-width:72ch;margin:0 auto;padding:56px 16px 72px}
+  @media (min-width:640px){main{padding:80px 24px 96px}}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--dk-muted);margin:0 0 14px}
+  h1{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:clamp(40px,9vw,72px);line-height:.98;letter-spacing:.01em;margin:0 0 18px}
+  h1 em{font-family:var(--serif);font-style:italic;text-transform:none;color:var(--it-dk);letter-spacing:0}
+  .lede{font-size:18px;color:var(--dk-fg);margin:0 0 10px}
+  .updated{display:inline-block;font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--dk-muted);border:1px solid var(--dk-line);border-radius:999px;padding:5px 12px;margin:14px 0 0}
+  .toc{margin:40px 0 8px;padding:22px 24px;background:var(--dk-raise);border:1px solid var(--dk-line);border-radius:14px}
+  .toc h2{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--dk-muted);margin:0 0 10px;font-weight:500;padding:0;border:0}
+  .toc ol{margin:0;padding-left:22px;columns:1}
+  @media (min-width:640px){.toc ol{columns:2;column-gap:32px}}
+  .toc li{margin:4px 0;break-inside:avoid;font-size:15px}
+  .toc a{color:var(--dk-fg);text-decoration:none}
+  .toc a:hover{color:var(--accent-t)}
+  section{scroll-margin-top:24px}
+  h2{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:clamp(26px,5vw,34px);line-height:1.05;letter-spacing:.015em;margin:56px 0 14px;padding-top:24px;border-top:1px solid var(--dk-line)}
+  h3{font-family:var(--body);font-weight:700;font-size:17px;margin:28px 0 6px;color:var(--dk-fg)}
+  p,li{color:var(--dk-fg)}
+  p{margin:0 0 14px}
+  ul,ol{margin:0 0 16px;padding-left:22px}
+  li{margin:6px 0}
+  li::marker{color:var(--accent-t)}
+  strong{font-weight:700}
+  .muted{color:var(--dk-muted)}
+  .note{background:var(--dk-raise);border:1px solid var(--dk-line);border-left:3px solid var(--accent);border-radius:10px;padding:16px 18px;margin:18px 0}
+  .note p:last-child{margin:0}
+  address{font-style:normal}
+  a,p,li,address{overflow-wrap:anywhere}
+  .site-ft{position:relative;z-index:1;border-top:1px solid var(--dk-line);background:var(--dk-raise)}
+  .site-ft .in{max-width:1100px;margin:0 auto;padding:32px var(--gut);display:flex;flex-wrap:wrap;gap:18px 40px;justify-content:space-between;font-size:14px;color:var(--dk-muted)}
+  .site-ft p{margin:0;color:var(--dk-muted)}
+  .site-ft .wordmark{font-size:16px;display:inline-block;margin-bottom:8px}
+  .site-ft ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 20px}
+  .site-ft li{margin:0}
+  .site-ft ul a{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--dk-muted);text-decoration:none}
+  .site-ft ul a:hover,.site-ft ul a[aria-current]{color:var(--dk-fg)}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-hd">
+  <div class="in">
+    <a class="wordmark" href="/" aria-label="AutoConvert Digital home">AUTOCONVERT <span>DIGITAL</span></a>
+    <nav aria-label="Site"><a href="/">Home</a></nav>
+  </div>
+</header>
+<main id="main">
+<p class="eyebrow">Legal</p>
+<h1>Privacy <em>policy</em></h1>
+<p class="lede">This policy explains what personal information we collect, why we collect it, who we share it with, and how you stay in control of it.</p>
+<p>We are AutoConvert Digital, a business run by Luke Wade as a sole trader (ABN 58 593 675 977), based on the Gold Coast, Queensland. In this policy, “we”, “us” and “our” mean AutoConvert Digital. “You” means anyone who visits our website, contacts us, or buys from us.</p>
+<p>We follow the <em>Privacy Act 1988</em> (Cth) and the Australian Privacy Principles (APPs). Some small businesses are exempt from parts of that Act. We choose to follow the APPs anyway, because it is the right way to handle your information.</p>
+<!-- OPEN QUESTION — Luke to confirm: whether ACD is covered by the Privacy Act (turnover under $3m is usually exempt, but some activities remove the exemption). Either way, this policy commits us to the APPs, so we must live up to it. -->
+<p class="updated">Last updated 24 September 2026</p>
+
+<nav class="toc" aria-labelledby="toc-h">
+  <h2 id="toc-h">On this page</h2>
+  <ol>
+    <li><a href="#what-we-collect">What we collect</a></li>
+    <li><a href="#ad-accounts">Your ad account during an audit</a></li>
+    <li><a href="#how-we-collect">How we collect it</a></li>
+    <li><a href="#why">Why we use it</a></li>
+    <li><a href="#cookies">Cookies, pixels and analytics</a></li>
+    <li><a href="#remarketing">Remarketing</a></li>
+    <li><a href="#marketing">Email and SMS marketing</a></li>
+    <li><a href="#sharing">Who we share it with</a></li>
+    <li><a href="#overseas">Overseas disclosure</a></li>
+    <li><a href="#security">Security</a></li>
+    <li><a href="#retention">How long we keep it</a></li>
+    <li><a href="#access">Access and correction</a></li>
+    <li><a href="#anonymity">Staying anonymous</a></li>
+    <li><a href="#complaints">Complaints</a></li>
+    <li><a href="#changes">Changes to this policy</a></li>
+    <li><a href="#contact">Contact us</a></li>
+  </ol>
+</nav>
+
+<section id="what-we-collect">
+  <h2>1. What we collect</h2>
+  <p>We only collect what we need to run the business and do the work you ask for. That can include:</p>
+  <ul>
+    <li><strong>Contact details:</strong> your name, email address, phone number and business name.</li>
+    <li><strong>Business details:</strong> your website, industry, what you sell, your offer, your ad spend and your goals. You give us these in our intake form or on a call.</li>
+    <li><strong>Payment details:</strong> Stripe processes your card. We see the amount, the date and the last four digits of the card. We never see or store your full card number.</li>
+    <li><strong>Ad account data:</strong> if you buy an audit, we look at your Meta ad account. See <a href="#ad-accounts">section 2</a>.</li>
+    <li><strong>Messages and recordings:</strong> emails, texts, form answers, call notes, and any call recordings (we will always tell you before we record).</li>
+    <li><strong>Website and device data:</strong> pages you visit, the links you click, your browser, device type, rough location (city level), and your IP address. See <a href="#cookies">section 5</a>.</li>
+    <li><strong>Ad response data:</strong> if you fill in one of our Meta instant forms, Meta passes us the details you entered.</li>
+  </ul>
+  <p>We do not ask for sensitive information, such as health details, and we ask you not to send it. Our services are for businesses. They are not meant for anyone under 18.</p>
+</section>
+
+<section id="ad-accounts">
+  <h2>2. Your ad account during an audit</h2>
+  <p>To do the $97 Meta Campaign Audit, we need to see your Meta ad account. Here is how we handle that:</p>
+  <ul>
+    <li><strong>Read-only access.</strong> You grant us access through Meta’s own partner or user settings. We ask for view-only (analyst) access. We cannot change, pause or spend anything on your account.</li>
+    <li><strong>No passwords, ever.</strong> We will never ask for your Facebook or Meta password, your two-factor codes, or your login. If anyone claiming to be us asks for these, do not send them, and let us know.</li>
+    <li><strong>What we see.</strong> Your campaigns, ads, audiences, budgets, results and pixel or event setup. If your account holds lead data from your own customers, we may see some of it. We only look at what we need for the audit.</li>
+    <li><strong>Kept confidential.</strong> Your account data, results and strategy stay private between us. We do not share them with anyone except the tools listed in <a href="#sharing">section 8</a> that we use to prepare your report.</li>
+    <li><strong>Access removed after.</strong> Once we deliver your report, we remove our access, or ask you to remove it, within 7 days.</li>
+    <!-- ASSUMPTION — Luke to confirm: 7 days to remove access after delivery. -->
+    <li><strong>You can revoke any time.</strong> You can remove our access in your Meta Business settings whenever you like, even mid-audit. If you do that before we finish, we may not be able to complete the report. See our <a href="/refunds">refund policy</a> for what happens then.</li>
+    <li><strong>Anonymised use only with permission.</strong> We will never publish your name, brand, ads or numbers. We would only use your results, with every identifying detail removed, as a case study or example if you say yes in writing first.</li>
+  </ul>
+  <!-- OPEN QUESTION — Luke to confirm: are any AI tools (for example, an AI assistant used to help analyse data or draft the report) used on client ad account data? If so, name them here and in section 8, and note where they store data. -->
+</section>
+
+<section id="how-we-collect">
+  <h2>3. How we collect it</h2>
+  <p>Mostly, you give it to us directly. For example, when you:</p>
+  <ul>
+    <li>fill in a form on our website or a Meta instant form</li>
+    <li>buy an audit or another service through our order form</li>
+    <li>complete our intake form</li>
+    <li>book or attend a call</li>
+    <li>email, text or message us.</li>
+  </ul>
+  <p>We also collect some information automatically through cookies, the Meta pixel, the Meta Conversions API and Google Analytics when you use our website. Sometimes we get information from third parties, such as Meta (when you respond to our ads) or Stripe (to confirm a payment).</p>
+</section>
+
+<section id="why">
+  <h2>4. Why we use it</h2>
+  <p>We use your information to:</p>
+  <ul>
+    <li>deliver the audit, strategy call or campaign build you paid for</li>
+    <li>take payments, send receipts and handle refunds</li>
+    <li>reply to your questions and keep you updated on your work</li>
+    <li>send you marketing, if you have agreed to it (see <a href="#marketing">section 7</a>)</li>
+    <li>measure and improve our website and our ads</li>
+    <li>keep our systems secure and prevent fraud</li>
+    <li>meet our legal duties, such as tax record-keeping.</li>
+  </ul>
+  <p>We will not use your information for anything unrelated to these reasons unless you agree or the law allows it. We do not sell your personal information.</p>
+</section>
+
+<section id="cookies">
+  <h2>5. Cookies, pixels and analytics</h2>
+  <p>Cookies are small files your browser stores. Pixels and tags are small bits of code that report what happens on a page. We use them to see how people use our site and whether our ads work.</p>
+  <h3>What we use</h3>
+  <ul>
+    <li><strong>Meta pixel.</strong> Records visits and actions on our site (such as viewing a page or buying) and reports them to Meta.</li>
+    <li><strong>Meta Conversions API.</strong> Sends the same kind of event from our server to Meta, so results are measured even when browsers block the pixel. Where contact details are sent (such as an email address after a purchase), they are hashed first. Hashing scrambles the data into a code before it leaves us.</li>
+    <li><strong>Google Analytics.</strong> Tells us how many people visit, which pages they read and where they came from. We use this in summary form.</li>
+    <li><strong>GoHighLevel.</strong> Our forms and order pages use cookies to work properly and to connect a form entry to your record.</li>
+  </ul>
+  <h3>How to opt out</h3>
+  <ul>
+    <li>Block or delete cookies in your browser settings. Most of our site will still work.</li>
+    <li>Use the <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener">Google Analytics opt-out browser add-on</a>.</li>
+    <li>Control how Meta uses your data for ads in your <a href="https://www.facebook.com/adpreferences" rel="noopener">Meta ad preferences</a>.</li>
+    <li>Control Google ads in <a href="https://myadcenter.google.com" rel="noopener">My Ad Center</a>.</li>
+    <li>Opt out of interest-based ads from many companies at <a href="https://www.youronlinechoices.com.au" rel="noopener">Your Online Choices</a>.</li>
+  </ul>
+  <!-- OPEN QUESTION — Luke to confirm: add a cookie banner? Not strictly required in Australia today, but good practice and needed if we target EU/UK visitors. -->
+</section>
+
+<section id="remarketing">
+  <h2>6. Remarketing</h2>
+  <p>If you visit our site, you may later see our ads on Facebook, Instagram or other sites. This is called remarketing. It works through the Meta pixel, the Conversions API and similar tools.</p>
+  <p>We may also build audiences in Meta from our customer or lead lists, for example to leave out people who have already bought. When we do this, the details are hashed before upload, and Meta uses them only to match and then discards them, under its own terms.</p>
+  <p>You can turn off ads based on your activity using the links in <a href="#cookies">section 5</a>.</p>
+</section>
+
+<section id="marketing">
+  <h2>7. Email and SMS marketing</h2>
+  <p>We follow the <em>Spam Act 2003</em> (Cth). That means:</p>
+  <ul>
+    <li>We only send you marketing emails or texts if you have agreed, or where the law says consent can be inferred (for example, you are a current customer and it relates to what you bought).</li>
+    <li>Every marketing message says it is from AutoConvert Digital and how to reach us.</li>
+    <li>Every marketing message has an easy way to unsubscribe. For email, click “unsubscribe”. For SMS, reply STOP.</li>
+    <li>We act on your unsubscribe within 5 business days, usually straight away.</li>
+  </ul>
+  <p>Messages about work you have bought (such as your audit report, receipts or access requests) are not marketing. You will still get those after you unsubscribe.</p>
+</section>
+
+<section id="sharing">
+  <h2>8. Who we share it with</h2>
+  <p>We share information only with the service providers that help us run the business, and only what they need. They include:</p>
+  <ul>
+    <li><strong>GoHighLevel</strong> — our CRM, website forms, order forms, and email and SMS system. Hosted in the United States.</li>
+    <li><strong>Stripe</strong> — payment processing.</li>
+    <li><strong>Google Workspace</strong> — Gmail, Google Drive and Google Calendar, for email, file storage and bookings.</li>
+    <li><strong>Meta</strong> — for our ads, instant forms, the Meta pixel and the Conversions API.</li>
+    <li><strong>Google Analytics</strong> — website measurement.</li>
+    <li><strong>Loom</strong> — to record and share your audit walkthrough video.</li>
+    <li><strong>AI tools (Anthropic&rsquo;s Claude)</strong> — to help analyse what we see in your ad account and on your landing page during an audit. We share only what the audit needs, and never your passwords.<!-- CHECK: confirm Luke's Claude plan and its model-training setting before adding any 'not used for training' line. --> Luke reviews every finding before it reaches you.</li>
+  </ul>
+  <p>We may also share information with our accountant or professional advisers, or if the law requires it (for example, a court order). If we ever bring in a contractor to help deliver your work, they will be bound to keep your information confidential.</p>
+  <!-- OPEN QUESTION — Luke to confirm: does Sam (or anyone else) access client data? If so, mention team members bound by confidentiality. -->
+</section>
+
+<section id="overseas">
+  <h2>9. Overseas disclosure</h2>
+  <p>Several of the tools above store data outside Australia. It is most likely to be held in the <strong>United States</strong>. Some providers also use data centres in other countries, such as Ireland, the European Union, Singapore or elsewhere, depending on their own setup.</p>
+  <p>We choose well-known providers with strong security and privacy commitments, and we take reasonable steps under APP 8 to make sure they handle your information in line with the APPs. By using our services, you understand that your information may be stored and processed overseas.</p>
+</section>
+
+<section id="security">
+  <h2>10. Security</h2>
+  <p>We take reasonable steps to protect your information from misuse, loss and unauthorised access. These include:</p>
+  <ul>
+    <li>two-factor authentication on our business accounts</li>
+    <li>read-only access to client ad accounts, never passwords</li>
+    <li>limiting access to the people who need it</li>
+    <li>using providers that encrypt data in transit.</li>
+  </ul>
+  <p>No system is perfectly secure. If a data breach is likely to cause you serious harm, we will tell you and the Office of the Australian Information Commissioner, as the Notifiable Data Breaches scheme requires.</p>
+</section>
+
+<section id="retention">
+  <h2>11. How long we keep it</h2>
+  <ul>
+    <li><strong>Payment and tax records:</strong> at least 5 years, because tax law requires it.</li>
+    <li><strong>Audit reports, notes and recordings:</strong> up to 2 years after delivery, so we can answer follow-up questions, then deleted.</li>
+    <li><strong>Leads and enquiries:</strong> until you ask us to remove them, or 2 years after we last heard from you.</li>
+  </ul>
+  <!-- ASSUMPTION — Luke to confirm: 2-year retention for audit files and dormant leads. -->
+  <p>When we no longer need information, we delete it or make it anonymous. You can ask us to delete your information sooner. We will do so unless the law requires us to keep it.</p>
+</section>
+
+<section id="access">
+  <h2>12. Access and correction</h2>
+  <p>You can ask to see the personal information we hold about you, and ask us to fix anything that is wrong or out of date. Email us at <a href="mailto:sales@autoconvertdigital.com.au">sales@autoconvertdigital.com.au</a>.</p>
+  <p>We will reply within 30 days. It is free. If we cannot give you access (the law allows this in a few cases), we will tell you why in writing.</p>
+</section>
+
+<section id="anonymity">
+  <h2>13. Staying anonymous</h2>
+  <p>You can browse our site and ask general questions without telling us who you are. To buy an audit or other service, we need your name, contact details and business details.</p>
+</section>
+
+<section id="complaints">
+  <h2>14. Complaints</h2>
+  <p>If you think we have mishandled your information, please tell us first at <a href="mailto:sales@autoconvertdigital.com.au">sales@autoconvertdigital.com.au</a>. We will look into it and reply within 30 days.</p>
+  <p>If you are not happy with our answer, you can complain to the Office of the Australian Information Commissioner (OAIC) at <a href="https://www.oaic.gov.au" rel="noopener">oaic.gov.au</a> or on 1300 363 992.</p>
+</section>
+
+<section id="changes">
+  <h2>15. Changes to this policy</h2>
+  <p>We may update this policy as our business or the law changes. The date at the top shows the latest version. If a change is significant, we will put a notice on our website or email current clients.</p>
+</section>
+
+<section id="contact">
+  <h2>16. Contact us</h2>
+  <address>
+    <p>AutoConvert Digital (Luke Wade, sole trader)<br>
+    ABN 58 593 675 977<br>
+    Gold Coast, Queensland<br>
+    Email: <a href="mailto:sales@autoconvertdigital.com.au">sales@autoconvertdigital.com.au</a><br>
+    Web: <a href="https://autoconvertdigital.com.au">autoconvertdigital.com.au</a></p>
+  </address>
+</section>
+
+</main>
+<footer class="site-ft">
+  <div class="in">
+    <div>
+      <a class="wordmark" href="/">AUTOCONVERT <span>DIGITAL</span></a>
+      <p>Luke Wade trading as AutoConvert Digital · ABN 58 593 675 977</p>
+      <p>Gold Coast, Queensland · <a href="mailto:sales@autoconvertdigital.com.au">sales@autoconvertdigital.com.au</a></p>
+    </div>
+    <nav aria-label="Legal">
+      <ul>
+        <li><a href="/privacy" aria-current="page">Privacy</a></li>
+        <li><a href="/terms">Terms</a></li>
+        <li><a href="/refunds">Refunds</a></li>
+        <li><a href="/terms#disclaimer">Disclaimer</a></li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>
