@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<!-- DRAFT 2026.09.24 — written from a template, not legal advice. Have it checked before relying on it. -->
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Terms of Use and Service — AutoConvert Digital</title>
+<meta name="description" content="The terms for using autoconvertdigital.com.au and buying the Meta Campaign Audit and other services from AutoConvert Digital.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+  :root{
+    /* THEME 1 · NIGHT — plum black ground, purple gradient (G2) */
+    --dk-bg:#0B0713; --dk-fg:#F2EFF7; --dk-muted:#A79FB8; --dk-faint:#6D6582; --dk-line:#2C2342; --dk-raise:#140D22;
+    --lt-bg:#F6F5F8; --lt-fg:#111111; --lt-muted:#5C5568; --lt-faint:#8A8398; --lt-line:#E0DCE8; --lt-raise:#FFFFFF;
+    --accent:#6E2CF4; --accent-t:#A986FF;
+    --grad:linear-gradient(118deg,#2A1160 0%,#6E2CF4 62%,#8B4DFF 100%);
+    --grad-soft:radial-gradient(85% 70% at 78% 12%,rgba(110,44,244,.26),transparent 62%),radial-gradient(60% 50% at 8% 92%,rgba(110,44,244,.13),transparent 66%);
+    --next-grad:linear-gradient(118deg,#FF3D00,#FF6A1A 45%,#FFB84D 100%);
+    --btn-fg:#FFFFFF;
+    --it-dk:#BFA3FF; --it-lt:#7A3CFF;
+    /* the bridge stage is a full-screen colour block, and the scorecard is an
+       instrument panel: both were hardcoded Night purple, so neither followed a
+       theme change. They read from these now. */
+    --bridge:#150929;
+    --film-bg:#0B0713; --film-fg:#F2EFF7; --film-muted:#A79FB8; --film-faint:#6D6582; --film-line:#2C2342; --film-raise:#140D22;
+    --sc-bg:#0F0A1C; --sc-fg:#F2EFF7; --sc-muted:#A79FB8; --sc-line:#2C2342; --sc-track:#1B1330;
+    --display:"Anton",Impact,"Arial Narrow",sans-serif;
+    --serif:"Instrument Serif",Georgia,serif;
+    --body:"Manrope","Helvetica Neue",Arial,sans-serif;
+    --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+    --ease:cubic-bezier(.2,.7,.1,1);
+    --ch:14px;
+    --gut:clamp(20px,5vw,80px);
+    color-scheme:dark;
+  }
+
+  *,*::before,*::after{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{margin:0;background:var(--dk-bg);color:var(--dk-fg);font:400 16.5px/1.7 var(--body);overflow-x:hidden}
+  body::before{content:"";position:absolute;inset:0 0 auto 0;height:620px;background:var(--grad-soft);-webkit-mask-image:linear-gradient(#000 55%,transparent);mask-image:linear-gradient(#000 55%,transparent);pointer-events:none;z-index:0}
+  a{color:var(--accent-t);text-underline-offset:3px;text-decoration-thickness:1px}
+  a:hover{text-decoration-thickness:2px}
+  a:focus-visible{outline:2px solid var(--accent-t);outline-offset:3px;border-radius:2px}
+  .skip{position:absolute;left:-9999px;top:8px;background:var(--dk-fg);color:var(--dk-bg);padding:8px 12px;z-index:10}
+  .skip:focus{left:16px}
+  .site-hd{position:relative;z-index:1;border-bottom:1px solid var(--dk-line)}
+  .site-hd .in{max-width:1100px;margin:0 auto;padding:18px var(--gut);display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .wordmark{font-family:var(--display);font-size:20px;letter-spacing:.04em;text-transform:uppercase;color:var(--dk-fg);text-decoration:none;line-height:1}
+  .wordmark span{color:var(--accent-t)}
+  .site-hd nav a{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--dk-muted);text-decoration:none}
+  .site-hd nav a:hover{color:var(--dk-fg)}
+  main{position:relative;z-index:1;max-width:72ch;margin:0 auto;padding:56px 16px 72px}
+  @media (min-width:640px){main{padding:80px 24px 96px}}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--dk-muted);margin:0 0 14px}
+  h1{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:clamp(40px,9vw,72px);line-height:.98;letter-spacing:.01em;margin:0 0 18px}
+  h1 em{font-family:var(--serif);font-style:italic;text-transform:none;color:var(--it-dk);letter-spacing:0}
+  .lede{font-size:18px;color:var(--dk-fg);margin:0 0 10px}
+  .updated{display:inline-block;font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--dk-muted);border:1px solid var(--dk-line);border-radius:999px;padding:5px 12px;margin:14px 0 0}
+  .toc{margin:40px 0 8px;padding:22px 24px;background:var(--dk-raise);border:1px solid var(--dk-line);border-radius:14px}
+  .toc h2{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--dk-muted);margin:0 0 10px;font-weight:500;padding:0;border:0}
+  .toc ol{margin:0;padding-left:22px;columns:1}
+  @media (min-width:640px){.toc ol{columns:2;column-gap:32px}}
+  .toc li{margin:4px 0;break-inside:avoid;font-size:15px}
+  .toc a{color:var(--dk-fg);text-decoration:none}
+  .toc a:hover{color:var(--accent-t)}
+  section{scroll-margin-top:24px}
+  h2{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:clamp(26px,5vw,34px);line-height:1.05;letter-spacing:.015em;margin:56px 0 14px;padding-top:24px;border-top:1px solid var(--dk-line)}
+  h3{font-family:var(--body);font-weight:700;font-size:17px;margin:28px 0 6px;color:var(--dk-fg)}
+  p,li{color:var(--dk-fg)}
+  p{margin:0 0 14px}
+  ul,ol{margin:0 0 16px;padding-left:22px}
+  li{margin:6px 0}
+  li::marker{color:var(--accent-t)}
+  strong{font-weight:700}
+  .muted{color:var(--dk-muted)}
+  .note{background:var(--dk-raise);border:1px solid var(--dk-line);border-left:3px solid var(--accent);border-radius:10px;padding:16px 18px;margin:18px 0}
+  .note p:last-child{margin:0}
+  address{font-style:normal}
+  a,p,li,address{overflow-wrap:anywhere}
+  .site-ft{position:relative;z-index:1;border-top:1px solid var(--dk-line);background:var(--dk-raise)}
+  .site-ft .in{max-width:1100px;margin:0 auto;padding:32px var(--gut);display:flex;flex-wrap:wrap;gap:18px 40px;justify-content:space-between;font-size:14px;color:var(--dk-muted)}
+  .site-ft p{margin:0;color:var(--dk-muted)}
+  .site-ft .wordmark{font-size:16px;display:inline-block;margin-bottom:8px}
+  .site-ft ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 20px}
+  .site-ft li{margin:0}
+  .site-ft ul a{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--dk-muted);text-decoration:none}
+  .site-ft ul a:hover,.site-ft ul a[aria-current]{color:var(--dk-fg)}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-hd">
+  <div class="in">
+    <a class="wordmark" href="/" aria-label="AutoConvert Digital home">AUTOCONVERT <span>DIGITAL</span></a>
+    <nav aria-label="Site"><a href="/">Home</a></nav>
+  </div>
+</header>
+<main id="main">
+<p class="eyebrow">Legal</p>
+<h1>Terms of use <em>and service</em></h1>
+<p class="lede">These terms cover using our website and buying our services. We have kept them plain and fair. Please read them before you buy.</p>
+<p class="updated">Last updated 24 September 2026</p>
+
+<nav class="toc" aria-labelledby="toc-h">
+  <h2 id="toc-h">On this page</h2>
+  <ol>
+    <li><a href="#about">About us and these terms</a></li>
+    <li><a href="#site">Using our website</a></li>
+    <li><a href="#services">Our services</a></li>
+    <li><a href="#audit">The Meta Campaign Audit</a></li>
+    <li><a href="#responsibilities">Your responsibilities</a></li>
+    <li><a href="#payment">Payment</a></li>
+    <li><a href="#refunds">Refunds</a></li>
+    <li><a href="#acl">Your consumer rights</a></li>
+    <li><a href="#ip">Intellectual property</a></li>
+    <li><a href="#confidentiality">Confidentiality</a></li>
+    <li><a href="#disclaimer">Disclaimer</a></li>
+    <li><a href="#liability">Limitation of liability</a></li>
+    <li><a href="#links">Links to other websites</a></li>
+    <li><a href="#law">Governing law and disputes</a></li>
+    <li><a href="#changes">Changes to these terms</a></li>
+    <li><a href="#contact">Contact us</a></li>
+  </ol>
+</nav>
+
+<section id="about">
+  <h2>1. About us and these terms</h2>
+  <p>AutoConvert Digital is a business run by Luke Wade as a sole trader (ABN 58 593 675 977), based on the Gold Coast, Queensland. In these terms, “we”, “us” and “our” mean AutoConvert Digital. “You” means the person or business using our website or buying from us.</p>
+  <p>By using <a href="https://autoconvertdigital.com.au">autoconvertdigital.com.au</a> or buying a service from us, you agree to these terms, our <a href="/privacy">privacy policy</a> and our <a href="/refunds">refund policy</a>. If you are buying for a business, you confirm you are allowed to agree on its behalf.</p>
+</section>
+
+<section id="site">
+  <h2>2. Using our website</h2>
+  <p>You are welcome to use our website for its normal purpose: learning about us and buying our services. Please do not:</p>
+  <ul>
+    <li>copy, resell or republish our content without permission</li>
+    <li>try to hack, overload or disrupt the site</li>
+    <li>scrape the site or harvest contact details</li>
+    <li>use the site for anything unlawful or misleading.</li>
+  </ul>
+  <p>We try to keep the site accurate and working, but we cannot promise it will always be available or error-free. We may change or remove content at any time.</p>
+</section>
+
+<section id="services">
+  <h2>3. Our services</h2>
+  <p>We offer:</p>
+  <ul>
+    <li><strong>The $97 Meta Campaign Audit</strong> — described in <a href="#audit">section 4</a>.</li>
+    <li><strong>Strategy calls</strong> — a paid call to work through your campaigns and next steps.</li>
+    <li><strong>Meta campaign builds</strong> — building your Meta campaigns and follow-up system on GoHighLevel.</li>
+  </ul>
+  <p>Strategy calls and campaign builds are scoped and priced separately. We will confirm what is included, the price and the timing in writing (a proposal, quote or order form) before you pay. These terms apply to that work too, unless the written agreement says otherwise.</p>
+</section>
+
+<section id="audit">
+  <h2>4. The Meta Campaign Audit</h2>
+  <h3>What you get</h3>
+  <ul>
+    <li>A review of your Meta ads, your offer, your landing page and how you capture leads.</li>
+    <li>A scored report across 10 categories, out of 100.</li>
+    <li>A recorded Loom video walking you through what we found.</li>
+    <li>A ranked action plan: what to fix first, and why.</li>
+  </ul>
+  <p>There is no sales call. You get the report and the video, and you decide what to do next.</p>
+  <h3>Turnaround</h3>
+  <p>We deliver your audit within 48 hours once all three of these are done:</p>
+  <ol>
+    <li>your payment has gone through</li>
+    <li>you have completed the intake form</li>
+    <li>you have granted us read-only access to your Meta ad account.</li>
+  </ol>
+  <p>The 48 hours start when the last of these is done. If something outside our control causes a delay (for example, a Meta outage), we will tell you and deliver as soon as we can.</p>
+  <!-- OPEN QUESTION — Luke to confirm: are the 48 hours calendar hours including weekends, or business hours? Written as 48 hours flat, to match the sales page. -->
+</section>
+
+<section id="responsibilities">
+  <h2>5. Your responsibilities</h2>
+  <ul>
+    <li><strong>Accurate intake.</strong> Give us honest, complete answers in the intake form. The audit is only as good as what we are told and can see.</li>
+    <li><strong>Read-only access.</strong> Grant us view-only access to your Meta ad account through Meta’s own settings. We will send simple steps.</li>
+    <li><strong>We never need your password.</strong> We will never ask for your Facebook or Meta password, login, or two-factor codes. Do not send them to us. If someone claiming to be us asks, it is not us.</li>
+    <li><strong>You have the right to share it.</strong> You confirm you are allowed to give us access to the ad account, website and any materials you share.</li>
+    <li><strong>You make the decisions.</strong> Our report gives recommendations. You decide what to change, and you are responsible for your own ad account, ad spend and compliance with Meta’s policies and the law.</li>
+  </ul>
+</section>
+
+<section id="payment">
+  <h2>6. Payment</h2>
+  <p>You pay upfront, through our order form. Payments are taken through GoHighLevel and processed by Stripe. We do not see or store your full card details.</p>
+  <p>You pay the price shown at checkout. The price shown at checkout is in Australian dollars. We will send you a receipt or tax invoice by email.</p>
+  <p>For strategy calls and campaign builds, the payment terms will be in the written quote or order form.</p>
+</section>
+
+<section id="refunds">
+  <h2>7. Refunds</h2>
+  <p>If the audit cannot give you meaningful steps forward to get revenue back in your pocket without increasing your ad spend, we refund the full price. You can also ask for a refund for any other reason within 30 days of delivery. The full details are in our <a href="/refunds">refund policy</a>.</p>
+</section>
+
+<section id="acl">
+  <h2>8. Your consumer rights</h2>
+  <p>Our services come with guarantees that cannot be excluded under the Australian Consumer Law. For example, services must be provided with due care and skill, be fit for any purpose we agreed, and be delivered within a reasonable time.</p>
+  <p>Nothing in these terms removes or limits those rights, or any other right you have that the law says cannot be excluded. Where these terms seem to say otherwise, the law wins.</p>
+</section>
+
+<section id="ip">
+  <h2>9. Intellectual property</h2>
+  <ul>
+    <li><strong>You keep your report.</strong> Once you have paid, your audit report, video and action plan are yours to keep and use in your business, including sharing them with your team or other marketers.</li>
+    <li><strong>You keep your stuff.</strong> Your brand, ads, content and data stay yours. You let us use them only to do the work.</li>
+    <li><strong>Our methods stay ours.</strong> Our methods, scoring system, templates, frameworks, checklists, training material and the Click-to-Close Circuit™ remain our property. Using them in your own business is fine. Please do not copy, resell or teach them as your own.</li>
+    <li><strong>Our website.</strong> The words, design and images on our website belong to us or our licensors.</li>
+  </ul>
+</section>
+
+<section id="confidentiality">
+  <h2>10. Confidentiality</h2>
+  <p>We keep your ad account data, results, offer and strategy private. We only use them to do your work. We will not share them, except with the tools we use to deliver the work (listed in our <a href="/privacy#sharing">privacy policy</a>) or where the law requires.</p>
+  <p>We will never publish your name, brand or numbers. We would only use your results, with every identifying detail removed, as an example if you say yes in writing first.</p>
+  <p>We ask that you keep our paid materials and methods to your own business, as set out in <a href="#ip">section 9</a>.</p>
+</section>
+
+<section id="disclaimer">
+  <h2>11. Disclaimer</h2>
+
+  <h3>General information</h3>
+  <p>The content on our website, in our emails, posts and videos is general information about marketing. It is not tailored to your business unless it is part of work you have paid us for.</p>
+
+  <h3>Earnings and results</h3>
+  <p>We cannot promise any particular result. Results depend on many things we do not control: your offer, your market, your budget, your follow-up, your team, timing and the platforms themselves.</p>
+  <ul>
+    <li>Any examples, case studies or testimonials describe one business’s experience. They are not typical and are not a guarantee of what you will get.</li>
+    <li>Figures used to explain an idea (for example, “if you close 1 in 10 leads…”) are illustrative only.</li>
+    <li>Your results may be better, worse or different.</li>
+  </ul>
+
+  <h3>Testimonials</h3>
+  <p>Testimonials on our website come from real clients. They were not paid for them. We may shorten a testimonial for length, but we do not change its meaning.</p>
+
+  <h3>Example and sample materials</h3>
+  <p>Sample reports, scorecards, screenshots and ads on our website show what our work looks like. They may be made up or use changed details to protect clients. They are not real client results unless we say so.</p>
+
+  <h3>Meta and Facebook</h3>
+  <p>AutoConvert Digital is not affiliated with, endorsed by, or sponsored by Meta Platforms, Inc. This site is not part of the Facebook or Instagram websites. Facebook, Instagram and Meta are trademarks of Meta Platforms, Inc.</p>
+
+  <h3>Google</h3>
+  <p>AutoConvert Digital is not affiliated with or endorsed by Google LLC. Google and Google Analytics are trademarks of Google LLC.</p>
+
+  <h3>Platform decisions outside our control</h3>
+  <p>Meta, Google, GoHighLevel and other platforms make their own rules and change them often. We are not responsible for their decisions, including ad rejections, account restrictions or bans, algorithm and policy changes, tracking changes, outages, or price changes. We will always give our honest advice, but the platforms have the final say.</p>
+
+  <h3>Not financial, legal or other professional advice</h3>
+  <p>We are marketers. Nothing we provide is financial, investment, tax, accounting or legal advice. Please talk to a qualified professional before making decisions in those areas, including decisions about how much to spend.</p>
+</section>
+
+<section id="liability">
+  <h2>12. Limitation of liability</h2>
+  <p>This section applies only as far as the law allows. It does not limit your rights under the Australian Consumer Law (see <a href="#acl">section 8</a>).</p>
+  <ul>
+    <li>Where our services are not of a kind ordinarily bought for personal, domestic or household use, and the law allows it, our liability for failing to meet a consumer guarantee is limited to supplying the services again, or paying the cost of having them supplied again.</li>
+    <li>We are not liable for indirect or consequential loss, such as lost profits, lost revenue, lost data or wasted ad spend, except where the law says we must be.</li>
+    <li>We are not liable for loss caused by things outside our control, including the platform decisions described in <a href="#disclaimer">section 11</a>, or by information you gave us that was wrong or incomplete.</li>
+  </ul>
+</section>
+
+<section id="links">
+  <h2>13. Links to other websites</h2>
+  <p>Our website may link to other sites, such as Meta, Google or Loom. We do not control those sites and are not responsible for their content or privacy practices. Please read their terms and policies.</p>
+</section>
+
+<section id="law">
+  <h2>14. Governing law and disputes</h2>
+  <p>These terms are governed by the laws of Queensland, Australia. If there is a problem, please email us first. We will try to sort it out fairly and quickly, in good faith. If we cannot, either of us can take the matter to the courts of Queensland.</p>
+  <p>If any part of these terms cannot be enforced, the rest still applies.</p>
+</section>
+
+<section id="changes">
+  <h2>15. Changes to these terms</h2>
+  <p>We may update these terms from time to time. The date at the top shows the latest version. The terms that apply to your purchase are the ones on our website when you paid.</p>
+</section>
+
+<section id="contact">
+  <h2>16. Contact us</h2>
+  <address>
+    <p>AutoConvert Digital (Luke Wade, sole trader)<br>
+    ABN 58 593 675 977<br>
+    Gold Coast, Queensland<br>
+    Email: <a href="mailto:sales@autoconvertdigital.com.au">sales@autoconvertdigital.com.au</a><br>
+    Web: <a href="https://autoconvertdigital.com.au">autoconvertdigital.com.au</a></p>
+  </address>
+</section>
+
+</main>
+<footer class="site-ft">
+  <div class="in">
+    <div>
+      <a class="wordmark" href="/">AUTOCONVERT <span>DIGITAL</span></a>
+      <p>Luke Wade trading as AutoConvert Digital · ABN 58 593 675 977</p>
+      <p>Gold Coast, Queensland · <a href="mailto:sales@autoconvertdigital.com.au">sales@autoconvertdigital.com.au</a></p>
+    </div>
+    <nav aria-label="Legal">
+      <ul>
+        <li><a href="/privacy">Privacy</a></li>
+        <li><a href="/terms" aria-current="page">Terms</a></li>
+        <li><a href="/refunds">Refunds</a></li>
+        <li><a href="/terms#disclaimer">Disclaimer</a></li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>
