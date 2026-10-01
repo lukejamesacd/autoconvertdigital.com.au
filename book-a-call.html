@@ -1716,6 +1716,8 @@
   @media(max-width:900px){.bc-book{grid-template-columns:1fr}.bc-book-l{position:static}}
 
   /* the calendar slot: GHL's embed is tall, so the placeholder holds its height */
+  /* Luke, 2026.10.01: no more than 40px above and below the embedded calendar */
+  section#book{padding-block:40px}
   .bc-book.solo{grid-template-columns:minmax(0,1fr);max-width:860px;margin-inline:auto}
   .bc-cal{position:relative;min-width:0}
   .bc-cal-ph{display:grid;place-items:center;min-height:760px;padding:24px;text-align:center;

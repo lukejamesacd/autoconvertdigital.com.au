@@ -1727,6 +1727,9 @@
 
   /* the form panel: always Night, because the GHL form is always Night
      (recipe: 2026.09.30 - ACD - Audit Intake Form CSS (dark).css) */
+  /* Luke, 2026.10.01: no more than 40px above and below the embedded form */
+  section#apply{padding-block:40px}
+  section#apply .sc-apply{row-gap:min(40px,5vw)}
   .sc-ghl{display:block;width:100%;height:1700px;border:0}
   @media (max-width:520px){.sc-ghl{height:1780px}}
   .sc-panel{position:relative;min-width:0;background:var(--film-bg);color:var(--film-fg);border:1px solid var(--film-line);
