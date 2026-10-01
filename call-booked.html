@@ -1719,7 +1719,11 @@
   .bc-book.solo{grid-template-columns:minmax(0,1fr);max-width:760px}
   .bc-book.solo .bc-book-l{position:static}
   .bc-book.solo .ticks li{max-width:none}
-  .bc-follow{margin-top:clamp(40px,5vw,72px);padding-top:clamp(32px,4vw,56px);border-top:1px solid var(--line)}
+  /* Have these ready | Follow us: one section, two columns (Luke, 2026.10.02). Stacks on a phone. */
+  .bc-two{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(32px,6vw,96px);align-items:start}
+  .bc-two .bc-book-l{position:static}
+  .bc-two .ticks li{max-width:none}
+  @media(max-width:900px){.bc-two{grid-template-columns:minmax(0,1fr)}.bc-follow{padding-top:clamp(28px,6vw,40px);border-top:1px solid var(--line)}}
   .bc-social{display:flex;flex-wrap:wrap;gap:12px;list-style:none;margin:0;padding:0}
   .bc-social a{display:inline-block;padding:14px 22px;border:1px solid var(--line);font-family:var(--display);font-size:16px;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;color:var(--fg);transition:background .2s,color .2s,border-color .2s}
   .bc-social a:hover,.bc-social a:focus-visible{background:var(--accent);border-color:var(--accent);color:#fff}
@@ -1764,18 +1768,17 @@
   </div>
 </section>
 
-<!-- 03 HAVE THESE READY, then FOLLOW US in the same white section (Luke, 2026.10.01). Was 02: HAVE THESE READY: moved here from /book-a-call (Luke, 2026.10.01). Shown after booking; the same list goes in the confirmation email. -->
+<!-- 03 HAVE THESE READY beside FOLLOW US: one white section, two columns (Luke, 2026.10.02). Was 02: HAVE THESE READY: moved here from /book-a-call (Luke, 2026.10.01). Shown after booking; the same list goes in the confirmation email. -->
 <section class="light" id="ready">
   <div class="wrap rv">
-    <div class="bc-book solo">
+    <div class="bc-two">
       <div class="bc-book-l">
         <div class="shead"><h2 class="ah">Have these<span class="it">ready.</span></h2>
         <p class="say">Bring your numbers, not a guess. The whole call runs on them, so the more exact they are, the better the plan.</p></div>
         <ul class="ticks"><li><span class="tk"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5.5 5.5L20 7"/></svg></span><span>Your last 30 days: ad spend, enquiries and jobs booked</span></li><li><span class="tk"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5.5 5.5L20 7"/></svg></span><span>What a job is worth to you</span></li><li><span class="tk"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5.5 5.5L20 7"/></svg></span><span>The marketing you&rsquo;re running now, what&rsquo;s worked and what hasn&rsquo;t</span></li><li><span class="tk"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5.5 5.5L20 7"/></svg></span><span>Anyone on your team who should be in the room, invite them along</span></li></ul>
+    <p class="bc-miss">Need to move it? The reschedule link is in your confirmation email. Anything else, email <a href="mailto:sales@autoconvertdigital.com.au">sales@autoconvertdigital.com.au</a>.</p>
       </div>
-    </div>
-    <p class="bc-miss" style="max-width:760px">Need to move it? The reschedule link is in your confirmation email. Anything else, email <a href="mailto:sales@autoconvertdigital.com.au">sales@autoconvertdigital.com.au</a>.</p>
-    <div class="bc-follow" id="follow">
+      <div class="bc-follow" id="follow">
     <div class="shead"><h2 class="ah">Follow us<span class="it">while you wait.</span></h2>
     <p class="sub">Tips, teardowns and the odd cat. Pick your platform.</p></div>
     <ul class="bc-social">
@@ -1785,6 +1788,7 @@
       <li><a href="https://share.google/fACTnaPU91Maqthym" target="_blank" rel="noopener">Google</a></li>
       <li><a href="https://open.spotify.com/playlist/11O69oFYBWeUKgEg4GUvx6" target="_blank" rel="noopener">Spotify</a></li>
     </ul>
+      </div>
     </div>
   </div>
 </section>
