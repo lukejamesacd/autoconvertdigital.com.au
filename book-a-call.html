@@ -636,8 +636,8 @@
   footer.lp .quiet{font-size:13.5px;color:var(--muted)}
   footer.lp .quiet a{color:var(--accent-t);text-decoration:none;white-space:nowrap}
   footer.lp .quiet a:hover{text-decoration:underline}
-  footer.lp .legal{flex-direction:column;gap:10px}
-  footer.lp .legal p{margin:0;font-size:12.5px;line-height:1.55;color:var(--faint);max-width:110ch}
+  footer.lp .legal{flex-direction:column;align-items:stretch;gap:10px}
+  footer.lp .legal p{margin:0;font-size:12.5px;line-height:1.55;color:var(--faint)}
   footer.lp .legal b{color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.04em}
   footer.lp .legal a{color:var(--muted)}
   footer.lp .legal .entity{margin-top:6px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--muted)}
@@ -1719,6 +1719,9 @@
   /* Luke, 2026.10.01: no more than 40px above and below the embedded calendar */
   section#book{padding-block:40px}
   .bc-book.solo{grid-template-columns:minmax(0,1fr);max-width:860px;margin-inline:auto}
+  /* funnel look: same hero image as the Strategy Call page */
+  .bc-hero .envbg{opacity:.85;background-position:center 40%;-webkit-mask-image:linear-gradient(180deg,#000 0%,#000 72%,transparent 100%);mask-image:linear-gradient(180deg,#000 0%,#000 72%,transparent 100%)}
+  .bc-hero .envbg::after{background:linear-gradient(90deg,var(--dk-bg) 0%,color-mix(in srgb,var(--dk-bg) 82%,transparent) 36%,color-mix(in srgb,var(--dk-bg) 30%,transparent) 62%,color-mix(in srgb,var(--dk-bg) 12%,transparent) 100%)}
   .bc-cal{position:relative;min-width:0}
   .bc-cal-ph{display:grid;place-items:center;min-height:760px;padding:24px;text-align:center;
     font-family:var(--mono);font-size:13px;font-weight:500;letter-spacing:.04em;line-height:1.6;
@@ -1750,7 +1753,8 @@
 </defs></svg>
 
 <!-- 01 HERO: compact, no visual. the hero names the step and points down -->
-<section class="hero dark ahero bc-hero" id="hero">
+<section class="hero dark env ahero bc-hero" id="hero" style="--env:url(assets/env-founder-balcony.jpg)">
+  <div class="envbg" aria-hidden="true"></div>
   <div class="grad" aria-hidden="true"></div>
   <div class="wrap inner rv">
     <div class="pitch">

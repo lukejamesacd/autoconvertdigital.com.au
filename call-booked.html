@@ -636,8 +636,8 @@
   footer.lp .quiet{font-size:13.5px;color:var(--muted)}
   footer.lp .quiet a{color:var(--accent-t);text-decoration:none;white-space:nowrap}
   footer.lp .quiet a:hover{text-decoration:underline}
-  footer.lp .legal{flex-direction:column;gap:10px}
-  footer.lp .legal p{margin:0;font-size:12.5px;line-height:1.55;color:var(--faint);max-width:110ch}
+  footer.lp .legal{flex-direction:column;align-items:stretch;gap:10px}
+  footer.lp .legal p{margin:0;font-size:12.5px;line-height:1.55;color:var(--faint)}
   footer.lp .legal b{color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.04em}
   footer.lp .legal a{color:var(--muted)}
   footer.lp .legal .entity{margin-top:6px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--muted)}
@@ -1727,6 +1727,19 @@
   .bc-social{display:flex;flex-wrap:wrap;gap:12px;list-style:none;margin:0;padding:0}
   .bc-social a{display:inline-block;padding:14px 22px;border:1px solid var(--line);font-family:var(--display);font-size:16px;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;color:var(--fg);transition:background .2s,color .2s,border-color .2s}
   .bc-social a:hover,.bc-social a:focus-visible{background:var(--accent);border-color:var(--accent);color:#fff}
+
+  /* funnel look (Luke, 2026.10.02): hero, Have these ready and Follow us share the Strategy Call hero image, drifting slowly */
+  .bc-hero .envbg,.bc-followsec .envbg{inset:-14% 0;background-position:center 40%;will-change:transform}
+  .bc-hero .envbg{opacity:.85;-webkit-mask-image:linear-gradient(180deg,#000 0%,#000 72%,transparent 100%);mask-image:linear-gradient(180deg,#000 0%,#000 72%,transparent 100%)}
+  .bc-hero .envbg::after{background:linear-gradient(90deg,var(--dk-bg) 0%,color-mix(in srgb,var(--dk-bg) 82%,transparent) 36%,color-mix(in srgb,var(--dk-bg) 30%,transparent) 62%,color-mix(in srgb,var(--dk-bg) 12%,transparent) 100%)}
+    .bc-ready .ticks{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 48px;max-width:980px}
+  .bc-ready .ticks li{max-width:none}
+  .bc-ready .shead{margin-bottom:clamp(20px,2.4vw,32px)}
+  .bc-followsec{background:var(--film-bg);color:var(--film-fg);--fg:var(--film-fg);--muted:var(--film-muted);--faint:var(--film-faint);--line:var(--film-line);--raise:var(--film-raise);padding-block:clamp(56px,7vw,96px)}
+  .bc-followsec .envbg{opacity:.4}
+  .bc-followsec .envbg::after{background:linear-gradient(180deg,var(--film-bg) 0%,color-mix(in srgb,var(--film-bg) 82%,transparent) 50%,var(--film-bg) 100%)}
+  @media(max-width:760px){.bc-ready .ticks{grid-template-columns:1fr}}
+  @media(prefers-reduced-motion:reduce){.bc-hero .envbg,.bc-followsec .envbg{transform:none!important}}
   .bc-cal{position:relative;min-width:0}
   .bc-cal-ph{display:grid;place-items:center;min-height:760px;padding:24px;text-align:center;
     font-family:var(--mono);font-size:13px;font-weight:500;letter-spacing:.04em;line-height:1.6;
@@ -1758,7 +1771,8 @@
 </defs></svg>
 
 <!-- 01 HERO: compact, no visual. the hero names the step and points down -->
-<section class="hero dark ahero bc-hero" id="hero">
+<section class="hero dark env ahero bc-hero" id="hero" style="--env:url(assets/env-founder-balcony.jpg)">
+  <div class="envbg" aria-hidden="true"></div>
   <div class="grad" aria-hidden="true"></div>
   <div class="wrap inner rv">
     <div class="pitch">
@@ -1769,16 +1783,22 @@
 </section>
 
 <!-- 03 HAVE THESE READY beside FOLLOW US: one white section, two columns (Luke, 2026.10.02). Was 02: HAVE THESE READY: moved here from /book-a-call (Luke, 2026.10.01). Shown after booking; the same list goes in the confirmation email. -->
-<section class="light" id="ready">
+<section class="dark bc-ready" id="ready">
   <div class="wrap rv">
-    <div class="bc-two">
-      <div class="bc-book-l">
+    <div class="bc-book-l">
         <div class="shead"><h2 class="ah">Have these<span class="it">ready.</span></h2>
         <p class="say">Bring your numbers, not a guess. The whole call runs on them, so the more exact they are, the better the plan.</p></div>
         <ul class="ticks"><li><span class="tk"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5.5 5.5L20 7"/></svg></span><span>Your last 30 days: ad spend, enquiries and jobs booked</span></li><li><span class="tk"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5.5 5.5L20 7"/></svg></span><span>What a job is worth to you</span></li><li><span class="tk"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5.5 5.5L20 7"/></svg></span><span>The marketing you&rsquo;re running now, what&rsquo;s worked and what hasn&rsquo;t</span></li><li><span class="tk"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5.5 5.5L20 7"/></svg></span><span>Anyone on your team who should be in the room, invite them along</span></li></ul>
     <p class="bc-miss">Need to move it? The reschedule link is in your confirmation email. Anything else, email <a href="mailto:sales@autoconvertdigital.com.au">sales@autoconvertdigital.com.au</a>.</p>
       </div>
-      <div class="bc-follow" id="follow">
+  </div>
+</section>
+
+<!-- 04 FOLLOW US: its own section, deeper shade of the hero, same image drifting (Luke, 2026.10.02) -->
+<section class="dark env bc-followsec" id="follow" style="--env:url(assets/env-founder-balcony.jpg)">
+  <div class="envbg" aria-hidden="true"></div>
+  <div class="wrap rv">
+      <div class="bc-follow">
     <div class="shead"><h2 class="ah">Follow us<span class="it">while you wait.</span></h2>
     <p class="sub">Tips, teardowns and the odd cat. Pick your platform.</p></div>
     <ul class="bc-social">
@@ -1789,7 +1809,6 @@
       <li><a href="https://open.spotify.com/playlist/11O69oFYBWeUKgEg4GUvx6" target="_blank" rel="noopener">Spotify</a></li>
     </ul>
       </div>
-    </div>
   </div>
 </section>
 
@@ -1831,6 +1850,12 @@ sync(); addEventListener("scroll",sync,{passive:true});
 if(!reduce&&"IntersectionObserver" in window){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}}),{threshold:.08});
  document.querySelectorAll(".rv").forEach(el=>io.observe(el));}
 else document.querySelectorAll(".rv").forEach(el=>el.classList.add("in"));
+
+/* slow parallax on the funnel backgrounds (Luke, 2026.10.02): the image drifts at a fraction of scroll speed */
+if(!reduce){const pb=[...document.querySelectorAll(".bc-hero .envbg,.bc-followsec .envbg")];
+ let tick=false;const drift=()=>{tick=false;const vh=innerHeight;pb.forEach(el=>{const r=el.parentElement.getBoundingClientRect();
+  if(r.bottom<-100||r.top>vh+100)return;el.style.transform="translate3d(0,"+((r.top+r.height/2-vh/2)*-.12).toFixed(1)+"px,0)"})};
+ addEventListener("scroll",()=>{if(!tick){tick=true;requestAnimationFrame(drift)}},{passive:true});addEventListener("resize",drift);drift();}
 
 /* themes (v12) */
 const THEMES=["night","sand","signal"],root=document.documentElement,tgl=E("tgl");
