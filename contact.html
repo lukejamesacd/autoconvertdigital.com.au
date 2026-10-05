@@ -1795,6 +1795,51 @@
   .ct-luke a:hover{text-decoration:underline}
 
   /* contact form card around the GHL embed */
+
+  /* contact (Luke, 2026.10.05): compact title hero, form directly under it, night CTA card, standard homepage footer */
+  .ahero.ct-hero{min-height:0;display:block;padding-block:calc(var(--hdrh,91px) + clamp(40px,6vw,84px)) clamp(36px,5vw,64px)}
+  .ct-hero .inner{grid-template-columns:1fr}
+  .ct-hero .envbg{opacity:.85;background-position:center 40%;-webkit-mask-image:linear-gradient(180deg,#000 0%,#000 72%,transparent 100%);mask-image:linear-gradient(180deg,#000 0%,#000 72%,transparent 100%)}
+  .ct-hero .envbg::after{background:linear-gradient(90deg,var(--dk-bg) 0%,color-mix(in srgb,var(--dk-bg) 82%,transparent) 36%,color-mix(in srgb,var(--dk-bg) 30%,transparent) 62%,color-mix(in srgb,var(--dk-bg) 12%,transparent) 100%)}
+  #message{padding-top:clamp(28px,4vw,56px)}
+  .ct-li{margin-top:18px}
+  .ct-final{background:var(--film-bg);color:var(--film-fg);--fg:var(--film-fg);--muted:var(--film-muted);--faint:var(--film-faint);--line:var(--film-line);--raise:var(--film-raise);isolation:isolate}
+  .ct-final .envbg{opacity:.45;background-position:center 40%}
+  .ct-final .envbg::after{background:linear-gradient(180deg,var(--film-bg) 0%,color-mix(in srgb,var(--film-bg) 70%,transparent) 40%,color-mix(in srgb,var(--film-bg) 70%,transparent) 70%,var(--film-bg) 100%)}
+  /* standard footer (homepage) */
+  footer{background:var(--dk-bg);color:var(--dk-fg);border-top:1px solid var(--dk-line);padding-block:60px 0;overflow:hidden;--fg:var(--dk-fg);--muted:var(--dk-muted);--faint:var(--dk-faint);--line:var(--dk-line)}
+  .frow{display:flex;flex-wrap:wrap;gap:18px 34px;align-items:baseline;padding-block:20px;border-bottom:1px solid var(--line)}
+  .frow:last-of-type{border-bottom:0}
+  .flinks a{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-decoration:none;margin-right:20px;white-space:nowrap;display:inline-block}
+  .flinks a:hover{color:var(--accent-t)}
+  .crew{display:flex;gap:26px;flex-wrap:wrap}
+  @media(max-width:600px){.crew{flex-direction:column;gap:18px}}
+  .crew div{display:flex;align-items:center;gap:12px}
+  .crew .av{width:44px;height:44px;border-radius:50%;background:var(--sc-bg);border:1px solid var(--line);display:block;overflow:hidden;flex:0 0 auto;padding:0;cursor:zoom-in;transition:transform .3s var(--ease),border-color .3s var(--ease)}
+  .crew .av:hover{transform:scale(1.08);border-color:var(--accent-t)}
+  .crew .av:focus-visible{outline:2px solid var(--accent-t);outline-offset:3px}
+  .lb{position:fixed;inset:0;z-index:200;display:grid;place-items:center;padding:5vmin;background:color-mix(in srgb,#05030A 88%,transparent);backdrop-filter:blur(6px);opacity:0;pointer-events:none;transition:opacity .35s var(--ease)}
+  .lb.on{opacity:1;pointer-events:auto}
+  .lb figure{margin:0;max-width:min(560px,90vw);width:100%;transform:scale(.94);transition:transform .35s var(--ease)}
+  .lb.on figure{transform:none}
+  .lb img{width:100%;height:auto;display:block;border:1px solid var(--line);clip-path:polygon(var(--ch) 0,100% 0,100% calc(100% - var(--ch)),calc(100% - var(--ch)) 100%,0 100%,0 var(--ch))}
+  .lb figcaption{margin-top:14px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#fff;opacity:.75;text-align:center}
+  .lb .x{position:absolute;top:18px;right:20px;width:42px;height:42px;border-radius:50%;cursor:pointer;border:1px solid color-mix(in srgb,#fff 30%,transparent);background:color-mix(in srgb,#fff 8%,transparent);color:#fff;font-size:20px;line-height:1;display:grid;place-items:center}
+  .crew .av img{width:100%;height:100%;object-fit:cover;display:block}
+  /* sources are square; each subject sits differently in frame, so frame per face */
+  .crew .av img[alt="Luke Wade"]{object-position:50% 40%}
+  .crew .av img[alt="Oskar"]{object-position:47% 38%}
+  .crew .av img[alt="Luna"]{object-position:50% 45%}
+  .crew .nm{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+  .crew .nm b{display:block;color:var(--fg);font-weight:500;margin-bottom:3px}
+  .ackrow{display:flex;gap:16px;align-items:flex-start}
+  .flags{display:flex;flex-direction:row;gap:8px;flex:none;padding-top:2px}
+  .flags svg{width:44px;height:29px;border:1px solid var(--line);display:block}
+  .ack{font-size:13px;color:var(--faint);max-width:none;font-style:italic}
+  @media(max-width:600px){.ackrow{flex-direction:column}}
+  .incl{font-size:13.5px;color:var(--muted)}
+  .bigmark{font-family:var(--display);font-size:clamp(60px,17vw,230px);line-height:.8;color:color-mix(in srgb,var(--fg) 9%,var(--dk-bg));margin-top:30px;margin-bottom:-.16em;text-transform:uppercase;white-space:nowrap}
+  .sources{font-family:var(--mono);font-size:10.5px;color:var(--faint);letter-spacing:.04em}
   .ct-formcard{position:relative;min-width:0;padding:clamp(22px,2.6vw,36px);border:1px solid var(--line);background:color-mix(in srgb,var(--raise) 45%,transparent);
       clip-path:polygon(var(--ch) 0,100% 0,100% calc(100% - var(--ch)),calc(100% - var(--ch)) 100%,0 100%,0 var(--ch))}
   .ct-ghl{display:block;width:100%;height:780px;border:0}
@@ -1856,51 +1901,21 @@ src="https://www.facebook.com/tr?id=2332249874247186&ev=PageView&noscript=1"
   <linearGradient id="icoPanel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--accent);stop-opacity:.22"/><stop offset="1" style="stop-color:var(--accent);stop-opacity:.03"/></linearGradient>
 </defs></svg>
 
-<!-- HERO -->
+<!-- HERO: just the title. The form sits directly under it (Luke, 2026.10.05) -->
 <section class="hero dark env ahero ct-hero" id="hero" style="--env:url(assets/env-founder-balcony.jpg)">
   <div class="envbg" aria-hidden="true"></div>
   <div class="wrap inner rv">
     <div class="pitch">
-      <h1 class="ah">Get in touch<span class="it">and get a straight answer.</span></h1>
-      <p class="lede">Ask about the audit, a strategy call, or anything else. AutoConvert Digital is run by one person, so Luke, the founder, reads every message himself.</p>
-      <div class="btns"><a class="btn" href="#form">Send a message &rarr;</a></div>
+      <h1 class="ah">Contact Us<span class="it">How can we help?</span></h1>
     </div>
   </div>
 </section>
 
-<!-- SIGNPOSTS: the two ways in, for anyone who already knows what they're after -->
-<section class="light" id="start">
-  <div class="wrap rv">
-    <div class="shead"><h2 class="ah">Skip the<span class="it">back-and-forth.</span></h2>
-    <p class="sub">If you already know what you&rsquo;re after, these get you there sooner than an email.</p></div>
-    <div class="tw-grid">
-      <article class="tw tw-yes ct-card">
-        <p class="kick">The $97 Meta Campaign Audit</p>
-        <div class="ftxt">
-          <h3>Want to know where your ad money goes?</h3>
-          <p>An expert audit of your Meta ads, offer, landing page, and lead capture. Your 3 biggest leaks, ranked by what each one costs you, and what to fix first. In your inbox in 48 hours.</p>
-        </div>
-        <div class="btns"><a class="btn" href="https://autoconvertdigital.com.au/audit">Get your $97 audit &rarr;</a></div>
-        <p class="fc-trust">Money-back guarantee &middot; No sales call &middot; Read-only access</p>
-      </article>
-      <article class="tw ct-card">
-        <p class="kick">Strategy call</p>
-        <div class="ftxt">
-          <h3>Already know you want it built?</h3>
-          <p>Apply for a strategy call to have your Meta campaign built and managed for you. You fill in a short application first, so Luke comes to the call knowing your numbers.</p>
-        </div>
-        <div class="btns"><a class="btn ghost" href="https://autoconvertdigital.com.au/strategy-call">Apply for a strategy call &rarr;</a></div>
-        <p class="fc-trust">You deal with Luke directly &middot; No junior account managers</p>
-      </article>
-    </div>
-  </div>
-</section>
+
 
 <!-- CONTACT DETAILS + MESSAGE FORM -->
 <section class="dark" id="message">
   <div class="wrap rv">
-    <div class="shead"><h2 class="ah">Anything else,<span class="it">ask here.</span></h2>
-    <p class="sub">Questions about working together, or something the other pages don&rsquo;t cover. Send it through and you&rsquo;ll get a reply by email.</p></div>
     <div class="ct-grid">
 
       <div class="ct-details">
@@ -1909,11 +1924,12 @@ src="https://www.facebook.com/tr?id=2332249874247186&ev=PageView&noscript=1"
           <div class="ct-row"><dt>ABN</dt><dd>58 593 675 977<span>Luke Wade trading as AutoConvert Digital</span></dd></div>
         </dl>
         <div class="ct-who">
-          <p class="kick">Who reads your message</p>
+          <p class="kick">Connect with Us</p>
           <div class="ct-luke">
             <img src="assets/people/luke-avatar.jpg" alt="Luke Wade" width="56" height="56" loading="lazy">
-            <p><b>Luke Wade</b><span>Founder &amp; Chief Conversion Officer</span><a href="https://www.linkedin.com/in/wadeluke/" target="_blank" rel="noopener">Luke on LinkedIn &rarr;</a></p>
+            <p><b>Luke Wade</b><span>Founder &amp; Chief Conversion Officer</span></p>
           </div>
+          <a class="btn ghost ct-li" href="https://www.linkedin.com/in/wadeluke/" target="_blank" rel="noopener">Connect on LinkedIn &rarr;</a>
         </div>
       </div>
 
@@ -1935,30 +1951,73 @@ src="https://www.facebook.com/tr?id=2332249874247186&ev=PageView&noscript=1"
   </div>
 </section>
 
+<!-- FINAL CTA: the two ways in, for anyone who scrolls this far. Night card with the hero image behind it. -->
+<section class="dark env ct-final" id="start" style="--env:url(assets/env-founder-balcony.jpg)">
+  <div class="envbg" aria-hidden="true"></div>
+  <div class="wrap rv">
+    <div class="shead"><h2 class="ah">Not sure<span class="it">where to start?</span></h2></div>
+    <div class="tw-grid">
+      <article class="tw tw-yes ct-card">
+        <p class="kick">The $97 Meta Campaign Audit</p>
+        <div class="ftxt">
+          <h3>Want to know where your ad money goes?</h3>
+          <p>An expert audit of your Meta ads, offer, landing page, and lead capture. Your 3 biggest leaks, ranked by what each one costs you, and what to fix first. In your inbox in 48 hours.</p>
+        </div>
+        <div class="btns"><a class="btn" href="https://autoconvertdigital.com.au/audit">Get your $97 audit &rarr;</a></div>
+        <p class="fc-trust">Money-back guarantee &middot; No sales call &middot; Read-only access</p>
+      </article>
+      <article class="tw ct-card">
+        <p class="kick">Strategy call</p>
+        <div class="ftxt">
+          <h3>Already know what you need?</h3>
+          <p>Apply for a strategy call to have your Meta campaign set up and managed for you. You fill in a short application first, so Luke comes to the call knowing your numbers.</p>
+        </div>
+        <div class="btns"><a class="btn ghost" href="https://autoconvertdigital.com.au/strategy-call">Apply for a strategy call &rarr;</a></div>
+        <p class="fc-trust">You deal with Luke directly &middot; No junior account managers</p>
+      </article>
+    </div>
+  </div>
+</section>
+
 </main>
 
-<footer class="lp">
+<footer>
   <div class="wrap">
     <div class="frow">
       <div>
-        <div class="brand"><svg class="logo" viewBox="0 0 1535 279" role="img" aria-label="AutoConvert Digital"><path class="lg-a" d="M0 0H64V9H9V64H0Z M1534.4140625 278.0H1470.4140625V269.0H1525.4140625V214.0H1534.4140625Z"/><path class="lg-t" d="M84.197265625 202.53759765625 96.6484375 73.63134765625H140.3740234375L152.60546875 202.53759765625H128.2158203125L126.384765625 181.73681640625H110.857421875L109.24609375 202.53759765625ZM112.6884765625 161.15576171875H124.4072265625L118.767578125 95.60400390625H117.595703125Z M199.3251953125 203.70947265625Q183.2119140625 203.70947265625 175.5947265625 194.6640625Q167.9775390625 185.61865234375 167.9775390625 168.04052734375V73.63134765625H193.0263671875V167.01513671875Q193.0263671875 170.23779296875 193.392578125 173.2041015625Q193.7587890625 176.17041015625 195.0771484375 178.07470703125Q196.3955078125 179.97900390625 199.3251953125 179.97900390625Q202.328125 179.97900390625 203.646484375 178.111328125Q204.96484375 176.24365234375 205.29443359375 173.24072265625Q205.6240234375 170.23779296875 205.6240234375 167.01513671875V73.63134765625H230.6728515625V168.04052734375Q230.6728515625 185.61865234375 223.0556640625 194.6640625Q215.4384765625 203.70947265625 199.3251953125 203.70947265625Z M260.6201171875 202.53759765625V98.38720703125H245.3125V73.63134765625H301.708984375V98.38720703125H286.4013671875V202.53759765625Z M348.6484375 203.70947265625Q333.1943359375 203.70947265625 325.02783203125 194.37109375Q316.861328125 185.03271484375 316.861328125 167.38134765625V106.15087890625Q316.861328125 89.59814453125 324.95458984375 81.02880859375Q333.0478515625 72.45947265625 348.6484375 72.45947265625Q364.2490234375 72.45947265625 372.34228515625 81.02880859375Q380.435546875 89.59814453125 380.435546875 106.15087890625V167.38134765625Q380.435546875 185.03271484375 372.26904296875 194.37109375Q364.1025390625 203.70947265625 348.6484375 203.70947265625ZM348.8681640625 179.97900390625Q354.7275390625 179.97900390625 354.7275390625 168.62646484375V105.71142578125Q354.7275390625 96.18994140625 349.0146484375 96.18994140625Q342.5693359375 96.18994140625 342.5693359375 105.93115234375V168.77294921875Q342.5693359375 174.77880859375 344.0341796875 177.37890625Q345.4990234375 179.97900390625 348.8681640625 179.97900390625Z M429.865234375 203.70947265625Q415.8759765625 203.70947265625 407.34326171875 194.99365234375Q398.810546875 186.27783203125 398.810546875 170.60400390625V111.13134765625Q398.810546875 92.38134765625 406.24462890625 82.42041015625Q413.6787109375 72.45947265625 430.451171875 72.45947265625Q439.6064453125 72.45947265625 446.74755859375 75.82861328125Q453.888671875 79.19775390625 457.990234375 85.8994140625Q462.091796875 92.60107421875 462.091796875 102.78173828125V125.04736328125H436.45703125V106.00439453125Q436.45703125 100.21826171875 434.9921875 98.2041015625Q433.52734375 96.18994140625 430.451171875 96.18994140625Q426.8623046875 96.18994140625 425.6171875 98.7900390625Q424.3720703125 101.39013671875 424.3720703125 105.71142578125V170.23779296875Q424.3720703125 175.58447265625 425.94677734375 177.78173828125Q427.521484375 179.97900390625 430.451171875 179.97900390625Q433.7470703125 179.97900390625 435.10205078125 177.26904296875Q436.45703125 174.55908203125 436.45703125 170.23779296875V147.02001953125H462.384765625V171.40966796875Q462.384765625 188.40185546875 453.8154296875 196.0556640625Q445.24609375 203.70947265625 429.865234375 203.70947265625Z M510.7158203125 203.70947265625Q495.26171875 203.70947265625 487.09521484375 194.37109375Q478.9287109375 185.03271484375 478.9287109375 167.38134765625V106.15087890625Q478.9287109375 89.59814453125 487.02197265625 81.02880859375Q495.115234375 72.45947265625 510.7158203125 72.45947265625Q526.31640625 72.45947265625 534.40966796875 81.02880859375Q542.5029296875 89.59814453125 542.5029296875 106.15087890625V167.38134765625Q542.5029296875 185.03271484375 534.33642578125 194.37109375Q526.169921875 203.70947265625 510.7158203125 203.70947265625ZM510.935546875 179.97900390625Q516.794921875 179.97900390625 516.794921875 168.62646484375V105.71142578125Q516.794921875 96.18994140625 511.08203125 96.18994140625Q504.63671875 96.18994140625 504.63671875 105.93115234375V168.77294921875Q504.63671875 174.77880859375 506.1015625 177.37890625Q507.56640625 179.97900390625 510.935546875 179.97900390625Z M561.9033203125 202.53759765625V73.63134765625H588.4169921875L600.2822265625 135.37451171875V73.63134765625H625.1845703125V202.53759765625H599.9892578125L587.0986328125 138.08447265625V202.53759765625Z M657.4755859375 202.53759765625 641.58203125 73.55810546875H666.1181640625L675.56640625 161.30224609375L683.9892578125 73.55810546875H708.525390625L692.6318359375 202.53759765625Z M724.99609375 202.53759765625V73.63134765625H776.55859375V98.53369140625H751.216796875V123.65576171875H775.533203125V147.89892578125H751.216796875V177.41552734375H778.2431640625V202.53759765625Z M795.7392578125 202.53759765625V73.63134765625H835.2900390625Q845.177734375 73.63134765625 850.2314453125 78.1357421875Q855.28515625 82.64013671875 857.00634765625 90.7333984375Q858.7275390625 98.82666015625 858.7275390625 109.73974609375Q858.7275390625 120.28662109375 856.05419921875 126.58544921875Q853.380859375 132.88427734375 845.9833984375 135.30126953125Q852.0625 136.54638671875 854.51611328125 141.34375Q856.9697265625 146.14111328125 856.9697265625 153.75830078125V202.53759765625H831.5546875V152.07373046875Q831.5546875 146.43408203125 829.24755859375 145.0791015625Q826.9404296875 143.72412109375 821.8134765625 143.72412109375V202.53759765625ZM821.9599609375 121.38525390625H828.185546875Q833.5322265625 121.38525390625 833.5322265625 109.73974609375Q833.5322265625 102.19580078125 832.3603515625 99.85205078125Q831.1884765625 97.50830078125 827.9658203125 97.50830078125H821.9599609375Z M887.283203125 202.53759765625V98.38720703125H871.9755859375V73.63134765625H928.3720703125V98.38720703125H913.064453125V202.53759765625Z"/><path class="lg-a" d="M988.7060546875 202.53759765625V73.63134765625H1024.1552734375Q1038.0712890625 73.63134765625 1045.1025390625 81.3583984375Q1052.1337890625 89.08544921875 1052.1337890625 103.95361328125V164.30517578125Q1052.1337890625 182.61572265625 1045.72509765625 192.57666015625Q1039.31640625 202.53759765625 1023.2763671875 202.53759765625ZM1014.6337890625 179.75927734375H1019.1015625Q1026.2060546875 179.75927734375 1026.2060546875 172.87451171875V106.37060546875Q1026.2060546875 99.92529296875 1024.48486328125 98.0576171875Q1022.763671875 96.18994140625 1017.490234375 96.18994140625H1014.6337890625Z M1070.5087890625 202.53759765625V73.63134765625H1095.4111328125V202.53759765625Z M1141.251953125 203.70947265625Q1113.6396484375 203.70947265625 1113.6396484375 164.15869140625V108.56787109375Q1113.6396484375 72.45947265625 1145.2802734375 72.45947265625Q1158.3173828125 72.45947265625 1165.275390625 77.6962890625Q1172.2333984375 82.93310546875 1174.8701171875 92.96728515625Q1177.5068359375 103.00146484375 1177.5068359375 117.43017578125H1152.3115234375V106.00439453125Q1152.3115234375 101.82958984375 1151.17626953125 99.009765625Q1150.041015625 96.18994140625 1146.4521484375 96.18994140625Q1141.984375 96.18994140625 1140.55615234375 99.19287109375Q1139.1279296875 102.19580078125 1139.1279296875 105.78466796875V168.26025390625Q1139.1279296875 173.46044921875 1140.48291015625 176.7197265625Q1141.837890625 179.97900390625 1145.79296875 179.97900390625Q1149.89453125 179.97900390625 1151.24951171875 176.7197265625Q1152.6044921875 173.46044921875 1152.6044921875 168.11376953125V149.72998046875H1145.7197265625V127.46435546875H1177.2138671875V202.53759765625H1166.88671875L1162.4921875 191.69775390625Q1155.75390625 203.70947265625 1141.251953125 203.70947265625Z M1195.22265625 202.53759765625V73.63134765625H1220.125V202.53759765625Z M1250.4384765625 202.53759765625V98.38720703125H1235.130859375V73.63134765625H1291.52734375V98.38720703125H1276.2197265625V202.53759765625Z M1304.189453125 202.53759765625 1316.640625 73.63134765625H1360.3662109375L1372.59765625 202.53759765625H1348.2080078125L1346.376953125 181.73681640625H1330.849609375L1329.23828125 202.53759765625ZM1332.6806640625 161.15576171875H1344.3994140625L1338.759765625 95.60400390625H1337.587890625Z M1389.5078125 202.53759765625V73.63134765625H1415.2890625V180.56494140625H1441.802734375V202.53759765625Z"/></svg></div>
+        <div class="brand" style="font-size:20px">AutoConvert <b>Digital</b></div>
         <p class="fineprint" style="margin-top:8px">Marketing that just works.</p>
       </div>
+      <div style="margin-left:auto" class="fineprint">Gold Coast, Queensland · Working with businesses Australia-wide<br>ABN 58 593 675 977</div>
+    </div>
+    <div class="frow crew">
+      <div><button class="av" type="button" data-full="assets/people/luke-avatar-full.jpg" aria-label="View full photo of Luke Wade"><img src="assets/people/luke-avatar.jpg" alt="Luke Wade" loading="lazy"></button><span class="nm"><b>Luke Wade</b>Chief Conversion Officer</span></div>
+      <div><button class="av" type="button" data-full="assets/people/oskar-full.jpg" aria-label="View full photo of Oskar"><img src="assets/people/oskar.jpg" alt="Oskar" loading="lazy"></button><span class="nm"><b>Oskar</b>Chief Meowketing Officer</span></div>
+      <div><button class="av" type="button" data-full="assets/people/luna-full.jpg" aria-label="View full photo of Luna"><img src="assets/people/luna.jpg" alt="Luna" loading="lazy"></button><span class="nm"><b>Luna</b>Head of Purrformance</span></div>
     </div>
     <div class="frow flinks">
-      <div><a href="https://autoconvertdigital.com.au/privacy">Privacy policy</a><a href="https://autoconvertdigital.com.au/terms">Terms</a><a href="https://autoconvertdigital.com.au/refunds">Refund policy</a><a href="https://autoconvertdigital.com.au/terms#disclaimer">Disclaimers</a></div>
-      <div style="margin-left:auto" class="quiet">Already know you want it built? <a href="https://autoconvertdigital.com.au/strategy-call">Apply for a strategy call&nbsp;&rarr;</a></div>
+      <div><a href="/audit">The $97 audit</a><a href="/strategy-call">Apply for a strategy call</a><a href="/contact">Contact</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/refunds">Refund policy</a></div>
+      <div style="margin-left:auto"><a href="https://share.google/fACTnaPU91Maqthym" target="_blank" rel="noopener">Google</a><a href="https://www.facebook.com/autoconvertdigitalgc" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/autoconvertdigital/" target="_blank" rel="noopener">Instagram</a><a href="https://www.linkedin.com/in/wadeluke/" target="_blank" rel="noopener">LinkedIn</a><a href="https://open.spotify.com/playlist/11O69oFYBWeUKgEg4GUvx6?si=bd427d418a234705" target="_blank" rel="noopener">Spotify</a></div>
     </div>
-    <div class="frow legal">
-      <p><b>Platform disclaimer:</b> This site is not part of the Facebook or Instagram websites or Meta Platforms, Inc. This site is not endorsed by Meta in any way. Facebook, Instagram and Meta are trademarks of Meta Platforms, Inc. AutoConvert Digital is not affiliated with or endorsed by Google LLC. Google is a trademark of Google LLC.</p>
-      <p><b>Earnings disclaimer:</b> We cannot promise any particular result. Results depend on many things we do not control: your offer, your market, your budget, your follow-up, your team, timing and the platforms themselves. Any examples, case studies or testimonials describe one business&rsquo;s experience. They are not typical and are not a guarantee of what you will get. Your results may be better, worse or different.</p>
-      <p><b>Liability disclaimer:</b> The content on this page is general information about marketing. It is not financial, investment, tax, accounting or legal advice. Talk to a qualified professional before making decisions in those areas, including how much to spend on ads. Meta, Google and other platforms make their own rules and change them often, and we are not responsible for their decisions, including ad rejections, account restrictions, policy changes or outages. We are not liable for indirect or consequential loss, such as lost profits or wasted ad spend, except where the law says we must be.</p>
-      <p><b>Your consumer rights:</b> Our services come with guarantees that cannot be excluded under the Australian Consumer Law. Nothing on this page or in our <a href="https://autoconvertdigital.com.au/terms">terms</a> removes or limits those rights. <a href="https://autoconvertdigital.com.au/terms#disclaimer">Full disclaimers</a>.</p>
-      <p class="entity">Luke Wade trading as AutoConvert Digital &middot; ABN 58 593 675 977</p>
+    <div class="frow" style="flex-direction:column;gap:14px">
+      <p class="incl" style="margin:0">∞ 🏳️‍🌈 Neurodivergent-owned. Hyperfocus included at no extra cost. LGBTQIA+ inclusive.</p>
+      <div class="ackrow">
+        <span class="flags">
+          <svg viewBox="0 0 60 40" role="img" aria-label="Aboriginal flag"><rect width="60" height="20" fill="#000"/><rect y="20" width="60" height="20" fill="#C00"/><circle cx="30" cy="20" r="9" fill="#FC0"/></svg>
+          <svg viewBox="0 0 60 40" role="img" aria-label="Torres Strait Islander flag"><rect width="60" height="40" fill="#00A94F"/><rect y="6" width="60" height="28" fill="#000"/><rect y="9" width="60" height="22" fill="#0072CE"/><path d="M30 12.5c4.6 0 8.4 1.9 8.4 1.9l-1.6 2.2c0 0-3-1.5-6.8-1.5s-6.8 1.5-6.8 1.5l-1.6-2.2c0 0 3.8-1.9 8.4-1.9z" fill="#fff"/><path d="M22.6 16.6h2.2v3.2h-2.2zM27 16.9h2.2v3.4H27zM31.4 16.9h2.2v3.4h-2.2zM35.8 16.6h2.2v3.2h-2.2z" fill="#fff"/><path d="M30 21.4l1.5 3.1 3.4.5-2.5 2.4.6 3.4-3-1.6-3 1.6.6-3.4-2.5-2.4 3.4-.5z" fill="#fff"/></svg>
+        </span>
+        <p class="ack" style="margin:0">AutoConvert Digital acknowledges the Traditional Custodians of the land on which we work, the Kombumerri families of the <a href="https://www.yugambeh.com/">Yugambeh Language Region</a>, and the Traditional Custodians of the lands where our clients live and work. We pay our respects to Elders past and present.</p>
+      </div>
+      <p class="sources" style="margin:0">&copy; 2026 AutoConvert Digital &middot; <a href="mailto:sales@autoconvertdigital.com.au">sales@autoconvertdigital.com.au</a></p>
     </div>
-    <div class="bigmark" aria-hidden="true">AutoConvert</div>
+    <div class="bigmark">AutoConvert</div>
   </div>
 </footer>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo">
+  <button class="x" type="button" id="lbX" aria-label="Close photo">×</button>
+  <figure><img id="lbImg" src="" alt=""><figcaption id="lbCap"></figcaption></figure>
+</div>
+
 
 <script>
 const reduce=matchMedia("(prefers-reduced-motion:reduce)").matches, E=id=>document.getElementById(id);
@@ -1984,5 +2043,36 @@ setTheme(THEMES.includes(sv)?sv:"night");
 if(tgl)tgl.onclick=()=>setTheme(THEMES[(THEMES.indexOf(root.dataset.current||"night")+1)%THEMES.length]);
 </script>
 <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+<script>
+(()=>{loopTick=0;syncLoops();}); }
+    // A pinned loop can be paused by one off-screen frame mid-scroll; without a
+    // pass after scrolling stops it would sit on a still frame forever.
+    clearTimeout(loopSettle); loopSettle=setTimeout(syncLoops,180);
+  },{passive:true});
+  addEventListener("resize",syncLoops,{passive:true});
+  syncLoops();
+})();
+</script>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo">
+  <button class="x" type="button" id="lbX" aria-label="Close photo">×</button>
+  <figure><img id="lbImg" src="" alt=""><figcaption id="lbCap"></figcaption></figure>
+</div>
+<script>
+(function(){
+  const lb=document.getElementById("lb"), img=document.getElementById("lbImg"),
+        cap=document.getElementById("lbCap"), x=document.getElementById("lbX");
+  let last=null;
+  const open=btn=>{ last=btn; const i=btn.querySelector("img");
+    img.src=btn.dataset.full; img.alt=i.alt; cap.textContent=i.alt;
+    lb.classList.add("on"); x.focus(); document.body.style.overflow="hidden"; };
+  const close=()=>{ lb.classList.remove("on"); document.body.style.overflow="";
+    if(last) last.focus(); };
+  document.querySelectorAll(".crew .av").forEach(b=>b.addEventListener("click",()=>open(b)));
+  x.addEventListener("click",close);
+  lb.addEventListener("click",e=>{ if(e.target===lb||e.target.tagName==="FIGURE") close(); });
+  addEventListener("keydown",e=>{ if(e.key==="Escape"&&lb.classList.contains("on")) close(); });
+})();
+</script>
 </body>
 </html>
