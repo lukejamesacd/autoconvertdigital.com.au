@@ -1,227 +1,1626 @@
-<!doctype html>
-<html lang="en-AU">
-<head>
 <meta charset="utf-8">
-<title>AutoConvert Digital · Marketing that just works · Gold Coast</title>
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Marketing that just works. We fix what happens after the click, so more of your leads become sales. Gold Coast, working with businesses Australia-wide.">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://autoconvertdigital.com.au/">
-<meta name="theme-color" content="#0B0713">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="AutoConvert Digital">
-<meta property="og:title" content="AutoConvert Digital · Marketing that just works">
-<meta property="og:description" content="We fix what happens after the click, so more of your leads become sales. New site coming soon.">
-<meta property="og:url" content="https://autoconvertdigital.com.au/">
-<meta property="og:image" content="https://autoconvertdigital.com.au/assets/people/luke-avatar-full.jpg">
-<meta property="og:locale" content="en_AU">
-<meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@graph": [
-  {
-   "@type": "ProfessionalService",
-   "@id": "https://autoconvertdigital.com.au/#business",
-   "name": "AutoConvert Digital",
-   "url": "https://autoconvertdigital.com.au/",
-   "slogan": "Marketing that just works.",
-   "description": "Marketing that just works. We fix what happens after the click, so more of your leads become sales.",
-   "email": "sales@autoconvertdigital.com.au",
-   "image": "https://autoconvertdigital.com.au/assets/people/luke-avatar-full.jpg",
-   "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Labrador",
-    "addressRegion": "QLD",
-    "postalCode": "4215",
-    "addressCountry": "AU"
-   },
-   "areaServed": {
-    "@type": "Country",
-    "name": "Australia"
-   },
-   "identifier": {
-    "@type": "PropertyValue",
-    "propertyID": "ABN",
-    "value": "58 593 675 977"
-   },
-   "foundingDate": "2026",
-   "founder": {
-    "@id": "https://autoconvertdigital.com.au/#luke"
-   },
-   "knowsAbout": [
-    "Meta advertising",
-    "Landing pages",
-    "Lead capture and CRM setup",
-    "Speed-to-lead and follow-up automation",
-    "Conversion copywriting"
-   ],
-   "sameAs": [
-    "https://www.instagram.com/autoconvertdigital/"
-   ]
-  },
-  {
-   "@type": "Person",
-   "@id": "https://autoconvertdigital.com.au/#luke",
-   "name": "Luke Wade",
-   "jobTitle": "Founder",
-   "worksFor": {
-    "@id": "https://autoconvertdigital.com.au/#business"
-   },
-   "image": "https://autoconvertdigital.com.au/assets/people/luke-avatar-full.jpg"
-  },
-  {
-   "@type": "WebSite",
-   "@id": "https://autoconvertdigital.com.au/#website",
-   "url": "https://autoconvertdigital.com.au/",
-   "name": "AutoConvert Digital",
-   "inLanguage": "en-AU",
-   "publisher": {
-    "@id": "https://autoconvertdigital.com.au/#business"
-   }
-  }
- ]
-}
-</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AutoConvert Digital</title>
+<meta property="og:image" content="assets/hf/cta-v6.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap">
 <style>
   :root{
-    /* Night theme, copied from the audit page (v10) so the two read as one site */
-    --bg:#0B0713; --fg:#F2EFF7; --muted:#A79FB8; --faint:#6D6582; --line:#2C2342; --raise:#140D22;
-    --accent:#6E2CF4; --accent-t:#A986FF; --it:#BFA3FF;
+    /* THEME 1 · NIGHT — plum black ground, purple gradient (G2) */
+    --dk-bg:#0B0713; --dk-fg:#F2EFF7; --dk-muted:#A79FB8; --dk-faint:#6D6582; --dk-line:#2C2342; --dk-raise:#140D22;
+    --lt-bg:#F6F5F8; --lt-fg:#111111; --lt-muted:#5C5568; --lt-faint:#8A8398; --lt-line:#E0DCE8; --lt-raise:#FFFFFF;
+    --accent:#6E2CF4; --accent-t:#A986FF;
     --grad:linear-gradient(118deg,#2A1160 0%,#6E2CF4 62%,#8B4DFF 100%);
+    --grad-soft:radial-gradient(85% 70% at 78% 12%,rgba(110,44,244,.26),transparent 62%),radial-gradient(60% 50% at 8% 92%,rgba(110,44,244,.13),transparent 66%);
+    --next-grad:linear-gradient(118deg,#FF3D00,#FF6A1A 45%,#FFB84D 100%);
+    --btn-fg:#FFFFFF;
+    --it-dk:#BFA3FF; --it-lt:#7A3CFF;
+    /* the bridge stage is a full-screen colour block, and the scorecard is an
+       instrument panel: both were hardcoded Night purple, so neither followed a
+       theme change. They read from these now. */
+    --bridge:#150929;
+    --film-bg:#0B0713; --film-fg:#F2EFF7; --film-muted:#A79FB8; --film-faint:#6D6582; --film-line:#2C2342; --film-raise:#140D22;
+    --sc-bg:#0F0A1C; --sc-fg:#F2EFF7; --sc-muted:#A79FB8; --sc-line:#2C2342; --sc-track:#1B1330;
     --display:"Anton",Impact,"Arial Narrow",sans-serif;
     --serif:"Instrument Serif",Georgia,serif;
     --body:"Manrope","Helvetica Neue",Arial,sans-serif;
     --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
     --ease:cubic-bezier(.2,.7,.1,1);
-    --ch:12px;
+    --ch:14px;
+    --gut:clamp(20px,5vw,80px);
+    color-scheme:dark;
+  }
+  /* THEME 2 · BRIGHT CLAY — light paper ground, neon orange to amber (chosen 2026.09.17) */
+  [data-theme="sand"]{
+    --dk-bg:#FBF6EF; --dk-fg:#140C08; --dk-muted:#5E5046; --dk-faint:#8C7E73; --dk-line:#EDE0D0; --dk-raise:#FFFFFF;
+    --lt-bg:#171009; --lt-fg:#F5EDE1; --lt-muted:#BFB09C; --lt-faint:#8E8172; --lt-line:#33271A; --lt-raise:#211709;
+    --accent:#FF3D00; --accent-t:#FFB84D;
+    --grad:linear-gradient(118deg,#FF3D00,#FF6A1A 45%,#FFB84D 100%);
+    --grad-soft:radial-gradient(85% 70% at 78% 12%,rgba(255,61,0,.16),transparent 62%),radial-gradient(60% 50% at 8% 92%,rgba(255,184,77,.26),transparent 66%);
+    --it-dk:#FF3D00; --it-lt:#FFB84D;
+    --next-grad:linear-gradient(118deg,#FFB400,#FFD400 45%,#FFF08A 100%);
+    --btn-fg:#FFF6EC;
+    --bridge:#1C1108;
+    --film-bg:#171009; --film-fg:#F5EDE1; --film-muted:#BFB09C; --film-faint:#8E8172; --film-line:#33271A; --film-raise:#211709;
+    --sc-bg:#FFFFFF; --sc-fg:#140C08; --sc-muted:#5E5046; --sc-line:#E7D8C6; --sc-track:#F1E5D5;
+    color-scheme:light;
+  }
+  /* on the light paper sections the amber is too pale for small labels, so they take a deeper orange */
+  [data-theme="sand"] .site-hd,[data-theme="sand"] header,[data-theme="sand"] footer,[data-theme="sand"] .dark{--accent-t:#D63A00}
+  [data-theme="sand"] .dark .light{--accent-t:#FFB84D}
+  /* THEME 3 · ULTRAMARINE — deep blue ground, yellow as the pop */
+  [data-theme="signal"]{
+    --dk-bg:#0D1247; --dk-fg:#EDF0FF; --dk-muted:#A9B3E8; --dk-faint:#6C77BE; --dk-line:#232C7A; --dk-raise:#141A5E;
+    --lt-bg:#EEF0FF; --lt-fg:#0B1040; --lt-muted:#4A5395; --lt-faint:#7B84C0; --lt-line:#D5D9F5; --lt-raise:#FFFFFF;
+    --accent:#1B2ACC; --accent-t:#FFD400;
+    --grad:linear-gradient(118deg,#FFB400 0%,#FFD400 46%,#FFF08A 100%);
+    --grad-soft:radial-gradient(85% 70% at 78% 12%,rgba(27,42,204,.42),transparent 62%),radial-gradient(60% 50% at 8% 92%,rgba(255,212,0,.14),transparent 66%);
+    --next-grad:linear-gradient(118deg,#2A1160,#6E2CF4 62%,#8B4DFF 100%);
+    --btn-fg:#0B1040;
+    --it-dk:#FFD400; --it-lt:#1B2ACC;
+    /* the bridge is the one place the ultramarine goes full field */
+    --bridge:#1B2ACC;
+    --film-bg:#090D33; --film-fg:#EDF0FF; --film-muted:#A9B3E8; --film-faint:#6C77BE; --film-line:#232C7A; --film-raise:#111751;
+    --sc-bg:#0A0E3A; --sc-fg:#EDF0FF; --sc-muted:#A9B3E8; --sc-line:#232C7A; --sc-track:#161C63;
     color-scheme:dark;
   }
   *{box-sizing:border-box}
-  html{background:var(--bg)}
-  body{margin:0;min-height:100vh;min-height:100dvh;background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.55;
-    -webkit-font-smoothing:antialiased;display:flex;flex-direction:column;align-items:center;
-    padding:max(18px,env(safe-area-inset-top)) 20px max(28px,env(safe-area-inset-bottom));position:relative;overflow-x:hidden}
+  html{background:var(--dk-bg);scroll-behavior:smooth}
+  body{margin:0;background:var(--dk-bg);color:var(--dk-fg);font-family:var(--body);font-size:16px;line-height:1.6;overflow-x:hidden;transition:background .5s var(--ease),color .5s var(--ease)}
+  a{color:inherit}
+  :focus-visible{outline:2px solid var(--accent-t);outline-offset:3px}
+  img{max-width:100%}
 
-  /* one soft violet glow and a faint grid, no video: this page gets opened on phones, so it has to be instant */
-  body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
-    background:
-      radial-gradient(70% 45% at 50% 0%,rgba(110,44,244,.30),transparent 70%),
-      radial-gradient(55% 40% at 50% 100%,rgba(110,44,244,.14),transparent 70%)}
-  body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.35;
-    background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
-    background-size:44px 44px;
-    -webkit-mask-image:radial-gradient(80% 60% at 50% 30%,#000 0%,transparent 75%);mask-image:radial-gradient(80% 60% at 50% 30%,#000 0%,transparent 75%)}
+  .wrap{max-width:1240px;margin:0 auto;padding-inline:var(--gut)}
+  section{position:relative;padding-block:clamp(72px,10vw,140px);transition:background .5s var(--ease),color .5s var(--ease)}
+  .dark{background:var(--dk-bg);color:var(--dk-fg)}
+  .light{background:var(--lt-bg);color:var(--lt-fg)}
+  .dark .grad,.light .grad{position:absolute;inset:0;pointer-events:none}
+  .dark .grad{background:var(--grad-soft)}
+  .light .grad{background:var(--grad-soft)}
+  .dark .wrap,.light .wrap{position:relative}
+  .dark{--fg:var(--dk-fg);--muted:var(--dk-muted);--faint:var(--dk-faint);--line:var(--dk-line);--raise:var(--dk-raise)}
+  /* footage needs a dark ground to read against, in every theme */
+  .hero-film,.final-film{background:var(--film-bg);color:var(--film-fg);
+    --fg:var(--film-fg);--muted:var(--film-muted);--faint:var(--film-faint);--line:var(--film-line);--raise:var(--film-raise)}
+  /* the same goes for the sections that are dark stages by design: the bridge,
+     the vibe check and the testimonial stage all sit on a dark field or a dark
+     environment plate, so their type takes the film set rather than the page's */
+  .midcta,.vibe-pin,.env-stage{color:var(--film-fg);
+    --fg:var(--film-fg);--muted:var(--film-muted);--faint:var(--film-faint);--line:var(--film-line);--raise:var(--film-raise)}
+  .env-stage{background:var(--film-bg)}
+  .light{--fg:var(--lt-fg);--muted:var(--lt-muted);--faint:var(--lt-faint);--line:var(--lt-line);--raise:var(--lt-raise)}
 
-  main{position:relative;z-index:1;width:100%;max-width:440px;display:flex;flex-direction:column}
+  h1,h2,h3{margin:0;font-weight:400;text-wrap:balance}
+  .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-t);margin:0 0 18px}
+  .light .eyebrow{color:var(--accent)}
+  /* headline: Anton line, then the italic on its own line beneath */
+  .h2{font-family:var(--display);font-size:clamp(50px,7.6vw,110px);line-height:.9;letter-spacing:.005em;text-transform:uppercase}
+  .h2.xl{font-size:clamp(64px,10.5vw,168px);line-height:.84}
+  .tm{font-size:.52em;line-height:1;letter-spacing:.02em;align-self:flex-start;position:relative;top:.06em}
+  .h2 .tm,.hero .tm{font-size:.26em;align-self:auto;vertical-align:super;line-height:0;top:-.1em}
+  .h2 .it{display:block;font-family:var(--serif);font-style:italic;font-size:.74em;line-height:1.04;letter-spacing:0;text-transform:none;margin-top:.04em;color:var(--it-dk);padding-bottom:.06em}
+  .light .h2 .it{color:var(--it-lt)}
+  .lede{font-size:clamp(16px,1.5vw,19px);max-width:60ch;color:var(--muted);margin-top:22px}
+  .mono{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase}
 
-  /* bracket wordmark, same device as the Facebook cover */
-  .mark{align-self:center;position:relative;display:inline-block;padding:9px 18px;margin:4px 0 4px;
-    font-family:var(--display);font-size:17px;letter-spacing:.08em;text-transform:uppercase;color:var(--fg);text-decoration:none}
-  .mark b{font-weight:400;color:var(--accent-t)}
-  .mark::before,.mark::after{content:"";position:absolute;width:10px;height:10px;border-color:var(--accent-t);border-style:solid}
-  .mark::before{top:0;left:0;border-width:1.5px 0 0 1.5px}
-  .mark::after{bottom:0;right:0;border-width:0 1.5px 1.5px 0}
+  .mk{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-t);border:1px dashed color-mix(in srgb,var(--accent-t) 50%,transparent);padding:5px 9px;background:color-mix(in srgb,var(--accent) 10%,transparent)}
+  .light .mk{color:var(--accent);border-color:color-mix(in srgb,var(--accent) 45%,transparent)}
+  .mk::before{content:"◆";font-size:9px}
+  .slot{position:relative;border:1px dashed color-mix(in srgb,var(--accent-t) 45%,transparent);background:linear-gradient(160deg,color-mix(in srgb,var(--accent) 12%,transparent),transparent);display:grid;place-items:center;text-align:center;padding:24px;gap:10px;clip-path:polygon(var(--ch) 0,100% 0,100% calc(100% - var(--ch)),calc(100% - var(--ch)) 100%,0 100%,0 var(--ch))}
+  .slot p{margin:0;max-width:32ch;font-size:13px;color:var(--muted)}
 
-  /* Luke, under the wordmark, rising out of MARKETING: the photo runs edge to edge
-     on a phone and the headline overlaps his chest. Sides fade so the photo's own
-     background never shows as a box; the bottom is hidden behind the word. */
-  /* --ph is the photo size: full width on a phone, but capped by the visible screen
-     height (svh) so the audit button always lands above the fold, even inside
-     Instagram's in-app browser. The headline overlap scales with it. */
-  .me{--ph:min(100vw,480px,48svh);position:relative;z-index:0;align-self:center;flex:none;
-    width:var(--ph);height:var(--ph);margin:0 0 calc(var(--ph) * -.27)}
-  .me::before{content:"";position:absolute;inset:14% 16% 10%;border-radius:50%;z-index:-1;
-    background:radial-gradient(closest-side,rgba(110,44,244,.5),transparent 100%);filter:blur(24px)}
-  .me img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 30%;
-    -webkit-mask-image:radial-gradient(46% 74% at 50% 60%,#000 58%,transparent 100%);
-            mask-image:radial-gradient(46% 74% at 50% 60%,#000 58%,transparent 100%)}
+  .btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--display);font-size:15px;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;padding:16px 24px;background:var(--accent);color:var(--btn-fg);border:0;cursor:pointer;transition:transform .25s var(--ease),filter .25s var(--ease),box-shadow .25s var(--ease);clip-path:polygon(11px 0,100% 0,100% calc(100% - 11px),calc(100% - 11px) 100%,0 100%,0 11px);background-image:var(--grad)}
+  .btn:hover{transform:translateY(-2px);filter:brightness(1.12) saturate(1.05)}
+  .btn.ghost{background:transparent;background-image:none;color:var(--fg);box-shadow:inset 0 0 0 1px var(--line)}
+  .btn.ghost:hover{box-shadow:inset 0 0 0 1px var(--accent-t)}
+  .fineprint{margin-top:16px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--faint)}
 
-  h1{position:relative;z-index:1;margin:0;text-align:center;font-weight:400;line-height:.9;text-shadow:0 6px 28px rgba(11,7,19,.55)}
-  h1 .caps{display:block;font-family:var(--display);font-size:clamp(46px,min(19vw,9.6svh),92px);letter-spacing:.01em;text-transform:uppercase}
-  h1 .it{display:block;font-family:var(--serif);font-style:italic;font-size:clamp(28px,min(11vw,5.8svh),54px);line-height:1.05;color:var(--it);margin-top:4px}
+  header{position:fixed;left:0;right:0;top:0;z-index:60;backdrop-filter:blur(10px);background:color-mix(in srgb,var(--dk-bg) 78%,transparent);border-bottom:1px solid transparent;transition:border-color .3s var(--ease),background .5s var(--ease)}
+  header.stuck{border-bottom-color:var(--dk-line)}
+  /* while the bar sits over a film section it has to read against the footage,
+     not against the page ground — otherwise the warm theme puts a cream bar on
+     top of a dark hero */
+  header.on-film{background:color-mix(in srgb,var(--film-bg) 72%,transparent);color:var(--film-fg);border-bottom-color:transparent}
+  header.on-film .tgl{border-color:color-mix(in srgb,var(--film-fg) 35%,transparent);background:color-mix(in srgb,var(--film-fg) 6%,transparent);color:var(--film-fg)}
+  header.on-film .navsep{color:color-mix(in srgb,var(--film-fg) 40%,transparent)}
+  header.on-film .brand{color:var(--film-fg)}
+  /* in the warm theme the tint accent is a pale amber that vanishes on cream,
+     so the wordmark keeps the deeper orange except over footage */
+  [data-theme="sand"] header.on-film .brand b{color:#FFB84D}
+  /* the header is fixed, so an anchor jump has to clear it */
+  [id]{scroll-margin-top:calc(var(--hdrh,91px) + 12px)}
+  .nav{display:flex;align-items:center;gap:16px;padding-block:14px}
+  .brand{font-family:var(--display);font-size:17px;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;color:var(--dk-fg)}
+  .brand b{color:var(--accent-t);font-weight:400}
+  .nav .btn{margin-left:auto}
+  .navsep{color:var(--dk-line);font-size:18px;line-height:1}
+  .nav .btn{padding:11px 16px;font-size:12.5px}
+  .tgl{width:30px;height:30px;flex:none;border-radius:50%;padding:0;border:1px solid color-mix(in srgb,var(--dk-fg) 35%,transparent);background:color-mix(in srgb,var(--dk-fg) 6%,transparent);color:var(--dk-fg);cursor:pointer;transition:transform .25s var(--ease),box-shadow .25s var(--ease);display:grid;place-items:center}
+  .tgl svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}
+  .tgl:hover{transform:scale(1.1);box-shadow:0 0 0 4px color-mix(in srgb,var(--dk-fg) 10%,transparent)}
+  @media(max-width:600px){.navsep{display:none}}
 
-  .sub{margin:12px 0 20px;text-align:center;text-wrap:balance;font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  .hero{padding-block:clamp(64px,10vw,120px) clamp(56px,8vw,110px);overflow:hidden}
+  .hero .inner{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(24px,4vw,56px);align-items:center}
+  .hero h1{font-family:var(--display);font-size:clamp(64px,10.6vw,196px);line-height:.82;text-transform:uppercase}
+  @media(min-width:1280px){.hero h1{font-size:clamp(110px,10vw,178px)}} /* 178 cap: the .wrap column stops growing at ~1240px, so a larger cap clips MARKETING (nowrap + .rl overflow:hidden) above ~1835px viewport */
+  .hero h1 .s{display:block;font-family:var(--serif);font-style:italic;text-transform:none;font-size:.6em;line-height:1.06;margin-top:.03em;color:var(--it-dk);padding-bottom:.06em}
+  .hero .sub{margin:28px 0 0;max-width:46ch;font-size:clamp(15px,1.45vw,18px);color:var(--muted)}
+  .rl{display:block;overflow:hidden;overflow:clip;overflow-clip-margin:.12em} /* line-height .82 makes the mask shorter than the glyphs, which shaves the round top/bottom of G and O. clip-margin gives the ink room without changing layout; the `hidden` above is the fallback for anything without clip-margin. */
+  .rl>span{display:block;transform:translateY(102%);animation:rise .9s var(--ease) forwards}
+  .rl:nth-of-type(2)>span{animation-delay:.12s}
+  @keyframes rise{to{transform:translateY(0)}}
+  .stage{position:relative;aspect-ratio:4/5;min-height:340px}
+  .brk{position:absolute;width:28px;height:28px;border:1.5px solid var(--accent-t)}
+  .brk.tl{top:0;left:0;border-width:1.5px 0 0 1.5px}.brk.tr{top:0;right:0;border-width:1.5px 1.5px 0 0}
+  .brk.bl{bottom:0;left:0;border-width:0 0 1.5px 1.5px}.brk.br{bottom:0;right:0;border-width:0 1.5px 1.5px 0}
+  .hud{position:absolute;border:1px solid color-mix(in srgb,var(--accent-t) 35%,transparent);background:linear-gradient(180deg,color-mix(in srgb,var(--accent) 18%,transparent),transparent);padding:10px 12px;font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent-t);clip-path:polygon(9px 0,100% 0,100% calc(100% - 9px),calc(100% - 9px) 100%,0 100%,0 9px)}
+  .hud .bar{height:3px;background:color-mix(in srgb,var(--accent-t) 25%,transparent);margin-top:8px;position:relative;overflow:hidden}
+  .hud .bar i{position:absolute;inset:0 62% 0 0;background:var(--accent-t);animation:fill 3.4s var(--ease) infinite alternate}
+  @keyframes fill{to{inset:0 14% 0 0}}
+  @media(max-width:1040px){.hero .inner{grid-template-columns:1fr}.stage{aspect-ratio:16/10;min-height:260px}}
 
-  .soon{display:flex;flex-direction:column;gap:14px}
-  .soon-h{margin:0;text-align:center;font-family:var(--display);font-size:24px;letter-spacing:.05em;text-transform:uppercase}
-  .soon-d{margin:-6px 0 4px;text-align:center;color:var(--muted);font-size:15px}
-  .lk .d{word-break:break-word}
+  .marq{border-block:1px solid var(--dk-line);overflow:hidden;background:var(--dk-bg);padding-block:15px}
+  .marq .run{display:flex;gap:26px;white-space:nowrap;width:max-content;font-family:var(--display);font-size:clamp(17px,2.1vw,26px);letter-spacing:.04em;text-transform:uppercase;color:var(--dk-fg);animation:marq 48s linear infinite}
+  .marq.rev .run{animation-direction:reverse}
+  .marq:hover .run{animation-play-state:paused}
+  .marq .run s{text-decoration:none;color:var(--dk-faint)}
+  .marq .run b{font-weight:400;color:var(--accent-t)}
+  @keyframes marq{to{transform:translateX(-50%)}}
 
-  /* primary: the audit. Chamfered on two corners only, per the shape kit */
-  .lk{display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--fg);min-height:64px;padding:16px 20px;
-    clip-path:polygon(var(--ch) 0,100% 0,100% calc(100% - var(--ch)),calc(100% - var(--ch)) 100%,0 100%,0 var(--ch));
-    transition:transform .25s var(--ease),filter .25s var(--ease),box-shadow .25s var(--ease),background-color .25s var(--ease)}
-  .lk .txt{flex:1;min-width:0}
-  .lk .t{display:block;text-wrap:balance;font-family:var(--display);font-size:19px;letter-spacing:.05em;text-transform:uppercase;line-height:1.15}
-  .lk .d{display:block;margin-top:4px;font-size:14px;line-height:1.4;color:var(--muted)}
-  .lk .arr{flex:none;font-family:var(--display);font-size:20px;transition:transform .25s var(--ease)}
-  .lk:hover .arr,.lk:focus-visible .arr{transform:translateX(4px)}
+  .split{display:grid;grid-template-columns:minmax(0,.78fr) minmax(0,1.22fr);gap:clamp(28px,5vw,76px);align-items:start}
+  .sticky{position:sticky;top:110px}
+  .letter p{max-width:58ch;font-size:clamp(15px,1.4vw,17.5px);color:var(--muted)}
+  .letter .hl{background:linear-gradient(transparent 60%,color-mix(in srgb,var(--accent) 28%,transparent) 60%);background-size:0 100%;background-repeat:no-repeat;transition:background-size .9s var(--ease);color:var(--fg)}
+  .letter.in .hl{background-size:100% 100%}
+  .sig{margin-top:34px;max-width:360px;clip-path:inset(0 100% 0 0);transition:clip-path 1.6s var(--ease)}
+  .letter.in .sig{clip-path:inset(0 0 0 0)}
+  .sig img{width:100%;display:block;filter:invert(1)}
+  .light .sig img{filter:none}
+  .byline{margin-top:14px;font-family:var(--mono);font-size:11px;line-height:2;letter-spacing:.1em;text-transform:uppercase;color:var(--faint)}
+  .byline span{display:block}
+  .byline .r{color:var(--fg)}
+  @media(max-width:880px){.split{grid-template-columns:1fr}.sticky{position:static}}
 
-  .lk.pri{background:var(--accent);background-image:var(--grad);color:#fff;padding:18px 22px;min-height:76px}
-  .lk.pri .t{font-size:22px}
-  .lk.pri .d{color:rgba(255,255,255,.82)}
-  .lk.pri:hover{transform:translateY(-2px);filter:brightness(1.12) saturate(1.05)}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);margin-top:56px;border-top:1px solid var(--line)}
+  .stat{padding:34px 30px;border-right:1px solid var(--line);display:flex;flex-direction:column;gap:14px}
+  .stat:first-child{padding-left:0}
+  .stat:last-child{border-right:0}
+  .stat .n{font-family:var(--display);font-size:clamp(44px,5.6vw,76px);line-height:1;white-space:nowrap;font-variant-numeric:tabular-nums;color:var(--fg)}
+  .stat .n em{font-style:normal;font-size:.44em}
+  .stat .od{display:inline-block;height:1em;line-height:1;overflow:hidden;vertical-align:-.03em}
+  .stat .od .reel{display:block;transition:transform 1s var(--ease)}
+  .stat .od .reel i{display:block;font-style:normal;height:1em;line-height:1}
+  .stat .l{font-family:var(--mono);font-size:11px;line-height:1.35;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);max-width:24ch}
+  .stat .l sub{color:var(--accent-t);font-size:.85em;line-height:0;vertical-align:-.2em;position:relative;top:0}
+  .light .stat .l sub{color:var(--accent)}
+  .statfoot{margin-top:26px;font-family:var(--mono);font-size:11px;line-height:1.45;letter-spacing:.06em;text-transform:uppercase;color:var(--faint);max-width:none}
+  @media(max-width:900px){.stats{grid-template-columns:repeat(2,1fr)}.stat{border-bottom:1px solid var(--line);padding:30px 22px}.stat:nth-child(2n+1){padding-left:0}.stat:nth-child(2n){border-right:0}}
 
-  /* border drawn as a 1px inset panel, because clip-path cuts a box-shadow off at the chamfers */
-  .lk.sec{position:relative;isolation:isolate;background:var(--line)}
-  .lk.sec::before{content:"";position:absolute;inset:1px;z-index:-1;background:var(--raise);
-    clip-path:polygon(calc(var(--ch) - .4px) 0,100% 0,100% calc(100% - var(--ch) + .4px),calc(100% - var(--ch) + .4px) 100%,0 100%,0 calc(var(--ch) - .4px))}
-  .lk.sec:hover{background:var(--accent-t);transform:translateY(-2px)}
+  /* circuit: sticky title + engine, cards stack */
+  .circuit{display:grid;grid-template-columns:minmax(0,.78fr) minmax(0,1.22fr);gap:clamp(28px,5vw,80px);align-items:start;margin-top:clamp(40px,5vw,72px)}
+  .eng-wrap{position:sticky;top:104px}
+  .eng{width:100%;max-width:380px}
+  .eng .band{fill:#1B1330;stroke:#2C2342;stroke-width:1;transition:fill .45s var(--ease),stroke .45s var(--ease)}
+  .eng .band.done{fill:#2A1E4B}
+  .eng .band.live{fill:var(--accent);stroke:var(--accent-t)}
+  .eng .lead{stroke:#2C2342;stroke-width:1;transition:stroke .45s var(--ease)}
+  .eng .lead.live{stroke:var(--accent-t)}
+  .eng .dot{fill:#2C2342;transition:fill .45s var(--ease)}
+  .eng .dot.live{fill:var(--accent-t)}
+  .eng .lab{font-family:"JetBrains Mono",monospace;font-size:9px;letter-spacing:.09em;fill:var(--faint);text-transform:uppercase;transition:fill .45s var(--ease),opacity .45s var(--ease);opacity:.45}
+  .eng .lab.live{fill:var(--accent-t);opacity:1}
+  .eng .lab.done{opacity:.8;fill:var(--muted)}
+  .eng .shell{fill:none;stroke:#2C2342;stroke-width:1.5}
+  .eng .core{font-family:var(--mono);font-size:8px;letter-spacing:.14em;fill:var(--faint)}
+  .cards{display:grid;gap:26px}
+  @media(min-width:921px){.cards{padding-bottom:14vh}}
+  .card-stage{position:sticky;top:calc(104px + var(--i) * 62px);background:var(--raise);border:1px solid var(--line);padding:30px 32px 32px;clip-path:polygon(var(--ch) 0,100% 0,100% calc(100% - var(--ch)),calc(100% - var(--ch)) 100%,0 100%,0 var(--ch));box-shadow:0 -18px 40px rgba(5,3,10,.45);transition:border-color .4s var(--ease)}
+  .card-stage.active{border-color:color-mix(in srgb,var(--accent-t) 55%,transparent)}
+  /* R3 frame (from the cyberpunk pack): stepped octagon, second outline, side tabs, title plate, accent run. Drawn by drawFrame() */
+  .card-stage{background:none!important;border:0!important;clip-path:none!important;box-shadow:none!important;padding:48px 46px 40px!important}
+  .card-stage>svg.fr{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;overflow:visible}
+  .card-stage h3,.card-stage p,.card-stage .chips{position:relative;z-index:1}
+  .fr .o{fill:var(--dk-bg);stroke:var(--fg);stroke-opacity:.34;stroke-width:1}
+  .fr .of{fill:var(--dk-bg);stroke:none}
+  .light .fr .o,.light .fr .of{fill:var(--lt-bg)}
+  .fr .t{fill:var(--fg);opacity:.8}
+  .fr .tl{stroke:var(--fg);stroke-opacity:.45;fill:none}
+  .fr .f{fill:var(--raise);stroke:color-mix(in srgb,var(--fg) 55%,transparent);stroke-width:1.6;transition:stroke .4s var(--ease)}
+  .fr .run{stroke:var(--accent-t);stroke-width:5;fill:none;opacity:.55;transition:opacity .4s var(--ease)}
+  .card-stage.active .fr .f{stroke:var(--fg)}
+  .card-stage.active .fr .run{opacity:1}
+  .card-stage .live{position:absolute;z-index:3;top:0;right:64px;height:18px;padding:0 20px 0 12px;display:flex;align-items:center;gap:7px;background:var(--grad);color:var(--btn-fg);font-family:var(--mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;clip-path:polygon(0 0,100% 0,calc(100% - 10px) 100%,10px 100%);opacity:0;transition:opacity .4s var(--ease)}
+  .card-stage .live i{width:6px;height:6px;border-radius:50%;background:currentColor}
+  .card-stage.active .live{opacity:1}
+  .card-stage .tabx .aud{display:none}
+  .card-stage .tabx{position:absolute;z-index:3;top:2px;left:24px;height:24px;display:flex;align-items:center;white-space:nowrap;background:var(--grad);color:var(--btn-fg);font-family:var(--display);font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;padding:0 30px 0 14px;clip-path:polygon(9px 0,100% 0,calc(100% - 16px) 100%,0 100%,0 9px)}
+  .card-stage h3{font-family:var(--display);font-size:clamp(28px,3.4vw,40px);letter-spacing:.02em;text-transform:uppercase;margin:38px 0 12px}
+  .card-stage p{margin:0;color:var(--muted);font-size:15.5px;max-width:52ch}
+  .card-stage .cbrk{display:none!important;position:absolute;width:16px;height:16px;border:1.5px solid var(--accent-t);opacity:.7}
+  .card-stage .cbrk.tr{top:10px;right:10px;border-width:1.5px 1.5px 0 0}
+  .card-stage .cbrk.bl{bottom:10px;left:10px;border-width:0 0 1.5px 1.5px}
+  .chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:18px}
+  .chips span{display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);padding:6px 9px;clip-path:polygon(6px 0,100% 0,100% calc(100% - 6px),calc(100% - 6px) 100%,0 100%,0 6px);transition:color .25s var(--ease),border-color .25s var(--ease),background .25s var(--ease)}
+  .chips span::before{content:"";width:6px;height:6px;flex:none;border-radius:50%;background:#35C475;box-shadow:0 0 0 2px color-mix(in srgb,#35C475 22%,transparent);transition:box-shadow .25s var(--ease),transform .25s var(--ease)}
+  .chips span:hover{color:var(--fg);border-color:color-mix(in srgb,#35C475 55%,var(--line));background:color-mix(in srgb,#35C475 8%,transparent)}
+  .chips span:hover::before{box-shadow:0 0 0 4px color-mix(in srgb,#35C475 32%,transparent),0 0 10px 2px color-mix(in srgb,#35C475 70%,transparent);transform:scale(1.15)}
+  @media(max-width:920px){.circuit{grid-template-columns:1fr}.eng-wrap{position:static}.eng{max-width:300px;margin-inline:auto}.card-stage{position:relative;top:0}}
+  @media(min-width:921px){.cards{gap:18px}}
 
-  .lk.ter{min-height:52px;padding:12px 4px;justify-content:center;clip-path:none;gap:10px}
-  .lk.ter .t{font-family:var(--body);font-size:15px;font-weight:600;letter-spacing:0;text-transform:none;color:var(--accent-t)}
-  .lk.ter .arr{font-family:var(--body);font-size:15px;color:var(--accent-t)}
-  .lk.ter .txt{flex:none}
-  .lk.ter:hover .t{text-decoration:underline;text-underline-offset:4px}
+  .bens{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:56px}
+  .ben{position:relative;overflow:hidden;background:var(--raise);padding:34px 30px 38px;min-height:260px;transition:background .4s var(--ease)}
+  .ben h3,.ben p{position:relative;z-index:1}
+  .light .ben{background:var(--lt-raise)}
+  .ben .ic{position:absolute;right:-7%;bottom:-9%;width:64%;aspect-ratio:1;pointer-events:none;z-index:0;transition:transform .8s var(--ease)}
+  .ben:hover .ic{transform:translateY(-4px) rotate(-3deg) scale(1.04)}
+  .ben svg{width:100%;height:100%;overflow:visible}
+  .ben svg .pl{fill:url(#icoPanel);stroke:url(#icoStroke);stroke-width:1.4}
+  .ben svg .ln{fill:none;stroke:url(#icoStroke);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+  .ben svg .ln.thin{stroke-width:1.4;opacity:.7}
+  .ben svg .ln.white{stroke:#fff;stroke-width:3.2}
+  .ben svg .tk{fill:none;stroke:var(--accent);stroke-width:1.6;stroke-linecap:round;opacity:.55}
+  .ben svg .fl{fill:url(#icoFill);stroke:none}
+  .ben svg .fl.s{opacity:.75}
+  .ben svg .dt{fill:var(--accent-t)}
+  .ben svg .dt.o{opacity:.5}
+  .ben svg .gridd circle{fill:var(--accent);opacity:.35}
+  .ben svg .badge{font-family:var(--mono);font-size:8.5px;font-weight:500;letter-spacing:.06em;fill:#fff;text-anchor:middle}
+  .ben svg .pl,.ben svg .ln,.ben svg .tk{stroke-dasharray:none}
+  .ben .ic{opacity:0;transform:translateY(14px) scale(.94);transition:opacity .8s var(--ease),transform .9s var(--ease)}
+  .ben.in .ic{opacity:.22;transform:none}
+  .ben.in:hover .ic{opacity:.34}
+  .ben.in:hover .ic{transform:translateY(-4px) rotate(-3deg) scale(1.04)}
+  .ben .hd{position:relative;z-index:1;display:flex;align-items:flex-start;gap:12px;margin:0 0 12px}
+  .ben .tick{flex:none;margin-top:3px;width:32px;height:32px;display:grid;place-items:center;
+      background:color-mix(in srgb,#35C475 16%,transparent);
+      border:1px solid color-mix(in srgb,#35C475 60%,transparent);
+      box-shadow:0 0 0 1px color-mix(in srgb,#35C475 18%,transparent),0 0 14px 1px color-mix(in srgb,#35C475 35%,transparent);
+      clip-path:polygon(7px 0,100% 0,100% calc(100% - 7px),calc(100% - 7px) 100%,0 100%,0 7px);
+      transition:background .3s var(--ease),border-color .3s var(--ease),box-shadow .3s var(--ease),transform .3s var(--ease)}
+  .ben .tick svg{width:21px;height:21px;overflow:visible}
+  .ben .tick svg .pl{fill:color-mix(in srgb,#35C475 18%,transparent);stroke:#35C475}
+  .ben .tick svg .ln{stroke:#35C475}
+  .ben .tick svg .fl{fill:#35C475}
+  .ben .tick svg .tk{stroke:#35C475}
+  .ben .tick svg .dt{fill:#35C475}
+  .ben:hover .tick{background:color-mix(in srgb,#35C475 26%,transparent);border-color:#35C475;
+      box-shadow:0 0 0 2px color-mix(in srgb,#35C475 30%,transparent),0 0 20px 2px color-mix(in srgb,#35C475 55%,transparent);transform:scale(1.06)}
+  .ben h3{font-family:var(--display);font-size:clamp(22px,2vw,28px);line-height:1.05;letter-spacing:.04em;text-transform:uppercase;margin:0;max-width:14ch}
+  .ben p{position:relative;z-index:1;margin:0;font-size:15px;color:var(--muted);max-width:32ch}
+  @media(max-width:900px){.bens{grid-template-columns:1fr}}
 
-  .lk:focus-visible{outline:2px solid var(--accent-t);outline-offset:3px}
-  .lk.pri:focus-visible{clip-path:none}
-  .lk.sec:focus-visible{clip-path:none}
+  .audit{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:center}
+  .ticks{list-style:none;margin:32px 0 0;padding:0;display:grid;gap:16px}
+  .auditlede{font-size:clamp(19px,2vw,25px);line-height:1.35;max-width:30ch;color:var(--fg)}
+  .auditlede b{font-weight:600;color:var(--accent-t)}
+  .ticks li{display:grid;grid-template-columns:26px 1fr;gap:14px;align-items:start;font-size:15.5px;color:var(--muted);max-width:52ch}
+  .ticks li b{color:var(--fg);font-weight:600}
+  .ticks .tk{width:26px;height:26px;display:grid;place-items:center;border:1px solid color-mix(in srgb,#35C475 55%,transparent);background:color-mix(in srgb,#35C475 16%,transparent);clip-path:polygon(7px 0,100% 0,100% calc(100% - 7px),calc(100% - 7px) 100%,0 100%,0 7px)}
+  .ticks .tk svg{width:13px;height:13px;stroke:#35C475;fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+  .sc{position:relative;background:var(--sc-bg);border:1px solid var(--sc-line);padding:30px 30px 34px;clip-path:polygon(18px 0,100% 0,100% calc(100% - 18px),calc(100% - 18px) 100%,0 100%,0 18px);box-shadow:0 30px 70px rgba(5,3,10,.5);color:var(--sc-fg);overflow:hidden}
+  .sc::before{content:"";position:absolute;inset:0;background:radial-gradient(70% 55% at 85% 0%,color-mix(in srgb,var(--accent) 30%,transparent),transparent 65%);pointer-events:none}
+  .sc .schead{position:relative;display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+  .sc .schead .t{font-family:var(--display);font-size:22px;letter-spacing:.04em;text-transform:uppercase}
+  .sc .schead .s{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-t);border:1px dashed color-mix(in srgb,var(--accent-t) 50%,transparent);padding:5px 8px}
+  .sc .grade{position:relative;display:flex;align-items:baseline;gap:14px;margin-top:22px;padding-bottom:22px;border-bottom:1px solid var(--sc-line)}
+  .sc .grade .g{font-family:var(--display);font-size:72px;line-height:.8;color:var(--sc-fg)}
+  .sc .grade .gl{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--sc-muted);max-width:20ch}
+  .sc .rows{position:relative;margin-top:22px;display:grid;gap:18px}
+  .sc .r .k{display:flex;justify-content:space-between;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--sc-muted);margin-bottom:8px}
+  .sc .r .k b{color:var(--sc-fg);font-weight:500}
+  .sc .r .track{height:8px;background:var(--sc-track);position:relative;clip-path:polygon(3px 0,100% 0,100% calc(100% - 3px),calc(100% - 3px) 100%,0 100%,0 3px)}
+  .sc .r .track i{position:absolute;inset:0 100% 0 0;background:var(--grad);transition:inset 1.2s var(--ease)}
+  .sc.in .r .track i{inset:0 calc(100% - var(--w)) 0 0}
+  .sc .foot{position:relative;margin-top:26px;padding-top:20px;border-top:1px solid var(--sc-line);display:flex;gap:10px;flex-wrap:wrap}
+  .sc .foot span{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--sc-muted);border:1px solid var(--sc-line);padding:6px 9px}
+  @media(max-width:900px){.audit{grid-template-columns:1fr}}
 
-  footer{position:relative;z-index:1;width:100%;max-width:440px;margin-top:56px;text-align:center;
-    font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);line-height:2}
-  footer a{color:var(--muted);text-decoration:none}
-  footer a:hover{color:var(--fg)}
+  /* ---- TESTIMONIAL WHEEL · character select. Three seats on a turntable, cards
+     rotate in 3D (rotateY) and never tilt. Front seat flat and full; the two behind
+     sit back, blurred and dimmed. Arrows or click-a-seat to bring one round. No
+     horizontal scroll container, so nothing to trap a trackpad. ---- */
+  .env-stage .rv{text-align:center}
+  .env-stage .lede{margin-inline:auto}
+  .wheel{margin-top:clamp(40px,5vw,72px)}
+  .wstage{position:relative;height:660px;perspective:1800px;perspective-origin:50% 46%;margin-bottom:22px}
+  .tq{position:absolute;left:50%;top:270px;width:min(860px,94%);margin-left:calc(min(860px,94%) / -2);
+      transform-style:preserve-3d;cursor:pointer;
+      transition:transform .8s var(--ease),opacity .8s var(--ease),filter .8s var(--ease);
+      will-change:transform,opacity,filter}
+  .tq .card{position:relative;padding:46px 52px 40px 40px;min-height:290px;
+      display:grid;grid-template-columns:370px minmax(0,1fr);gap:0 28px;align-items:center}
+  .tq .card>svg.fr{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;overflow:visible}
+  .tq .fr .f{stroke:color-mix(in srgb,var(--fg) 38%,transparent)}
+  .tq.s0 .fr .f{stroke:var(--fg)}
+  .tq .fr .run{opacity:.4;stroke-width:4;stroke-linejoin:round}
+  .tq.s0 .fr .run{opacity:1}
+  .tq .tabx{position:absolute;z-index:3;top:2px;left:438px;height:24px;display:flex;align-items:center;
+      white-space:nowrap;background:var(--grad);color:var(--btn-fg);font-family:var(--display);
+      font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;padding:0 30px 0 14px;
+      clip-path:polygon(9px 0,100% 0,calc(100% - 16px) 100%,0 100%,0 9px)}
+  .tq .qbody{position:relative;z-index:1;min-width:0;grid-column:2}
+  .tq blockquote{margin:0;font-family:var(--serif);font-style:italic;font-size:clamp(16px,1.15vw,18.5px);
+      line-height:1.42;color:var(--fg)}
+  .tq .tnm{font-family:var(--display);text-transform:uppercase;letter-spacing:.03em;font-size:16px;line-height:1;margin:18px 0 0}
+  .tq .trl{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;line-height:1.3;text-transform:uppercase;color:var(--accent-t);margin:5px 0 0}
+  /* the speaker: bigger than the card, standing on the projector plate below and rising
+     clear of the card's top edge. No scanlines, no emitter — the background is the projector. */
+  .tq .holo{position:absolute;left:40px;bottom:36px;width:370px;height:470px;margin:0;z-index:3;pointer-events:none}
+  /* the figure fades out into the card rather than stopping dead, landing on a
+     faint emitter line. Mask sits on the image so it stays inside the silhouette. */
+  .tq .holo img{position:absolute;bottom:0;left:50%;transform:translateX(-50%);height:100%;width:auto;max-width:none;display:block;
+      filter:drop-shadow(0 14px 24px rgba(0,0,0,.65)) drop-shadow(0 0 22px color-mix(in srgb,var(--accent-t) 32%,transparent));
+      -webkit-mask-image:linear-gradient(180deg,#000 66%,color-mix(in srgb,#000 55%,transparent) 84%,color-mix(in srgb,#000 18%,transparent) 94%,transparent 100%);
+      mask-image:linear-gradient(180deg,#000 66%,color-mix(in srgb,#000 55%,transparent) 84%,color-mix(in srgb,#000 18%,transparent) 94%,transparent 100%)}
+  /* the glow the figure fades down into */
+  .tq .holo::before{content:"";position:absolute;left:-6%;right:-6%;bottom:-10px;height:46%;
+      background:radial-gradient(62% 84% at 50% 100%,color-mix(in srgb,var(--accent-t) 34%,transparent) 0%,
+        color-mix(in srgb,var(--accent-t) 13%,transparent) 44%,transparent 78%);
+      filter:blur(12px);mix-blend-mode:screen}
 
-  @media(prefers-reduced-motion:reduce){*{transition:none!important}}
+  /* three seats on the turntable */
+  .tq.s0{transform:translate3d(0,0,0) rotateY(0deg) scale(1);opacity:1;filter:none;z-index:3;cursor:default}
+  .tq.s1{transform:translate3d(56%,-52px,-600px) rotateY(-38deg) scale(.66);opacity:.34;filter:blur(4.5px);z-index:2}
+  .tq.s2{transform:translate3d(-56%,-52px,-600px) rotateY(38deg) scale(.66);opacity:.34;filter:blur(4.5px);z-index:1}
+  .tq.s1:hover,.tq.s2:hover{opacity:.66;filter:blur(1.8px)}
+  .wnav{display:flex;gap:14px;justify-content:center;align-items:center}
+  .wnav button{width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:transparent;
+      color:var(--fg);cursor:pointer;font-family:var(--mono);font-size:14px;
+      transition:border-color .25s var(--ease),transform .25s var(--ease)}
+  .wnav button:hover{border-color:var(--accent-t);transform:scale(1.06)}
+  .wnav .dots{display:flex;gap:7px}
+  .wnav .dots i{width:7px;height:7px;border-radius:50%;background:var(--line);transition:background .4s var(--ease),transform .4s var(--ease)}
+  .wnav .dots i.on{background:var(--accent-t);transform:scale(1.3)}
+  @media(max-width:820px){
+    .wstage{height:790px;perspective:1100px}
+    .tq{width:96%;margin-left:-48%}
+    /* too narrow for figure + copy side by side (the copy column collapsed to 60px),
+       so the figure stacks above and the copy takes the full card width */
+    .tq{top:310px}
+    .tq .card{padding:156px 26px 44px;min-height:384px;grid-template-columns:minmax(0,1fr);gap:0}
+    .tq .tabx{top:auto;bottom:-11px;left:24px;height:22px;font-size:11px;padding:0 22px 0 11px;
+      clip-path:polygon(8px 0,100% 0,calc(100% - 14px) 100%,0 100%,0 8px)}
+    .tq .holo{left:50%;right:auto;transform:translateX(-50%);top:-252px;bottom:auto;width:248px;height:404px}
+    .tq blockquote{font-size:15.5px}
+    .tq.s1{transform:translate3d(38%,-32px,-420px) rotateY(-30deg) scale(.72)}
+    .tq.s2{transform:translate3d(-38%,-32px,-420px) rotateY(30deg) scale(.72)}
+  }
+  @media(prefers-reduced-motion:reduce){.tq{transition:opacity .3s linear}}
+  .draft{display:inline-block;font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:#7a4a00;background:#FFE9B8;padding:3px 7px;margin-bottom:12px}
+
+
+  .cmp3{display:grid;grid-template-columns:minmax(120px,.8fr) minmax(0,1.3fr) minmax(0,1.3fr);margin-top:56px}
+  .cmp3 .hd{padding:22px 24px;font-family:var(--display);font-size:clamp(17px,2vw,24px);letter-spacing:.05em;text-transform:uppercase;border-bottom:1px solid var(--line);display:flex;align-items:flex-start;gap:10px}
+  .cmp3 .hd .ico{width:22px;height:22px;flex:none;display:grid;place-items:center;font-family:var(--mono);font-size:12px;border:1px solid currentColor}
+  .cmp3 .hd.lose{color:var(--faint)}
+  .cmp3 .hd.win{background:linear-gradient(180deg,color-mix(in srgb,var(--accent) 26%,transparent),transparent);border-bottom-color:var(--accent);color:var(--fg)}
+  .cmp3 .k{padding:20px 22px 20px 0;border-bottom:1px solid var(--line);font-family:var(--display);font-size:clamp(15px,1.7vw,20px);letter-spacing:.04em;text-transform:uppercase;color:var(--fg);display:flex;align-items:center}
+  .cmp3 .c{padding:20px 24px;border-bottom:1px solid var(--line);font-size:15.5px;color:var(--muted)}
+  .cmp3 .c.win{color:var(--fg);background:color-mix(in srgb,var(--raise) 82%,transparent);border-left:1px solid color-mix(in srgb,var(--accent-t) 30%,transparent);border-right:1px solid color-mix(in srgb,var(--accent-t) 30%,transparent)}
+  .cmp3 .hd.win{border-left:1px solid color-mix(in srgb,var(--accent-t) 30%,transparent);border-right:1px solid color-mix(in srgb,var(--accent-t) 30%,transparent);border-top:2px solid var(--accent)}
+  .cmp3 .c.win:last-child{border-bottom:1px solid color-mix(in srgb,var(--accent-t) 30%,transparent)}
+  @media(max-width:820px){
+    /* the header is a flex row, so the ™ flex-item floated to the top of the
+       line instead of sitting on the shoulder of the last letter */
+    .cmp3 .hd{display:block}
+    .cmp3 .hd .tm{align-self:auto;font-size:.4em;vertical-align:super;line-height:0;top:0;margin-left:1px}
+    .cmp3{grid-template-columns:1fr 1fr}.cmp3 .k{grid-column:1 / -1;padding:16px 0 6px;border-bottom:0}.cmp3 .hd:first-child{display:none}}
+  @media(max-width:560px){
+    .cmp3{grid-template-columns:1fr;margin-top:38px}
+    .cmp3 .hd{display:none}
+    .cmp3 .k{grid-column:auto;padding:26px 0 10px;border-bottom:0;font-size:17px}
+    .cmp3 .c{flex-wrap:wrap;padding:13px 15px;margin-bottom:8px;border:1px solid var(--line);font-size:15px}
+    .cmp3 .c.win{margin-bottom:0;border:1px solid color-mix(in srgb,var(--accent-t) 34%,transparent)}
+    .cmp3 .c.win:last-child{border-bottom:1px solid color-mix(in srgb,var(--accent-t) 34%,transparent)}
+    .cmp3 .c::before{content:"The usual way";flex:0 0 100%;margin-bottom:7px;
+      font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+    .cmp3 .c.win::before{content:"The Click-to-Close Circuit";color:var(--accent-t)}
+    /* wrap is only there to push the column label onto its own line: the tick
+       and the copy still have to sit on one line together */
+    .cmp3 .c .mark{flex:none}
+    .cmp3 .c>span:not(.mark){flex:1 1 0;min-width:0}
+  }
+  .col{border:1px solid var(--line);background:var(--raise);clip-path:polygon(var(--ch) 0,100% 0,100% calc(100% - var(--ch)),calc(100% - var(--ch)) 100%,0 100%,0 var(--ch))}
+  .col.win{border-color:color-mix(in srgb,var(--accent-t) 40%,transparent);box-shadow:0 26px 60px rgba(5,3,10,.35)}
+  .col.win .ch{background:linear-gradient(180deg,color-mix(in srgb,var(--accent) 26%,transparent),transparent);border-bottom-color:var(--accent)}
+  .col .ch{padding:20px 24px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:10px;font-family:var(--display);font-size:17px;letter-spacing:.05em;text-transform:uppercase}
+  .col .ch .ico{width:22px;height:22px;display:grid;place-items:center;font-family:var(--mono);font-size:12px;border:1px solid currentColor}
+  .col.lose .ch{color:var(--faint)}
+  .col ul{list-style:none;margin:0;padding:6px 24px 22px}
+  .col li{padding:15px 0;border-bottom:1px solid var(--line);font-size:15px;color:var(--muted);display:grid;gap:5px}
+  .col li:last-child{border-bottom:0}
+  .col li .kk{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint)}
+  .col.win li{color:var(--fg)}
+  @media(max-width:820px){.vs{grid-template-columns:1fr}}
+
+  /* FAQ: heading + still-got-a-question left (sticky), tabs + accordion right */
+  .faqsec .grad{background:linear-gradient(180deg,var(--dk-bg) 0%,color-mix(in srgb,var(--dk-bg) 60%,transparent) 45%,transparent 100%) top/100% clamp(160px,24vh,280px) no-repeat,var(--grad-soft)}
+  .faqwrap{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.35fr);gap:clamp(32px,5vw,76px);align-items:start}
+  .faqwrap .faqhead{position:sticky;top:120px;min-width:0}
+  /* sized to the column, not the viewport, so it can't run under the accordion */
+  .faqwrap .faqhead .h2{font-size:clamp(38px,4.4vw,62px);overflow-wrap:break-word}
+  .faqwrap .faqbody{min-width:0}
+  @media(max-width:900px){.faqwrap{grid-template-columns:1fr}.faqwrap .faqhead{position:static}
+    .faqwrap .faqhead .h2{font-size:clamp(50px,7.6vw,110px)}}
+  .tabs{display:flex;gap:10px;margin-top:0;margin-bottom:22px;flex-wrap:wrap}
+  .tab{background:none;padding:9px 16px;font-family:var(--display);font-size:clamp(13px,1.15vw,16px);
+      letter-spacing:.06em;text-transform:uppercase;color:var(--accent-t);cursor:pointer;
+      border:1px solid color-mix(in srgb,var(--accent-t) 42%,transparent);
+      clip-path:polygon(8px 0,100% 0,100% calc(100% - 8px),calc(100% - 8px) 100%,0 100%,0 8px);
+      transition:background .25s var(--ease),border-color .25s var(--ease),color .25s var(--ease)}
+  .tab:hover{border-color:var(--accent-t);background:color-mix(in srgb,var(--accent) 12%,transparent)}
+  .tab[aria-selected="true"]{color:var(--btn-fg);background:var(--grad);border-color:transparent}
+  .qa{border-bottom:1px solid var(--line)}
+  .qa button{width:100%;display:flex;justify-content:space-between;gap:20px;align-items:center;background:none;border:0;padding:22px 0;text-align:left;font-family:var(--display);font-size:clamp(16px,1.5vw,21px);letter-spacing:.03em;text-transform:uppercase;line-height:1.15;font-weight:400;color:var(--fg);cursor:pointer}
+  .qa .pm{font-family:var(--mono);color:var(--accent);flex:none;transition:transform .3s var(--ease)}
+  .qa.open .pm{transform:rotate(45deg)}
+  .qa .a{overflow:hidden;height:0;transition:height .3s var(--ease)}
+  .qa .a p{margin:0 0 22px;max-width:70ch;color:var(--muted);font-size:15.5px}
+
+  .vibe ul{margin:40px 0 0;padding:0}
+  .vibe li{list-style:none;position:relative;font-family:var(--display);font-size:clamp(21px,2.7vw,36px);line-height:1.3;letter-spacing:.045em;text-transform:uppercase;color:var(--fg);opacity:.92;padding:13px 0;transition:opacity .5s var(--ease)}
+  .vibe li.in{opacity:.82}
+  /* A real line-through, so a line that wraps gets struck on every row.
+     --k (0..1) comes from scroll and fades the rule in. */
+  .vibe li .txt{text-decoration-line:line-through;text-decoration-thickness:2px;
+      text-decoration-color:transparent;transition:text-decoration-color .9s var(--ease) .2s}
+  .vibe li.in .txt{text-decoration-color:var(--accent-t)}
+  /* pinned: the strike follows the scroll instead of running on a timer */
+  .vibe-pin li .txt{text-decoration-color:color-mix(in srgb,var(--accent-t) calc(var(--k,0) * 100%),transparent);transition:text-decoration-color .12s linear}
+  .vibe-pin li{opacity:calc(.68 + .32 * var(--k,0))}
+
+  /* black cross-fade on the Circuit -> CTA handover. Fixed, so it covers the
+     whole viewport while the two sections swap behind it. */
+  /* The blackout is a real element, not an overlay. It must be POSITIONED,
+     otherwise it paints under the Circuit's sticky video (which sets z-index:0)
+     and the footage shows straight through it. Its own top edge does the fade. */
+  .seam{position:relative;z-index:1;height:30svh;
+      background:linear-gradient(180deg,transparent 0%,var(--dk-bg) 38%,var(--dk-bg) 100%)}
+  @media(max-width:900px){.seam{height:26svh}}
+  @media(prefers-reduced-motion:reduce){.xfade{display:none}}
+  /* Environment layer: a still from the same world sitting behind a section.
+     Masked so it ends deliberately rather than being cut off at the seam. */
+  .env{position:relative;isolation:isolate}
+  .envbg{position:absolute;inset:0;z-index:-1;pointer-events:none;
+      background-image:var(--env,url(assets/env-founder.jpg));
+      background-size:cover;background-position:center;
+      opacity:.34;
+      -webkit-mask-image:linear-gradient(180deg,#000 0%,#000 52%,transparent 96%);
+      mask-image:linear-gradient(180deg,#000 0%,#000 52%,transparent 96%)}
+  /* keep the copy readable over it */
+  /* scrim keeps copy readable. Centre-weighted by default; the founder note
+     needs it heavier on the left, where the portrait sits. */
+  .envbg::after{content:"";position:absolute;inset:0;
+      background:radial-gradient(120% 90% at 50% 45%,transparent 0%,color-mix(in srgb,var(--dk-bg) 60%,transparent) 52%,var(--dk-bg) 100%)}
+  .env-l .envbg::after{background:linear-gradient(90deg,var(--dk-bg) 0%,color-mix(in srgb,var(--dk-bg) 72%,transparent) 46%,color-mix(in srgb,var(--dk-bg) 30%,transparent) 100%)}
+  /* fades in from black at the top too, instead of appearing at full strength the
+     instant the section starts — softens the line where the previous section (flat
+     black) hands off into this one */
+  .env-stage .envbg{background-position:center bottom;opacity:.5}
+  .env-fadein .envbg{-webkit-mask-image:linear-gradient(180deg,transparent 0%,#000 18%,#000 52%,transparent 96%);
+      mask-image:linear-gradient(180deg,transparent 0%,#000 18%,#000 52%,transparent 96%)}
+  /* Corridor span: one plate shared across Benefits + the top of Audit. It's live
+     (and panning) through Benefits, then fades to solid --dk-bg partway into Audit,
+     so the scorecard sits on flat black same as before. */
+  .corridor-span{position:relative;isolation:isolate;background:var(--dk-bg)}
+  .corridor-span>.dark{background:transparent}
+  .corridor-bg{position:absolute;inset:0;z-index:0;pointer-events:none;
+      background-image:url(assets/env-corridor.jpg);
+      background-size:cover;background-position:center 28%;
+      opacity:.34;
+      -webkit-mask-image:linear-gradient(180deg,transparent 0%,#000 9%,#000 47%,transparent 66%);
+      mask-image:linear-gradient(180deg,transparent 0%,#000 9%,#000 47%,transparent 66%)}
+  .corridor-bg::after{content:"";position:absolute;inset:0;
+      background:radial-gradient(120% 70% at 50% 30%,transparent 0%,color-mix(in srgb,var(--dk-bg) 55%,transparent) 55%,var(--dk-bg) 100%)}
+  .corridor-span section{position:relative;z-index:1}
+  /* On cream the plates were being washed out twice — once by the low opacity,
+     again by a scrim that ran all the way to solid cream. Let the rooms show. */
+  [data-theme="sand"] .envbg{opacity:.66}
+  [data-theme="sand"] .env-stage .envbg{opacity:.82}
+  [data-theme="sand"] .corridor-bg{opacity:.62}
+  [data-theme="sand"] .bgloop{opacity:.44}
+  [data-theme="sand"] .envbg::after{background:radial-gradient(120% 90% at 50% 45%,transparent 0%,color-mix(in srgb,var(--dk-bg) 30%,transparent) 55%,color-mix(in srgb,var(--dk-bg) 82%,transparent) 100%)}
+  [data-theme="sand"] .env-l .envbg::after{background:linear-gradient(90deg,color-mix(in srgb,var(--dk-bg) 86%,transparent) 0%,color-mix(in srgb,var(--dk-bg) 46%,transparent) 46%,color-mix(in srgb,var(--dk-bg) 14%,transparent) 100%)}
+  [data-theme="sand"] .corridor-bg::after{background:radial-gradient(120% 70% at 50% 30%,transparent 0%,color-mix(in srgb,var(--dk-bg) 26%,transparent) 55%,color-mix(in srgb,var(--dk-bg) 80%,transparent) 100%)}
+  /* mid-page CTA: a full-viewport stage. It pins and fills the screen, so while
+     you are on it nothing before or after it is visible — you read it, then move. */
+  .midcta{padding-block:0;text-align:center}
+  .mid-track{position:relative;height:112svh}
+  .mid-track{z-index:1}
+  .mid-sticky{position:sticky;top:0;height:100svh;display:grid;place-items:center;overflow:hidden;
+      /* short fades top and bottom so the field meets the page ground cleanly */
+      background:linear-gradient(180deg,var(--dk-bg) 0%,var(--bridge) 5%,var(--bridge) 95%,var(--dk-bg) 100%)}
+  /* No movement at all. The stage and the seam are both black, so the stage
+     sliding into place is invisible — the message simply appears on the black
+     and stays put until you scroll off it. */
+  .mid-in{opacity:var(--o,0);will-change:opacity}
+  @media(prefers-reduced-motion:reduce){.mid-in{transform:none;opacity:1}}
+  @media(max-width:900px){.mid-track{height:108svh}}
+  @media(prefers-reduced-motion:reduce){
+    .mid-track{height:auto}
+    .mid-sticky{position:static;height:auto;padding-block:clamp(96px,13vw,190px)}
+  }
+  .midcta .h2{margin-inline:auto;max-width:20ch}
+  .midcta .lede{margin-inline:auto;max-width:52ch}
+  .midcta .lede.sell{font-size:clamp(19px,2.1vw,26px);max-width:46ch;color:var(--fg)}
+  .midcta .btns{justify-content:center;margin-top:36px}
+  .midcta .fineprint{margin-top:16px}
+  /* ---- PATTERN INTERRUPT ----
+     Ten sections of charcoal and environments, then this: true black, no
+     background, oversized type, hard accent rules top and bottom. The jolt is
+     the absence of everything, right before the ask. */
+  .vibe-pin{background:linear-gradient(180deg,var(--dk-bg) 0%,var(--bridge) 5%,var(--bridge) 93%,var(--film-bg) 100%)}
+  .vibe-pin .eyebrow{color:var(--accent-t);font-size:11.5px;letter-spacing:.3em}
+  .vibe-pin .h2{font-size:clamp(54px,8.4vw,124px)}
+  .vibe-pin .lede{max-width:46ch}
+  .vibe-pin li{font-size:clamp(23px,3.1vw,42px);padding:16px 0}
+  .vibe-track{position:relative}
+  .vibe-sticky{position:sticky;top:0;min-height:100svh;display:flex;align-items:center;padding-block:96px 48px;box-sizing:border-box}
+  @media(max-width:920px),(max-height:639px){
+    /* too trapping on a phone — let it scroll normally and strike on entry */
+    .vibe-track{height:auto!important}
+    .vibe-sticky{position:static;min-height:0;padding-block:0}
+    .vibe-pin li .txt{text-decoration-color:transparent}
+    .vibe-pin li.in .txt{text-decoration-color:var(--accent-t);transition:text-decoration-color .9s var(--ease) .2s}
+    .vibe-pin li{opacity:.92}
+    .vibe-pin li.in{opacity:.7}
+  }
+  .vibe .signoff{margin-top:40px;font-family:var(--serif);font-style:italic;font-size:clamp(24px,3.1vw,38px);color:var(--fg);line-height:1.25}
+  .vibe .signoff b{font-family:var(--display);font-style:normal;font-weight:400;text-transform:uppercase;letter-spacing:.03em;margin-right:.3em}
+
+  .final .inner{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(24px,4vw,56px);align-items:center}
+  @media(max-width:900px){.final .inner{grid-template-columns:1fr}}
+  footer{background:var(--dk-bg);color:var(--dk-fg);border-top:1px solid var(--dk-line);padding-block:60px 0;overflow:hidden;--fg:var(--dk-fg);--muted:var(--dk-muted);--faint:var(--dk-faint);--line:var(--dk-line)}
+  .frow{display:flex;flex-wrap:wrap;gap:18px 34px;align-items:baseline;padding-block:20px;border-bottom:1px solid var(--line)}
+  .frow:last-of-type{border-bottom:0}
+  .flinks a{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-decoration:none;margin-right:20px;white-space:nowrap;display:inline-block}
+  .flinks a:hover{color:var(--accent-t)}
+  .crew{display:flex;gap:26px;flex-wrap:wrap}
+  @media(max-width:600px){.crew{flex-direction:column;gap:18px}}
+  .crew div{display:flex;align-items:center;gap:12px}
+  .crew .av{width:44px;height:44px;border-radius:50%;background:var(--sc-bg);border:1px solid var(--line);display:block;overflow:hidden;flex:0 0 auto;padding:0;cursor:zoom-in;transition:transform .3s var(--ease),border-color .3s var(--ease)}
+  .crew .av:hover{transform:scale(1.08);border-color:var(--accent-t)}
+  .crew .av:focus-visible{outline:2px solid var(--accent-t);outline-offset:3px}
+  .lb{position:fixed;inset:0;z-index:200;display:grid;place-items:center;padding:5vmin;background:color-mix(in srgb,#05030A 88%,transparent);backdrop-filter:blur(6px);opacity:0;pointer-events:none;transition:opacity .35s var(--ease)}
+  .lb.on{opacity:1;pointer-events:auto}
+  .lb figure{margin:0;max-width:min(560px,90vw);width:100%;transform:scale(.94);transition:transform .35s var(--ease)}
+  .lb.on figure{transform:none}
+  .lb img{width:100%;height:auto;display:block;border:1px solid var(--line);clip-path:polygon(var(--ch) 0,100% 0,100% calc(100% - var(--ch)),calc(100% - var(--ch)) 100%,0 100%,0 var(--ch))}
+  .lb figcaption{margin-top:14px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#fff;opacity:.75;text-align:center}
+  .lb .x{position:absolute;top:18px;right:20px;width:42px;height:42px;border-radius:50%;cursor:pointer;border:1px solid color-mix(in srgb,#fff 30%,transparent);background:color-mix(in srgb,#fff 8%,transparent);color:#fff;font-size:20px;line-height:1;display:grid;place-items:center}
+  .crew .av img{width:100%;height:100%;object-fit:cover;display:block}
+  /* sources are square; each subject sits differently in frame, so frame per face */
+  .crew .av img[alt="Luke Wade"]{object-position:50% 40%}
+  .crew .av img[alt="Oskar"]{object-position:47% 38%}
+  .crew .av img[alt="Luna"]{object-position:50% 45%}
+  .crew .nm{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+  .crew .nm b{display:block;color:var(--fg);font-weight:500;margin-bottom:3px}
+  .ackrow{display:flex;gap:16px;align-items:flex-start}
+  .flags{display:flex;flex-direction:row;gap:8px;flex:none;padding-top:2px}
+  .flags svg{width:44px;height:29px;border:1px solid var(--line);display:block}
+  .ack{font-size:13px;color:var(--faint);max-width:none;font-style:italic}
+  @media(max-width:600px){.ackrow{flex-direction:column}}
+  .incl{font-size:13.5px;color:var(--muted)}
+  .bigmark{font-family:var(--display);font-size:clamp(60px,17vw,230px);line-height:.8;color:color-mix(in srgb,var(--fg) 9%,var(--dk-bg));margin-top:30px;margin-bottom:-.16em;text-transform:uppercase;white-space:nowrap}
+  .sources{font-family:var(--mono);font-size:10.5px;color:var(--faint);letter-spacing:.04em}
+
+  .w{display:inline-block;white-space:nowrap}
+  .ch{display:inline-block;transition:transform .55s var(--ease);will-change:transform}
+  /* one fixed glow for the whole page, tight to the pointer */
+  .spotglow{position:fixed;inset:0;pointer-events:none;opacity:0;z-index:35;transition:opacity .3s var(--ease);
+    background:radial-gradient(120px circle at var(--x,50%) var(--y,50%),color-mix(in srgb,var(--accent) 32%,transparent),transparent 72%);mix-blend-mode:screen}
+  .card-stage,.quote,.sc{transition:transform .35s var(--ease),border-color .4s var(--ease),opacity .55s var(--ease)}
+  .rv{opacity:0;transform:translateY(26px);transition:opacity 1.2s var(--ease),transform 1.2s var(--ease)}
+  .rv.in{opacity:1;transform:none}
+  /* CIRCUIT PIN (desktop): title stays, cards rise one at a time */
+  @media(min-width:921px) and (min-height:640px){
+    .circ-pin{padding-block:0 clamp(48px,6vw,90px)}
+    .pin-track{height:430svh}
+    .circ-sticky{position:sticky;top:0;height:100svh;display:flex;flex-direction:column;padding-top:92px;padding-bottom:28px;box-sizing:border-box}
+    .circ-sticky>.wrap{width:100%}
+    .circ-pin .circ-head .lede{margin-bottom:0}
+    .circ-pin .circuit{flex:1;min-height:0;margin-top:clamp(18px,2.2vw,30px);align-items:stretch;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr)}
+    .circ-pin .eng-wrap{position:relative;top:0;display:flex;flex-direction:column;justify-content:flex-start;align-items:flex-start;min-height:0}
+    .circ-pin .eng{height:calc(100% - 30px);max-height:560px;width:auto;max-width:100%;margin-top:-6px}
+    .circ-pin .cards{position:relative;display:block;padding-bottom:0;height:100%}
+    .circ-pin .card-stage{position:absolute;left:0;right:0;top:calc(var(--i) * var(--peek,40px));height:var(--card-h,auto);overflow:hidden;transform:translateY(var(--ty,0px));will-change:transform;transition:border-color .4s var(--ease)}
+    .circ-pin .cards.tight .card-stage h3{font-size:24px;margin:4px 0 4px}
+    .circ-pin .cards.tight .card-stage>p{font-size:13px;line-height:1.36}
+    .circ-pin .cards.tight .card-stage{padding-top:31px!important;padding-bottom:10px!important}
+    .circ-pin .cards.tight .card-stage .chips{gap:5px;margin-top:8px}
+    .circ-pin .cards.tight .chips span{font-size:9px;padding:4px 7px}
+    .circ-pin .card-stage{padding:34px 44px 18px!important;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:26px;align-content:start}
+    .circ-pin .card-stage h3{grid-column:1;margin:10px 0 8px;font-size:clamp(26px,2.6vw,34px)}
+    .circ-pin .card-stage>p{grid-column:1;font-size:14.5px}
+    .circ-pin .card-stage .chips{grid-column:2;grid-row:1 / span 2;align-self:start;margin-top:14px}
+    .circ-pin .card-stage>p:last-child:not(:nth-of-type(1)){display:none}
+    .circ-pin .card-stage .tabx .aud{display:inline}
+    .circ-pin .circ-head .lede{max-width:78ch}
+  }
+
+  /* COMPARISON MARKS */
+  .mark{display:inline-grid;place-items:center;width:20px;height:20px;flex:none;margin-right:12px;vertical-align:-4px}
+  .mark svg{width:18px;height:18px;fill:none;stroke-width:2.8;stroke-linecap:round;stroke-linejoin:round}
+  .mark.x svg{stroke:#F0484E}.mark.ok svg{stroke:#35C475}
+  .cmp3 .c{display:flex;align-items:flex-start}
+  .cmp3 .c .mark{margin-top:1px}
+
+  /* FINAL CTA: full-bleed film */
+  .final-film{overflow:hidden}
+  .final-film .bgvid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:66% 22%;display:block}
+  .final-film .fscrim{position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,var(--film-bg) 0%,color-mix(in srgb,var(--film-bg) 88%,transparent) 30%,color-mix(in srgb,var(--film-bg) 35%,transparent) 52%,transparent 72%),linear-gradient(0deg,var(--film-bg) 0%,color-mix(in srgb,var(--film-bg) 55%,transparent) 16%,transparent 34%),linear-gradient(180deg,#000 0%,color-mix(in srgb,#000 60%,transparent) 14%,transparent 34%)}
+  .final-film .inner{position:relative;z-index:2;display:block;width:100%}
+  .final-film .inner>div{max-width:680px}
+  .final .h2.xl .it{white-space:nowrap}
+  @media(max-width:900px){.final-film .bgvid{object-position:70% 18%}.final-film .fscrim{background:linear-gradient(0deg,var(--film-bg) 38%,color-mix(in srgb,var(--film-bg) 70%,transparent) 68%,color-mix(in srgb,var(--film-bg) 30%,transparent) 100%)}.final-film{align-items:end!important}}
+
+  /* HIGGSFIELD MEDIA (v6, 17 Sep) */
+  .hero-film{padding:0;height:250vh;overflow:clip}
+  .film-pin{position:sticky;top:0;height:100svh;overflow:hidden;display:grid;align-items:center}
+  .film{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:28% 45%;display:block}
+  .film-scrim{position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,var(--film-bg) 0%,color-mix(in srgb,var(--film-bg) 82%,transparent) 30%,color-mix(in srgb,var(--film-bg) 20%,transparent) 62%,transparent 80%),linear-gradient(0deg,var(--film-bg) 0%,transparent 26%),linear-gradient(180deg,color-mix(in srgb,var(--film-bg) 60%,transparent) 0%,transparent 18%)}
+  .hero-film .inner{position:relative;z-index:2;padding-top:70px;width:100%}
+  @media(min-width:1041px){.hero-film .inner{grid-template-columns:minmax(0,1.5fr) minmax(0,.5fr)}.hero-film h1{white-space:nowrap}}
+  /* on a narrow phone the film band plus the copy is a tight fit against the
+     scroll cue, so the hero's own rhythm tightens up rather than the band shrinking */
+  @media(max-width:560px){
+    .hero-film h1{font-size:clamp(38px,15.6vw,104px);margin-top:10px}
+    .hero-film .sub{margin-top:16px;font-size:14.5px}
+    .hero-film .btns{margin-top:18px;gap:9px}
+    .hero-film .btns .btn{padding:13px 20px}
+    .hero-film .fineprint{margin-top:10px}
+    .hero-film .film-cue{bottom:6px}
+  }
+  .film-hud{position:relative;height:56vh;min-height:300px}
+  .film-cue,.scrollcue{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);z-index:2;transition:opacity .4s var(--ease);line-height:0}
+  .film-cue svg,.scrollcue svg{width:34px;height:34px;stroke:var(--accent-t);fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 8px color-mix(in srgb,var(--accent-t) 60%,transparent));animation:cuebounce 1.6s ease-in-out infinite}
+  @keyframes cuebounce{0%,45%,100%{transform:translateY(0);opacity:.5}22%{transform:translateY(9px);opacity:1}}
+  /* phone: show the whole 16:9 frame above the copy instead of a cropped
+     full-bleed plate, and let it fade to black into the headline */
+  @media(max-width:600px) and (min-height:620px){
+    /* the header is fixed, so the frame starts below it or the top of the shot
+       is hidden. The gradient only takes the bottom third so the whole frame reads. */
+    /* the shot is a full-body walk and its bottom third is wet floor, which read
+       as dead space. Blow it up 150% and cut it off around his waist: the pin
+       already clips the sides, clip-path takes the floor. */
+    /* the band is 190% wide so he reads big, and object-position picks the window:
+       head to just below the waist, leaving the wet floor out of the shot.
+       Capped against screen height so a short phone still fits the copy. */
+    :root{--band:calc(76svh - var(--hdrh,91px));--band-cta:76svh}
+    .film{position:absolute;top:var(--hdrh,91px);bottom:auto;left:-45%;right:auto;width:190%;
+      height:var(--band);object-fit:cover;object-position:50% 20%}
+    .film-scrim{inset:var(--hdrh,91px) 0 auto 0;height:var(--band);
+      background:linear-gradient(180deg,transparent 0%,transparent 42%,color-mix(in srgb,var(--film-bg) 62%,transparent) 60%,color-mix(in srgb,var(--film-bg) 88%,transparent) 74%,var(--film-bg) 90%,var(--film-bg) 100%)}
+    .hero-film .inner{align-self:stretch!important;display:flex!important;flex-direction:column;justify-content:center;
+      padding-top:47svh;padding-bottom:30px!important}
+    /* same idea on the closer, and it has the room to sit larger */
+    /* a box taller than 16:9 makes object-fit:cover scale to height, which crops
+       the sides and zooms in ~1.6x — and unlike an oversized negative-offset
+       element, it still composites here. */
+    .final-film .bgvid{inset:0 0 auto 0;width:100%;height:var(--band-cta);
+      object-fit:cover;object-position:50% 40%}
+    .final-film .fscrim{inset:0 0 auto 0;height:var(--band-cta);
+      background:linear-gradient(180deg,transparent 0%,transparent 42%,color-mix(in srgb,var(--film-bg) 62%,transparent) 60%,color-mix(in srgb,var(--film-bg) 88%,transparent) 74%,var(--film-bg) 90%,var(--film-bg) 100%)}
+    .final-film{align-items:start!important}
+    .final-film .inner{padding-top:37svh;padding-bottom:0!important}
+  }
+  @media(max-width:1040px){.hero-film{height:210vh}.film{object-position:38% 30%}.film-hud{display:none}
+    .film-scrim{background:linear-gradient(0deg,var(--film-bg) 30%,color-mix(in srgb,var(--film-bg) 70%,transparent) 62%,color-mix(in srgb,var(--film-bg) 25%,transparent) 100%)}
+    .hero-film .inner{align-self:end;padding-bottom:64px}}
+  .photo{position:relative;margin:0;aspect-ratio:4/5;overflow:hidden;background:var(--dk-bg);clip-path:polygon(var(--ch) 0,100% 0,100% calc(100% - var(--ch)),calc(100% - var(--ch)) 100%,0 100%,0 var(--ch))}
+  .photo img{width:100%;height:100%;object-fit:cover;object-position:50% 22%;display:block}
+  .photo figcaption{position:absolute;left:14px;bottom:12px;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#fff;opacity:.8}
+  .bgpin{position:sticky;top:0;height:100svh;margin-bottom:-100svh;overflow:hidden;pointer-events:none;z-index:0;-webkit-mask-image:linear-gradient(180deg,transparent 0%,#000 22%,#000 78%,transparent 100%);mask-image:linear-gradient(180deg,transparent 0%,#000 22%,#000 78%,transparent 100%)}
+  .bgloop{width:100%;height:100%;object-fit:cover;display:block;opacity:.2}
+  #circuit .wrap{z-index:1}
+  .cardvid{position:absolute;inset:22px;width:calc(100% - 44px);height:calc(100% - 44px);object-fit:cover;display:block;clip-path:polygon(var(--ch) 0,100% 0,100% calc(100% - var(--ch)),calc(100% - var(--ch)) 100%,0 100%,0 var(--ch))}
+
+  @media(prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important}
+    .rv{opacity:1;transform:none}.rl>span{transform:none}
+    .sig{clip-path:none}.vibe li .txt{text-decoration-color:var(--accent-t)}
+    .sc .r .track i{inset:0 calc(100% - var(--w)) 0 0}
+    html{scroll-behavior:auto}
+  }
+  /* LAPTOP SCALE. The type scale is sized off vw, which knows nothing about
+     height, so on a wide-but-short laptop everything stayed at 27-inch size and
+     content meant to be read together would not fit on one screen — Luke's words:
+     "like i need to zoom out to 75%". This is that zoom-out, done properly.
+     Tall desktop monitors are untouched. */
+  @media(min-width:921px) and (max-height:1050px){
+    section{padding-block:clamp(44px,5.6vw,84px)}
+    .h2{font-size:clamp(38px,5.4vw,72px)}
+    .h2.xl{font-size:clamp(48px,7.4vw,104px)}
+    .hero h1{font-size:clamp(64px,7.2vw,116px)}
+    .lede{font-size:17px;margin-top:16px}
+    .eyebrow{margin-bottom:12px}
+    /* sections whose whole point is being read in one screen get their own trim */
+    .vibe-pin .h2{font-size:clamp(42px,5.2vw,78px)}
+    .vibe ul{margin-top:26px}
+    .vibe li{font-size:clamp(19px,2vw,28px);padding:9px 0}
+    .midcta .lede.sell{font-size:clamp(17px,1.7vw,21px)}
+    .final .h2.xl{font-size:clamp(44px,6vw,88px)}
+    /* A wide-but-short viewport crops the 16:9 footage vertically, and the header
+       is fixed over it, so at 45% Luke's head sat behind the bar. Bias the crop
+       to the top: it takes the excess off the bottom, which the copy covers. */
+    .film{object-position:28% 14%}
+    .final-film .bgvid{object-position:66% 12%}
+    /* the wheel is the tallest thing on the page: stage 660px plus heading plus
+       nav ran well past a short screen. Scale the whole rig ~80%. */
+    .wstage{height:524px;perspective:1500px;margin-bottom:16px}
+    .tq{top:214px}
+    .tq .card{padding:36px 42px 32px 30px;min-height:232px;grid-template-columns:296px minmax(0,1fr);gap:0 22px}
+    .tq .holo{left:30px;bottom:28px;width:296px;height:376px}
+    .tq blockquote{font-size:clamp(15px,1.05vw,17px)}
+    .tq .tnm{font-size:15px;margin-top:14px}
+    .tq.s1{transform:translate3d(56%,-42px,-500px) rotateY(-38deg) scale(.66)}
+    .tq.s2{transform:translate3d(-56%,-42px,-500px) rotateY(38deg) scale(.66)}
+  }
+  /* and the Circuit pin specifically: its stacked sticky cards need ~860px of
+     headroom (104px offset + 6 x 62px stagger + card height), which a short
+     screen does not have — the engine squashed into the corner and the cards ran
+     off the bottom with their title plates overlapping. */
+  @media(min-width:921px) and (max-height:1050px){
+    #circuit .h2{font-size:clamp(38px,4.2vw,62px)}
+    #circuit .lede{font-size:16px;margin-top:14px}
+    #circuit .circuit{margin-top:26px}
+    .eng-wrap{top:86px}
+    .eng{max-width:290px}
+    .cards{gap:16px}
+    @media(min-width:921px){.cards{padding-bottom:8vh}}
+    .card-stage{top:calc(86px + var(--i) * 34px);padding:32px 34px 28px!important}
+  }
 </style>
-</head>
-<body>
-<main>
-  <span class="mark">AutoConvert <b>Digital</b></span>
 
-  <div class="me"><img src="/assets/people/luke-avatar-full.jpg" alt="Luke Wade, founder of AutoConvert Digital" width="1100" height="1100" fetchpriority="high"></div>
-
-  <h1><span class="caps">Marketing</span><span class="it">that just works.</span></h1>
-  <p class="sub">Every step after the click counts.</p>
-
-  <div class="soon">
-    <p class="soon-h">New site coming soon.</p>
-    <p class="soon-d">Until then, the quickest way to reach me:</p>
-    <a class="lk pri" href="mailto:sales@autoconvertdigital.com.au">
-      <span class="txt">
-        <span class="t">Email Luke</span>
-        <span class="d">sales@autoconvertdigital.com.au</span>
-      </span>
-      <span class="arr" aria-hidden="true">→</span>
-    </a>
-    <a class="lk sec" href="https://ig.me/m/autoconvertdigital" target="_blank" rel="noopener">
-      <span class="txt">
-        <span class="t">Message on Instagram</span>
-        <span class="d">@autoconvertdigital</span>
-      </span>
-      <span class="arr" aria-hidden="true">→</span>
-    </a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+  <linearGradient id="icoStroke" x1="0" y1="0" x2="1" y2="1"><stop offset="0" style="stop-color:var(--accent)"/><stop offset="1" style="stop-color:var(--accent-t)"/></linearGradient>
+  <linearGradient id="icoFill" x1="0" y1="0" x2="1" y2="1"><stop offset="0" style="stop-color:var(--accent-t)"/><stop offset="1" style="stop-color:var(--accent)"/></linearGradient>
+  <linearGradient id="icoPanel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--accent);stop-opacity:.22"/><stop offset="1" style="stop-color:var(--accent);stop-opacity:.03"/></linearGradient>
+</defs></svg>
+<header id="hdr">
+  <div class="wrap nav">
+    <a class="brand" href="#top">AutoConvert <b>Digital</b></a>
+    <a class="btn" href="/audit">Get your $97 audit →</a>
+    <span class="navsep" aria-hidden="true">|</span>
+    <button class="tgl" id="tgl" type="button" aria-label="Change colour theme">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.6v7.2"/><path d="M7.4 6.4a7 7 0 1 0 9.2 0"/></svg>
+    </button>
   </div>
+</header>
+
+<main id="top">
+
+  <!-- 01 HERO · scroll-scrubbed walk-in (approved package 2026.09.21) -->
+  <section class="hero dark hero-film" id="heroFilm">
+    <div class="film-pin">
+      <video class="film" id="heroVid" src="assets/hf/hero-walk-final.h264.mp4" poster="assets/hf/hero-walk-final-poster.jpg" muted playsinline preload="auto" aria-hidden="true"></video>
+      <div class="film-scrim"></div>
+      <div class="wrap inner">
+      <div>
+        <p class="eyebrow">When you need</p>
+        <h1><span class="rl"><span>Marketing</span></span><span class="rl s"><span>that just works.</span></span></h1>
+        <p class="sub">I help business owners recover the revenue their marketing is silently losing, and win back hours every week, without more staff or extra spend.</p>
+        <div class="btns">
+          <a class="btn" href="/audit">Get your $97 audit →</a>
+          <a class="btn ghost" href="#circuit">See how it works →</a>
+        </div>
+        <p class="fineprint">No sales call. Real marketing strategy.</p>
+      </div>
+      <!-- hero HUD chips removed: the footage has its own holographic panels -->
+      </div>
+      <div class="film-cue" id="filmCue" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></div>
+    </div>
+  </section>
+
+  <div class="marq" aria-hidden="true"><div class="run" id="marqA"></div></div>
+
+  <!-- 02 FOUNDER · the hero's world carries down here, then drops away
+       before facts and figures -->
+  <section class="dark env env-l" id="founder">
+    <div class="envbg" aria-hidden="true"></div>
+    <div class="wrap split rv">
+      <div class="sticky">
+        <figure class="photo">
+          <img src="assets/people/luke-founder.jpg" alt="Luke Wade, founder of AutoConvert Digital" loading="lazy">
+          <span class="brk tl"></span><span class="brk br"></span>
+        </figure>
+      </div>
+      <div class="letter">
+        <p class="eyebrow">From the founder</p>
+        <h2 class="h2">G’day,<span class="it">I’m Luke</span></h2>
+        <p style="margin-top:26px">In more than ten years running marketing for other people’s businesses, I’ve rarely seen one short on effort. They’re short on hours. Marketing is a full-time discipline, and it runs alongside every other priority in the business.</p>
+        <p>So leads fall through the cracks, follow-ups wait until someone’s free to get to the inbox, and campaigns run without anyone truly across them. The results never quite match what was promised.</p>
+        <p>None of that shows up on a report. <span class="hl">It shows up as a hole in your pocket at the end of the month.</span></p>
+        <p>That’s why I built the Click-to-Close Circuit™: a marketing system that recovers revenue slipping through the cracks and gets more from every dollar you already spend.</p>
+        <div class="sig"><img src="assets/luke-wade-signature-web.png" alt="Luke Wade signature"></div>
+        <p class="byline"><span class="r">Founder &amp; Chief Conversion Officer</span><span>AutoConvert Digital</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 COUNTERS -->
+  <section class="dark" style="padding-top:clamp(56px,7vw,104px)">
+    <div class="wrap rv">
+      <p class="eyebrow">Facts and figures</p>
+      <h2 class="h2">Getting the lead<span class="it">is only half the job</span></h2>
+      <p class="lede">Your ads, your landing page, the follow-up, the booking, the sale, the review, and the referral: every stage either makes you money or quietly costs you. The numbers below are what the industry settles for. Every one of them is a stage we rebuild, so the revenue they leak comes back to you.</p>
+      <div class="stats" id="stats">
+        <div class="stat">
+          <div class="n" data-to="93" data-suffix="/100">0/100</div>
+          <div class="l">Visitors leave a typical landing page without enquiring<sub>1</sub></div>
+        </div>
+        <div class="stat">
+          <div class="n" data-to="42" data-suffix="<em>hrs</em>">0<em>hrs</em></div>
+          <div class="l">Average time a business takes to reply to an enquiry<sub>2</sub></div>
+        </div>
+        <div class="stat">
+          <div class="n" data-to="34" data-suffix="%">0%</div>
+          <div class="l">Fewer missed appointments with two SMS reminders<sub>3</sub></div>
+        </div>
+        <div class="stat">
+          <div class="n" data-to="25" data-suffix="x">0x</div>
+          <div class="l">Cheaper to keep a customer than win a new one<sub>4</sub></div>
+        </div>
+      </div>
+      <p class="statfoot">Industry averages, not promises. Beating them is the job: same ad spend, more of it converted.</p>
+    </div>
+  </section>
+
+  <!-- 04 CIRCUIT -->
+  <section class="dark circ-pin" id="circuit">
+    <div class="bgpin" aria-hidden="true"><video class="bgloop" src="assets/hf/beam-loop-final.h264.mp4" poster="assets/hf/beam-loop-final-poster.jpg" muted loop playsinline preload="auto" data-inview></video></div>
+    <div class="pin-track" id="pinTrack">
+    <div class="circ-sticky">
+    <div class="wrap rv circ-head">
+      <p class="eyebrow">Seven stages. One system</p>
+      <h2 class="h2">The Click-to-Close Circuit<span class="tm">™</span><span class="it">every step after the click counts</span></h2>
+      <p class="lede">This isn’t just a campaign. It’s a growth system installed directly into your business, covering every step from the first click to closing the deal (and beyond!).</p>
+    </div>
+    <div class="wrap circuit">
+      <div class="eng-wrap">
+        <svg class="eng" id="eng" viewBox="0 0 340 400" aria-hidden="true"></svg>
+        <p class="fineprint">Stage <span id="engNow">01</span> of 07 · scroll to step through</p>
+      </div>
+      <div class="cards" id="cards"></div>
+    </div>
+    </div>
+    </div>
+  </section>
+
+
+
+  <div class="seam" id="seam" aria-hidden="true"></div>
+
+  <!-- 04b SCORE CTA · question-led, scoped to the first three stages.
+       The full audit offer still lives in section 06. -->
+  <section class="dark midcta" id="scoreCta">
+    <div class="mid-track">
+      <div class="mid-sticky">
+        <div class="wrap mid-in">
+          <p class="eyebrow">Stages 01&ndash;03</p>
+          <h2 class="h2">Which stage<span class="it">is costing you the most?</span></h2>
+          <p class="lede sell">We score your offer &amp; ads, your landing page, and your lead capture, against our Click-to-Close Circuit&trade;, and give you an action plan to win back lost revenue.</p>
+          <div class="btns"><a class="btn" href="/audit">Get your $97 audit &rarr;</a></div>
+          <p class="fineprint">Back in 48 hours &middot; no sales call</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 BENEFITS -->
+  <div class="corridor-span" id="corridorSpan">
+  <div class="corridor-bg" id="corridorBg" aria-hidden="true"></div>
+  <section class="dark">
+    <div class="wrap">
+      <div class="rv">
+        <p class="eyebrow">What to expect</p>
+        <h2 class="h2">More results.<span class="it">Same ad spend</span></h2>
+        <p class="lede">Here’s what changes when every stage of your marketing works together, all from the ads you’re already running.</p>
+      </div>
+      <div class="bens" id="bens"></div>
+    </div>
+  </section>
+
+  <!-- 06 AUDIT -->
+  <section class="dark" id="audit">
+    <div class="wrap rv">
+      <p class="eyebrow">The $97 audit</p>
+      <h2 class="h2">How much revenue<span class="it">could you recover?</span></h2>
+    </div>
+    <div class="wrap audit rv" style="margin-top:clamp(32px,4vw,56px)">
+      <div>
+        <p class="lede auditlede" style="margin-top:0">For $97, find out the <b>top three fixes that will make the biggest difference to your bottom line</b> — such as:</p>
+        <ul class="ticks" id="ticks"></ul>
+        <div class="btns"><a class="btn" href="/audit">Get your $97 audit →</a></div>
+        <p class="fineprint">48-hour turnaround · No sales call · Money-back guarantee</p>
+      </div>
+      <div class="sc" id="sc">
+        <div class="schead">
+          <div>
+            <div class="t">Ads audit scorecard</div>
+            <div class="fineprint" style="margin-top:6px;color:#6D6582">Stages 01–03 · Ads · Landing page · Lead capture</div>
+          </div>
+          <div class="s">Example</div>
+        </div>
+        <div class="grade">
+          <div class="g">54</div>
+          <div class="gl">Out of 100 across the first three stages</div>
+        </div>
+        <div class="rows">
+          <div class="r"><div class="k"><span>01 Ads</span><b>58</b></div><div class="track"><i style="--w:58%"></i></div></div>
+          <div class="r"><div class="k"><span>02 Landing page</span><b>34</b></div><div class="track"><i style="--w:34%"></i></div></div>
+          <div class="r"><div class="k"><span>03 Lead capture</span><b>72</b></div><div class="track"><i style="--w:72%"></i></div></div>
+        </div>
+        <div class="foot"><span>Fix 01 · Message match</span><span>Fix 02 · Speed to lead</span><span>Fix 03 · Form + tracking</span></div>
+      </div>
+    </div>
+  </section>
+  </div>
+
+  <div class="marq rev" aria-hidden="true"><div class="run" id="marqB"></div></div>
+
+  <!-- 07 TESTIMONIALS · character-select wheel: three seats on a turntable, rotateY,
+       no scroll container (the old horizontal snap scroller trapped trackpads) -->
+  <section class="dark env env-fadein env-stage" style="--env:url(assets/env-testimonials.jpg)">
+    <div class="envbg" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="rv">
+        <p class="eyebrow">Client results</p>
+        <h2 class="h2">Testimonials<span class="it">get a second opinion</span></h2>
+      </div>
+      <div class="wheel" id="wheel">
+        <div class="wstage" id="wstage">
+      <article class="tq" data-i="0">
+        <div class="card">
+          <svg class="fr" aria-hidden="true"></svg>
+          <span class="tabx">Result 01 &middot; Verified</span>
+          <figure class="holo"><img src="assets/people/peter-holo.webp" alt="Peter Giannakis" loading="lazy"></figure>
+          <div class="qbody"><blockquote>&ldquo;Luke’s ability to understand our business and speak with our voice is his greatest asset and perhaps the biggest problem we’ve had in the past with previous marketing efforts.&rdquo;</blockquote>
+            <p class="tnm">Peter Giannakis</p><p class="trl">Director, HG Coffee School</p></div>
+        </div>
+      </article>
+      <article class="tq" data-i="1">
+        <div class="card">
+          <svg class="fr" aria-hidden="true"></svg>
+          <span class="tabx">Result 02 &middot; Verified</span>
+          <figure class="holo"><img src="assets/people/dav-holo.webp" alt="Dav Lipasaar" loading="lazy"></figure>
+          <div class="qbody"><blockquote>&ldquo;We saw an immediate increase in results; more leads being delivered, the cost per lead decreasing, amazing quality of creative, and well-thought-out copy that converts.&rdquo;</blockquote>
+            <p class="tnm">Dav Lipasaar</p><p class="trl">Director, SAAR Media<br>&amp; Entertainment</p></div>
+        </div>
+      </article>
+      <article class="tq" data-i="2">
+        <div class="card">
+          <svg class="fr" aria-hidden="true"></svg>
+          <span class="tabx">Result 03 &middot; Verified</span>
+          <figure class="holo"><img src="assets/people/sam-holo.webp" alt="Sam Roberts" loading="lazy"></figure>
+          <div class="qbody"><blockquote>&ldquo;Leads used to get followed up whenever I found a spare minute between clients. Luke helped streamline our enquiries and lead capture so everything is in one place and tracked from start to finish. In this game, the fastest salesman gets the deal.&rdquo;</blockquote>
+            <p class="tnm">Sam Roberts</p><p class="trl">Principal Dealer, Revé Auto Haus</p></div>
+        </div>
+      </article>
+        </div>
+        <div class="wnav">
+          <button type="button" id="wprev" aria-label="Previous testimonial">&larr;</button>
+          <span class="dots" id="wdots"><i></i><i></i><i></i></span>
+          <button type="button" id="wnext" aria-label="Next testimonial">&rarr;</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 08 COMPARISON -->
+  <section class="dark">
+    <div class="wrap rv">
+      <p class="eyebrow">Side by side</p>
+      <h2 class="h2">Campaign<span class="it">vs a system</span></h2>
+      <p class="lede">A campaign buys you attention. A system turns it into revenue. Two completely different months from the same starting point.</p>
+      <div class="cmp3" id="cmp3"></div>
+      <div class="btns">
+        <a class="btn" href="/audit">Get your $97 audit →</a>
+        <a class="btn ghost" href="/strategy-call">Apply for a strategy call →</a>
+      </div>
+      <p class="fineprint">Not sure yet? Start with the audit. Ready to build? Apply for a call.</p>
+    </div>
+  </section>
+
+
+
+  <!-- 10 VIBE CHECK -->
+  <section class="dark vibe vibe-pin" id="vibeSec">
+    <div class="vibe-track" id="vibeTrack">
+      <div class="vibe-sticky">
+        <div class="wrap rv">
+          <p class="eyebrow">Vibe check</p>
+          <h2 class="h2">We’re not<span class="it">for everyone</span></h2>
+          <p class="lede">If any of these sound like you, we’re probably not the right fit.</p>
+          <ul id="vibe"></ul>
+          <p class="signoff"><b>Still reading?</b>Perfect. Let’s see how we can help.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10 FINAL CTA -->
+  <section class="dark final final-film" id="final" style="min-height:100svh;display:grid;align-items:center">
+    <video class="bgvid" src="assets/hf/cta-final.h264.mp4" poster="assets/hf/cta-final-poster.jpg" muted loop playsinline preload="metadata" data-inview aria-hidden="true"></video>
+    <div class="fscrim"></div>
+    <div class="wrap inner">
+      <div>
+        <p class="eyebrow">Let’s get started</p>
+        <h2 class="h2 xl">Ready<span class="it">when you are</span></h2>
+        <p class="lede">Find out where your marketing is losing money and exactly what to fix first, or apply for a strategy call if you’re ready to build.</p>
+        <div class="btns">
+          <a class="btn" href="/audit">Get your $97 audit →</a>
+          <a class="btn ghost" href="/strategy-call">Apply for a strategy call →</a>
+        </div>
+        <p class="fineprint">Money-back guarantee · No sales call</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11 FAQ · after the CTA, so the vibe check runs straight into it -->
+  <section class="dark faqsec">
+    <div class="grad" aria-hidden="true"></div>
+    <div class="wrap faqwrap rv">
+      <div class="faqhead">
+        <p class="eyebrow">Before you ask</p>
+        <h2 class="h2">Questions,<span class="it">answered</span></h2>
+        <p style="margin-top:28px">Still got a question? <a href="#" style="color:var(--accent);font-weight:600">Email me →</a></p>
+      </div>
+      <div class="faqbody">
+        <div class="tabs" role="tablist" id="tabs"></div>
+        <div id="faq"></div>
+      </div>
+    </div>
+  </section>
 </main>
 
 <footer>
-  Gold Coast · Australia-wide
+  <div class="wrap">
+    <div class="frow">
+      <div>
+        <div class="brand" style="font-size:20px">AutoConvert <b>Digital</b></div>
+        <p class="fineprint" style="margin-top:8px">Marketing that just works.</p>
+      </div>
+      <div style="margin-left:auto" class="fineprint">Gold Coast, Queensland · Working with businesses Australia-wide<br>ABN 58 593 675 977</div>
+    </div>
+    <div class="frow crew">
+      <div><button class="av" type="button" data-full="assets/people/luke-avatar-full.jpg" aria-label="View full photo of Luke Wade"><img src="assets/people/luke-avatar.jpg" alt="Luke Wade" loading="lazy"></button><span class="nm"><b>Luke Wade</b>Chief Conversion Officer</span></div>
+      <div><button class="av" type="button" data-full="assets/people/oskar-full.jpg" aria-label="View full photo of Oskar"><img src="assets/people/oskar.jpg" alt="Oskar" loading="lazy"></button><span class="nm"><b>Oskar</b>Chief Meowketing Officer</span></div>
+      <div><button class="av" type="button" data-full="assets/people/luna-full.jpg" aria-label="View full photo of Luna"><img src="assets/people/luna.jpg" alt="Luna" loading="lazy"></button><span class="nm"><b>Luna</b>Head of Purrformance</span></div>
+    </div>
+    <div class="frow flinks">
+      <div><a href="/audit">The $97 audit</a><a href="/strategy-call">Apply for a strategy call</a><a href="#">Contact</a><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Refund policy</a></div>
+      <div style="margin-left:auto"><a href="https://share.google/fACTnaPU91Maqthym" target="_blank" rel="noopener">Google</a><a href="https://www.facebook.com/autoconvertdigitalgc" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/autoconvertdigital/" target="_blank" rel="noopener">Instagram</a><a href="https://www.linkedin.com/in/wadeluke/" target="_blank" rel="noopener">LinkedIn</a><a href="https://open.spotify.com/playlist/11O69oFYBWeUKgEg4GUvx6?si=bd427d418a234705" target="_blank" rel="noopener">Spotify</a></div>
+    </div>
+    <div class="frow" style="flex-direction:column;gap:14px">
+      <p class="incl" style="margin:0">∞ 🏳️‍🌈 Neurodivergent-owned. Hyperfocus included at no extra cost. LGBTQIA+ inclusive.</p>
+      <div class="ackrow">
+        <span class="flags">
+          <svg viewBox="0 0 60 40" role="img" aria-label="Aboriginal flag"><rect width="60" height="20" fill="#000"/><rect y="20" width="60" height="20" fill="#C00"/><circle cx="30" cy="20" r="9" fill="#FC0"/></svg>
+          <svg viewBox="0 0 60 40" role="img" aria-label="Torres Strait Islander flag"><rect width="60" height="40" fill="#00A94F"/><rect y="6" width="60" height="28" fill="#000"/><rect y="9" width="60" height="22" fill="#0072CE"/><path d="M30 12.5c4.6 0 8.4 1.9 8.4 1.9l-1.6 2.2c0 0-3-1.5-6.8-1.5s-6.8 1.5-6.8 1.5l-1.6-2.2c0 0 3.8-1.9 8.4-1.9z" fill="#fff"/><path d="M22.6 16.6h2.2v3.2h-2.2zM27 16.9h2.2v3.4H27zM31.4 16.9h2.2v3.4h-2.2zM35.8 16.6h2.2v3.2h-2.2z" fill="#fff"/><path d="M30 21.4l1.5 3.1 3.4.5-2.5 2.4.6 3.4-3-1.6-3 1.6.6-3.4-2.5-2.4 3.4-.5z" fill="#fff"/></svg>
+        </span>
+        <p class="ack" style="margin:0">AutoConvert Digital acknowledges the Traditional Custodians of the land on which we work, the Kombumerri families of the <a href="https://www.yugambeh.com/">Yugambeh Language Region</a>, and the Traditional Custodians of the lands where our clients live and work. We pay our respects to Elders past and present.</p>
+      </div>
+      <p class="sources" style="margin:0">© 2026 AutoConvert Digital · Sources: ¹ Unbounce, 2024 · ² Harvard Business Review, 2011 · ³ NSW Behavioural Insights Unit, 2019 · ⁴ Harvard Business Review, 2014</p>
+    </div>
+    <div class="bigmark">AutoConvert</div>
+  </div>
 </footer>
 
-</body>
-</html>
+<script>
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+const STAGES=[
+ ["Offer & Ads","Give the right people a reason to stop scrolling. We shape an offer your ideal customer actually wants, say it the way they’d say it, and test it on real spend, not opinion.",["Offer creation","Positioning & messaging","Audience targeting & retargeting","Ad copy & creative","Rapid angle testing","PPC on Meta, Google + more"]],
+ ["Destination","Your landing page or website delivers exactly what the ad promised. One page, one offer, the same words as the ad, and fast to load on a phone, so fewer paid clicks go to waste.",["Landing pages","Message match","Conversion copy","Conversion rate optimisation","Page speed","A/B testing"]],
+ ["Capture","Every enquiry lands, and lands fast. Short forms, server-side tracking you can trust, and new leads on your phone in seconds, so your numbers finally match your inbox.",["Lead forms","Calendar scheduling","CRM setup","One inbox for SMS, email & DMs","Missed call text-back","Pixel & Conversions API","Instant lead alerts"]],
+ ["Qualify","Save your time for prospects ready to buy. Serious buyers go straight to you, everyone else gets something useful or another offer, and your calendar stays clean.",["Qualification forms","AI chat agent","AI receptionist","Lead scoring & routing"]],
+ ["Engage","Get there first, then stay in touch. Every new lead hears from you within minutes, day or night, and a nurture sequence keeps them engaged until they’re ready.",["Speed-to-lead SMS & email","AI booking agent","Follow-up sequences","Nurture sequences","Old lead reactivation"]],
+ ["Close","Reminders and pre-appointment content mean more people arrive ready to buy, and quotes get followed up without anyone having to remember.",["Appointment reminders","No-show recovery","Pre-sell content","Quote & proposal follow-up","Pipeline tracking"]],
+ ["Maximise","The sale is the starting point. Review requests, referral asks, and check-ins go out on their own, turning one-off customers into repeat business.",["Review requests","AI review replies","Referral flows","Service reminders & win-back","Customer check-ins"]]
+];
+const BENEFITS=[
+ ["Every enquiry answered in minutes","The industry average is 42 hours. Yours go out in minutes, day or night, whether you’re on a job or away for the weekend.","reply"],
+ ["More people turning up","Automated reminders and pre-appointment content mean fewer no-shows.","booked"],
+ ["Quotes that don’t go quiet","Follow-ups go out on their own, so a “we’ll think about it” doesn’t become a “no”.","quote"],
+ ["Reviews and referrals on repeat","Happy customers get asked at the right moment, every time, without anyone remembering.","reviews"],
+ ["Numbers you can actually trust","A live dashboard shows every stage in dollars, from the first click to the paid invoice.","numbers"],
+ ["Hours back in your week","Time you’d normally spend chasing leads, confirming bookings, and asking for reviews.","time"]
+];
+const ICONS={reply:`<rect class="pl" x="14" y="20" width="78" height="56" rx="6"/><path class="pl" d="M30 76 L22 96 L48 76"/>
+<path class="fl" d="M58 30 L40 52 H53 L47 68 L68 44 H55 Z"/>
+<circle class="ln thin" cx="88" cy="30" r="20" stroke-dasharray="4 5"/><path class="ln" d="M88 18 V30 L96 36"/>
+<path class="tk" d="M22 30h10M22 36h6M72 64h12M76 58h8"/><circle class="dt" cx="100" cy="86" r="3"/><circle class="dt o" cx="108" cy="78" r="2"/>`,booked:`<rect class="pl" x="14" y="22" width="80" height="76" rx="6"/><path class="ln" d="M14 40 H94"/><path class="ln" d="M32 14 V28 M76 14 V28"/>
+<g class="gridd"><circle cx="28" cy="54" r="2.4"/><circle cx="44" cy="54" r="2.4"/><circle cx="60" cy="54" r="2.4"/><circle cx="76" cy="54" r="2.4"/><circle cx="28" cy="70" r="2.4"/><circle cx="76" cy="70" r="2.4"/><circle cx="28" cy="86" r="2.4"/><circle cx="44" cy="86" r="2.4"/><circle cx="60" cy="86" r="2.4"/></g>
+<rect class="fl" x="36" y="62" width="32" height="16" rx="3"/><path class="ln white" d="M43 70 l5 5 l10 -10"/>
+<circle class="pl" cx="98" cy="84" r="14"/><circle class="fl" cx="98" cy="80" r="4.5"/><path class="fl" d="M89 94 q9 -10 18 0 z"/><path class="tk" d="M100 30h10M104 36h6"/>`,quote:`<path class="pl" d="M22 12 H68 L86 30 V100 H22 Z"/><path class="ln" d="M68 12 V30 H86"/>
+<path class="tk" d="M32 44h36M32 54h30M32 64h34M32 74h18"/><rect class="fl" x="32" y="82" width="22" height="8" rx="2"/>
+<path class="ln" d="M104 70 a22 22 0 1 1 -8 -17"/><path class="fl" d="M98 42 L106 55 L92 56 Z"/>
+<circle class="dt" cx="94" cy="92" r="4"/><circle class="dt o" cx="104" cy="98" r="2.4"/>`,reviews:`<circle class="ln thin" cx="60" cy="60" r="46" stroke-dasharray="3 6"/><circle class="pl" cx="60" cy="60" r="34"/>
+<path class="fl" d="M60 34 L67.6 50.2 L85.4 52.4 L72.3 64.6 L75.7 82.2 L60 73.6 L44.3 82.2 L47.7 64.6 L34.6 52.4 L52.4 50.2 Z"/>
+<path class="fl s" d="M100 18 l2.2 5 5.3.6-4 3.6 1.1 5.3-4.6-2.7-4.6 2.7 1.1-5.3-4-3.6 5.3-.6z"/>
+<path class="fl s" d="M18 88 l1.6 3.6 3.9.5-2.9 2.6.8 3.8-3.4-2-3.4 2 .8-3.8-2.9-2.6 3.9-.5z"/>
+<path class="ln" d="M100 76 a44 44 0 0 1 -30 28"/><path class="fl" d="M66 98 L72 110 L78 99 Z"/>`,numbers:`<rect class="pl" x="10" y="18" width="92" height="72" rx="6"/><path class="ln" d="M10 32 H102"/><circle class="dt" cx="20" cy="25" r="2"/><circle class="dt o" cx="28" cy="25" r="2"/>
+<rect class="fl" x="22" y="64" width="10" height="18" rx="1.5"/><rect class="fl" x="38" y="56" width="10" height="26" rx="1.5"/><rect class="fl" x="54" y="48" width="10" height="34" rx="1.5"/><rect class="fl" x="70" y="40" width="10" height="42" rx="1.5"/>
+<path class="ln" d="M20 56 L42 46 L58 40 L88 38"/><circle class="dt" cx="88" cy="38" r="3.5"/>
+<circle class="pl" cx="96" cy="94" r="16"/><path class="ln" d="M96 84 V104 M101 88 q-5-4-10 0 q0 4 5 5 q6 1 5 5 q-5 4-10 0"/>`,time:`<circle class="pl" cx="58" cy="62" r="40"/><circle class="ln thin" cx="58" cy="62" r="30" stroke-dasharray="2 5"/>
+<path class="tk" d="M58 26v7M58 91v7M22 62h7M87 62h7"/><path class="ln" d="M58 62 V40 M58 62 L74 72"/><circle class="fl" cx="58" cy="62" r="5"/>
+<path class="ln" d="M20 40 a44 44 0 0 1 18 -18"/><path class="fl" d="M14 48 L22 34 L30 46 Z"/>
+<rect class="fl" x="82" y="10" width="30" height="16" rx="3"/><text x="97" y="22" class="badge">+HRS</text>`};
+const CMP=[
+ ["The goal","More clicks, cheaper leads","More revenue from every lead"],
+ ["The finish line","The lead lands in your inbox","The invoice gets paid, and the referral follows"],
+ ["Follow-up","Whenever someone gets to it","Within minutes, day or night"],
+ ["Missed calls","Voicemail, then silence","Answered, qualified, and booked"],
+ ["No-shows","An empty slot you still paid for","Engagement that gets them through the door"],
+ ["Reporting","Pages of activity, no answer on sales","What you spent, what came back, and where it slipped"],
+ ["A bad month","“Let’s increase the budget”","Find the leaking stage and fix it"]
+];
+const TICKS=[
+ ["Your offer and message","is it giving the right people a reason to stop scrolling?"],
+ ["Your ads","targeting, creative, structure, and tracking, scored against Meta’s own benchmarks"],
+ ["Your landing page","does it match the ad, and has it got what it needs to turn clicks into enquiries?"],
+ ["Your three biggest fixes","ranked by what they’re likely costing you each month"]
+];
+const FAQ={
+ Trust:[["Is AutoConvert Digital a marketing agency?","Yes, but we don’t stop at just running ad campaigns. Plenty of marketing ends once an enquiry lands in your inbox. We build the whole system behind it, from the ad to the follow-up, the booking, the sale, and the review, and report on every stage in dollars."],
+ ["I’ve been burned by an agency before. Why would you be any different?","We focus on results, not activity. Every decision follows our Click-to-Close Circuit™ methodology, a seven-stage process built from more than ten years of running campaigns. It starts with a $97 audit that gives you the exact steps to bring in more revenue from what you’re already doing."],
+ ["What happens if I want to leave?","We work together in a way that makes sense for your business: a one-off project, ongoing management, or a mix of both. If you want to leave, you keep what we’ve built and can move to another provider for a fixed transfer fee, agreed upfront, so everything stays intact."]],
+ Results:[["Do you guarantee results?","Here’s what we do guarantee: we test before we scale, every decision is backed by data, and you’ll see exactly what’s working in real numbers. Add more than ten years of experience across service businesses, and you’re dealing in facts and figures, not hopes and dreams."],
+ ["Will this work for my industry?","It’s built for service businesses already running ads, such as trades, clinics, professional services, and home services. If you’re unsure or just starting out, send us an email for a friendly chat."],
+ ["Do I have to spend more on ads?","Not unless you want to. We focus on getting more from what you already spend, and because we charge a flat fee rather than a percentage of your ad budget, we’ve got no reason to push it up. When you’re ready to scale, we’ll show you the numbers first."]],
+ "How it works":[["I’m not tech-savvy. Will I have to learn new software?","No. We set everything up and run it for you. You get your own app to see new leads, reply to messages, and check bookings from your phone or computer, and your live dashboard is there 24/7."],
+ ["Will the AI sound like a robot to my customers?","No. Your AI agent is trained on your business, your services, and the way you communicate. It handles the first reply, the questions, and the booking, and hands over to a real person whenever it should."],
+ ["Who actually does the work?","I lead every account personally. You’ll deal with me from the audit through to the monthly reviews, not a junior account manager you’ve never met."]]
+};
+const VIBE=["Chasing the cheapest lead and nothing else","Expecting results before the ad is even live","Letting enquiries sit until they go cold","Buying more leads instead of following them up","Not willing to change what isn’t working","Not looking to collaborate"];
+
+/* banners: what we do + trust, not the stage names */
+const A="Meta + Google ads··Landing pages··Speed-to-lead··AI agents··Automation··@Reporting in dollars··10+ years··Gold Coast, Australia-wide··@You keep what we build··Flat fee, not a % of ad spend··";
+const B="The $97 audit··48-hour turnaround··No sales call··@Money-back guarantee··Scored against Meta benchmarks··Your three biggest fixes··";
+const mq=(el,s)=>{const once=s.split("··").filter(Boolean).map(t=>t[0]==="@"?`<b>${t.slice(1)}</b>`:`<span>${t}</span>`).join('<s>··</s>');el.innerHTML=once+'<s>··</s>'+once+'<s>··</s>';};
+mq(document.getElementById("marqA"),A); mq(document.getElementById("marqB"),B);
+
+/* cards */
+const cardsEl=document.getElementById("cards");
+STAGES.forEach(([n,c,ch],i)=>{
+  const d=document.createElement("article");
+  d.className="card-stage"; d.dataset.i=i; d.style.zIndex=10+i; d.style.setProperty("--i",i);
+  d.innerHTML=`<span class="tabx">Stage ${String(i+1).padStart(2,"0")} · ${n}${i<3?'<span class="aud">&nbsp;· In your $97 audit</span>':''}</span><span class="live"><i></i>Live</span><svg class="fr" aria-hidden="true"></svg>
+   <h3>${n}</h3><p>${c}</p><div class="chips">${ch.map(x=>`<span>${x}</span>`).join("")}</div>
+   ${i<3?'<p style="margin-top:18px"><span class="mk">Your $97 audit covers this stage</span></p>':''}`;
+  cardsEl.appendChild(d);
+});
+
+/* R3 frame: stepped octagon with the step along the top-left (where the plate sits), outer line, side tabs, accent run */
+const pth=pts=>"M"+pts.map(q=>q.map(n=>Math.round(n*10)/10).join(",")).join(" L")+" Z";
+function octStep(x,y,w,h,c,st){ // top edge: starts after the step
+  return [[x+w*.56,y],[x+w-c,y],[x+w,y+c],[x+w,y+h-c],[x+w-c,y+h],[x+c,y+h],[x,y+h-c],[x,y+c*.6+st],[x+c*.6,y+st],[x+w*.56-st,y+st]];
+}
+function drawFrame(el){
+  const w=el.clientWidth,h=el.clientHeight; if(!w||!h)return;
+  const O=5,I=16,c=Math.min(34,h*.16),st=12;
+  let g=`<path class="of" d="${pth(octStep(O+.5,O+.5,w-2*O-1,h-2*O-1,c+5,0))}"/><path class="o" d="${pth(octStep(O+.5,O+.5,w-2*O-1,h-2*O-1,c+5,st))}"/>`;
+  [[0,h*.3],[w-O-1,h*.3]].forEach(([x,y])=>{g+=`<rect class="t" x="${x}" y="${y}" width="${O+1}" height="${h*.16}"/><path class="tl" d="M${x<1?1.5:w-1.5} ${y+h*.2} v${h*.1}"/>`});
+  g+=`<path class="f" d="${pth(octStep(I,I,w-2*I,h-2*I,c,st))}"/>`;
+  g+=`<path class="run" d="M${w-I} ${I+c+10} V${Math.max(I+c+30,h*.6)}"/><path class="run" d="M${w-I-c+6} ${I} L${w-I} ${I+c-6}"/>`;
+  el.querySelector("svg.fr").innerHTML=g;
+}
+const frRO=new ResizeObserver(es=>es.forEach(e=>drawFrame(e.target)));
+document.querySelectorAll(".card-stage").forEach(c=>{drawFrame(c);frRO.observe(c)});
+
+/* engine diagram: block of 7 bands, thin leads out to labels */
+const eng=document.getElementById("eng");
+let g="";
+const BX=232,BY=40,BW=70,BH=44;
+g+=`<path class="shell" d="M${BX-10} ${BY-14} H${BX+BW+10} V${BY+BH*7+14} H${BX-10} Z"/>`;
+STAGES.forEach((s,i)=>{
+  const y=BY+i*BH;
+  g+=`<path class="band" data-i="${i}" d="M${BX+8} ${y+4} H${BX+BW} V${y+BH-8} H${BX+8} L${BX} ${y+BH-16} V${y+12} Z"/>`;
+  g+=`<path class="lead" data-i="${i}" d="M${BX-2} ${y+BH/2} H110"/>`;
+  g+=`<circle class="dot" data-i="${i}" cx="104" cy="${y+BH/2}" r="4"/>`;
+  g+=`<text class="lab" data-i="${i}" x="94" y="${y+BH/2+3}" text-anchor="end">${String(i+1).padStart(2,"0")} ${s[0].toUpperCase()}</text>`;
+});
+g+=`<text class="core" x="${BX+BW/2}" y="${BY+BH*7+30}" text-anchor="middle">THE ENGINE</text>`;
+eng.innerHTML=g;
+
+/* benefits */
+document.getElementById("bens").innerHTML=BENEFITS.map(([t,c,ic])=>
+ `<div class="ben"><span class="ic"><svg viewBox="0 0 120 120" aria-hidden="true">${ICONS[ic]}</svg></span>
+  <div class="hd"><span class="tick"><svg viewBox="0 0 120 120" aria-hidden="true">${ICONS[ic]}</svg></span><h3>${t}</h3></div>
+  <p>${c}</p></div>`).join("");
+
+/* comparison columns */
+document.getElementById("cmp3").innerHTML=
+ '<div class="hd"></div><div class="hd lose">The usual way</div><div class="hd win">The Click-to-Close Circuit<span class="tm">™</span></div>'
+ + CMP.map(([k,a,b])=>`<div class="k">${k}</div><div class="c"><span class="mark x" aria-label="No"><svg viewBox="0 0 12 12"><path d="M3 3l6 6M9 3l-6 6"/></svg></span><span>${a}</span></div><div class="c win"><span class="mark ok" aria-label="Yes"><svg viewBox="0 0 12 12"><path d="M2.5 6.5l2.5 2.5 4.5-5.5"/></svg></span><span>${b}</span></div>`).join("");
+
+/* audit ticks */
+document.getElementById("ticks").innerHTML=TICKS.map(([a,b])=>
+ `<li><span class="tk"><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 7"/></svg></span><span><b>${a}:</b> ${b}</span></li>`).join("");
+
+/* faq */
+const tabsEl=document.getElementById("tabs"),faqEl=document.getElementById("faq");
+Object.keys(FAQ).forEach((cat,i)=>{
+  const b=document.createElement("button");
+  b.className="tab";b.textContent=cat;b.setAttribute("role","tab");b.setAttribute("aria-selected",i===0);
+  b.onclick=()=>{[...tabsEl.children].forEach(t=>t.setAttribute("aria-selected","false"));b.setAttribute("aria-selected","true");renderFaq(cat);};
+  tabsEl.appendChild(b);
+});
+function renderFaq(cat){
+  faqEl.innerHTML=FAQ[cat].map(([q,a],i)=>`<div class="qa${i===0?" open":""}"><button type="button" aria-expanded="${i===0}">${q}<span class="pm">+</span></button><div class="a"><p>${a}</p></div></div>`).join("");
+  faqEl.querySelectorAll(".qa").forEach(qa=>{
+    const btn=qa.querySelector("button"),pane=qa.querySelector(".a");
+    if(qa.classList.contains("open"))pane.style.height=pane.scrollHeight+"px";
+    btn.onclick=()=>{const o=qa.classList.toggle("open");btn.setAttribute("aria-expanded",o);pane.style.height=o?pane.scrollHeight+"px":"0px";};
+  });
+}
+renderFaq(Object.keys(FAQ)[0]);
+
+document.getElementById("vibe").innerHTML=VIBE.map((t,i)=>`<li><span class="txt">${String(i+1).padStart(2,"0")} ${t}</span></li>`).join("");
+
+/* theme pairs: night → sand → signal */
+const THEMES=["night","sand","signal"],root=document.documentElement,tglBtn=document.getElementById("tgl");
+function setTheme(t){
+  if(t==="night")root.removeAttribute("data-theme");else root.setAttribute("data-theme",t);
+  const next=THEMES[(THEMES.indexOf(t)+1)%THEMES.length];
+  tglBtn.setAttribute("aria-label","Switch to the "+next+" theme");
+  try{localStorage.setItem("acd-theme",t)}catch(e){}
+  root.dataset.current=t;
+}
+let saved="night";try{saved=localStorage.getItem("acd-theme")||"night"}catch(e){}
+if(!THEMES.includes(saved))saved="night";
+setTheme(saved);
+tglBtn.onclick=()=>setTheme(THEMES[(THEMES.indexOf(root.dataset.current||"night")+1)%THEMES.length]);
+
+/* E4 · cursor spotlight on the full-screen sections */
+/* one glow, fixed to the viewport, so it follows the pointer across every section */
+(function(){
+  const g=document.createElement("span"); g.className="spotglow";
+  document.body.appendChild(g);
+  addEventListener("pointermove",e=>{
+    g.style.setProperty("--x",e.clientX+"px");
+    g.style.setProperty("--y",e.clientY+"px");
+    if(!reduce) g.style.opacity=1;
+  },{passive:true});
+  addEventListener("pointerleave",()=>g.style.opacity=0);
+  addEventListener("blur",()=>g.style.opacity=0);
+})();
+
+/* E6 · card tilt (CTCC stage cards excluded 2026.09.22, tilt read as noise against the R3 frame) */
+if(!reduce) document.querySelectorAll(".sc").forEach(c=>{
+  c.addEventListener("pointermove",e=>{const r=c.getBoundingClientRect();
+    const rx=((e.clientY-r.top)/r.height-.5)*-5,ry=((e.clientX-r.left)/r.width-.5)*6;
+    c.style.transform=`perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg)`;});
+  c.addEventListener("pointerleave",()=>{c.style.transform=""});
+});
+
+/* bumped titles: letters lean away from the cursor */
+if(!reduce) document.querySelectorAll(".h2,.hero h1").forEach(h=>{
+  const label=h.textContent.trim();
+  const wrapText=node=>{
+    if(node.nodeType===3){
+      const frag=document.createDocumentFragment();
+      node.textContent.split(/(\s+)/).forEach(word=>{
+        if(!word)return;
+        if(/^\s+$/.test(word)){frag.appendChild(document.createTextNode(" "));return}
+        const w=document.createElement("span");w.className="w";
+        word.split("").forEach(c=>{const sp=document.createElement("span");sp.className="ch";sp.textContent=c;w.appendChild(sp);});
+        frag.appendChild(w);
+      });
+      node.parentNode.replaceChild(frag,node);
+    } else if(node.nodeType===1){[...node.childNodes].forEach(wrapText)}
+  };
+  [...h.childNodes].forEach(wrapText);
+  h.setAttribute("aria-label",label);
+  const chs=[...h.querySelectorAll(".ch")];
+  let raf=null;
+  h.addEventListener("pointermove",e=>{
+    if(raf)return;
+    raf=requestAnimationFrame(()=>{raf=null;
+      chs.forEach(ch=>{const r=ch.getBoundingClientRect();
+        const dx=(r.left+r.width/2)-e.clientX,dy=(r.top+r.height/2)-e.clientY;
+        const d=Math.hypot(dx,dy)||1,reach=200;
+        if(d>reach){ch.style.transform="";return}
+        const f=(1-d/reach)*18;
+        ch.style.transform=`translate(${(dx/d)*f}px,${(dy/d)*f*.55}px)`;});
+    });
+  });
+  h.addEventListener("pointerleave",()=>chs.forEach(ch=>{ch.style.transform=""}));
+});
+
+/* reveals */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add("in")}),{threshold:.15,rootMargin:"0px 0px -6% 0px"});
+document.querySelectorAll(".rv,.ben,.letter,.sc").forEach(el=>io.observe(el));
+
+/* corridor pan: the shared Benefits+Audit plate drifts down slowly as you scroll
+   through it, rather than sitting static. Written per frame, not transitioned. */
+(function(){
+  const span=document.getElementById("corridorSpan"), bg=document.getElementById("corridorBg");
+  if(!span||!bg||reduce) return;
+  let target=0,cur=0,ticking=false;
+  const prog=()=>{
+    const r=span.getBoundingClientRect();
+    const total=r.height+innerHeight;
+    return Math.min(1,Math.max(0,(innerHeight-r.top)/total));
+  };
+  const apply=()=>{
+    cur+=(target-cur)*.12;
+    bg.style.backgroundPositionY=(18+cur*40)+"%";
+    if(Math.abs(target-cur)>.001) requestAnimationFrame(apply); else ticking=false;
+  };
+  addEventListener("scroll",()=>{
+    target=prog();
+    if(!ticking){ticking=true;requestAnimationFrame(apply);}
+  },{passive:true});
+  target=cur=prog();
+  bg.style.backgroundPositionY=(18+cur*40)+"%";
+})();
+
+
+
+
+
+
+
+/* score CTA: the screen is already black by the time the stage arrives, so the
+   message just appears on it and holds — no travel, no exit animation. */
+(function(){
+  const trk=document.querySelector(".mid-track"), el=document.querySelector(".mid-in");
+  if(!trk||!el) return;
+  if(reduce){ el.style.opacity=1; return; }
+  const tick=()=>{
+    // begins while the stage is still rising into view (top at 78% of the viewport)
+    // and is fully up by the time it pins, so there is no dead black scroll first
+    const start=innerHeight*0.78, top=trk.getBoundingClientRect().top;
+    let p=(start-top)/start;
+    p=Math.min(1,Math.max(0,p));
+    el.style.opacity=(1-Math.pow(1-p,3)).toFixed(3);   // ease-out, smooth
+  };
+  tick();
+  addEventListener("scroll",()=>requestAnimationFrame(tick),{passive:true});
+  addEventListener("resize",tick);
+})();
+
+/* vibe: on desktop the section pins and each line is struck through on scrub;
+   it only releases once every line is done. On mobile it scrolls normally and
+   strikes on entry (pinning a text block on a phone feels like a trap). */
+(function(){
+  const sec=document.getElementById("vibeSec"), trk=document.getElementById("vibeTrack");
+  const lis=[...document.querySelectorAll(".vibe li")];
+  if(!sec||!trk||!lis.length) return;
+  const vibeMQ=matchMedia("(min-width:921px) and (min-height:640px)");
+  const SPAN=0.75;            // how much of one step a single strike takes
+  const sizeTrack=()=>{
+    if(!vibeMQ.matches){ trk.style.height=""; return; }
+    // one viewport to read it, plus a slice of scroll per line, plus a beat at the end
+    trk.style.height = `calc(100svh + ${(lis.length + 0.6) * 26}svh)`;
+  };
+  const tick=()=>{
+    if(!vibeMQ.matches) return;
+    const total=trk.offsetHeight-innerHeight;
+    const p=total>0?Math.min(1,Math.max(0,-trk.getBoundingClientRect().top/total)):0;
+    const t=p*(lis.length+0.6);
+    lis.forEach((li,i)=>{
+      const k=Math.min(1,Math.max(0,(t-i)/SPAN));
+      li.style.setProperty("--k",k.toFixed(3));
+    });
+  };
+  // mobile fallback keeps the original behaviour
+  const vio=new IntersectionObserver(es=>es.forEach(e=>{
+    if(!vibeMQ.matches && e.isIntersecting){ e.target.classList.add("in"); }
+  }),{threshold:1,rootMargin:"0px 0px -50% 0px"});
+  lis.forEach(el=>vio.observe(el));
+  if(reduce){ lis.forEach(li=>li.style.setProperty("--k","1")); return; }
+  sizeTrack(); tick();
+  addEventListener("scroll",()=>requestAnimationFrame(tick),{passive:true});
+  addEventListener("resize",()=>{sizeTrack();tick()});
+  vibeMQ.addEventListener("change",()=>{sizeTrack();tick()});
+})();
+
+/* counters */
+new IntersectionObserver((es,obs)=>es.forEach(e=>{
+  if(!e.isIntersecting)return; obs.unobserve(e.target);
+  e.target.querySelectorAll(".n").forEach(n=>{
+    const to=+n.dataset.to,suf=n.dataset.suffix||"";
+    if(reduce){n.innerHTML=to+suf;return}
+    const digits=String(to).split("");
+    n.innerHTML=digits.map(()=>'<span class="od"><span class="reel"><i>0</i><i>1</i><i>2</i><i>3</i><i>4</i><i>5</i><i>6</i><i>7</i><i>8</i><i>9</i></span></span>').join("")+suf;
+    const reels=[...n.querySelectorAll(".reel")];
+    requestAnimationFrame(()=>reels.forEach((r,i)=>{
+      r.style.transitionDuration=(900+i*260)+"ms";
+      r.style.transform=`translateY(-${+digits[i]*10}%)`;
+    }));
+  });
+}),{threshold:.35}).observe(document.getElementById("stats"));
+
+/* engine stepping */
+const cards=[...document.querySelectorAll(".card-stage")];
+const bands=[...eng.querySelectorAll(".band")],leads=[...eng.querySelectorAll(".lead")],dots=[...eng.querySelectorAll(".dot")],labs=[...eng.querySelectorAll(".lab")];
+const nowEl=document.getElementById("engNow");
+function setStage(i){
+  cards.forEach((c,j)=>c.classList.toggle("active",j===i));
+  [[bands],[leads],[dots],[labs]].forEach(([set])=>set.forEach((el,j)=>{el.classList.toggle("live",j===i);el.classList.toggle("done",j<i)}));
+  nowEl.textContent=String(i+1).padStart(2,"0");
+}
+setStage(0);
+new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)setStage(+e.target.dataset.i)}),{rootMargin:"-45% 0px -45% 0px"}).observe;
+const circ=document.getElementById("circuit");
+const pinMQ=matchMedia("(min-width:921px) and (min-height:640px)");
+let PEEK=32;
+function layoutCards(){
+  if(!pinMQ.matches){cards.forEach(c=>{c.style.removeProperty("--ty");c.style.removeProperty("--card-h")});return}
+  cardsEl.classList.remove("tight");
+  cards.forEach(c=>c.style.setProperty("--card-h","auto"));
+  let need=Math.max(...cards.map(c=>c.scrollHeight));
+  const room=n=>cardsEl.clientHeight-n*(cards.length-1);
+  if(room(30)<need){cardsEl.classList.add("tight");need=Math.max(...cards.map(c=>c.scrollHeight));}
+  PEEK=Math.max(30,Math.min(42,Math.floor((cardsEl.clientHeight-need)/(cards.length-1))));
+  const h=Math.min(room(PEEK),need+6);
+  cards.forEach(c=>{c.style.setProperty("--card-h",Math.max(220,h)+"px");c.style.setProperty("--peek",PEEK+"px")});
+}
+function pinTick(){
+  if(!pinMQ.matches)return;
+  const trk=document.getElementById("pinTrack");
+  const total=trk.offsetHeight-innerHeight;
+  const p=total>0?Math.min(1,Math.max(0,-trk.getBoundingClientRect().top/total)):0;
+  const t=p*(cards.length-1+0.8);
+  const dist=cardsEl.clientHeight+80;
+  let live=0;
+  cards.forEach((c,i)=>{
+    if(i===0){c.style.setProperty("--ty","0px");return}
+    const e=Math.min(1,Math.max(0,t-(i-1)-0.35));
+    const k=reduce?(e>0?1:0):1-Math.pow(1-e,3);
+    c.style.setProperty("--ty",((1-k)*dist).toFixed(1)+"px");
+    if(e>0.55)live=i;
+  });
+  setStage(live);
+}
+layoutCards(); pinTick();
+addEventListener("resize",()=>{layoutCards();pinTick()});
+addEventListener("scroll",()=>requestAnimationFrame(pinTick),{passive:true});
+pinMQ.addEventListener("change",()=>{layoutCards();pinTick()});
+cards.forEach(c=>new IntersectionObserver(es=>es.forEach(e=>{if(!pinMQ.matches&&e.isIntersecting)setStage(+e.target.dataset.i)}),{rootMargin:"-40% 0px -45% 0px"}).observe(c));
+
+/* testimonial wheel */
+(function(){
+  const cards=[...document.querySelectorAll("#wstage .tq")];
+  const dots=[...document.querySelectorAll("#wdots i")];
+  if(!cards.length) return;
+
+  /* S3 plate: octagon, one indent bottom-right, every corner cut at 45deg.
+     Same R3 frame parts as the Circuit stage cards. */
+  const TQ={k:.24, y:.72};
+  const tpath=(x,y,w,h,c)=>{
+    const k=h*TQ.k, y1=h*TQ.y, st=Math.min(c*.62,k*.4,18);
+    return "M"+[[x+c,y],[x+w-c,y],[x+w,y+c],
+      [x+w,y+y1-st],[x+w-st,y+y1],
+      [x+w-k+st,y+y1],[x+w-k,y+y1+st],
+      [x+w-k,y+h-c],[x+w-k-c,y+h],
+      [x+c,y+h],[x,y+h-c],[x,y+c]]
+      .map(q=>q.map(n=>Math.round(n*10)/10).join(",")).join(" L")+" Z";
+  };
+  function drawTq(el){
+    const w=el.clientWidth,h=el.clientHeight; if(!w||!h) return;
+    const O=5, I=16, c=Math.min(34,h*.16);
+    const ih=h-2*I, iw=w-2*I;
+    let g=`<path class="of" d="${tpath(O+.5,O+.5,w-2*O-1,h-2*O-1,c+5)}"/>`+
+          `<path class="o"  d="${tpath(O+.5,O+.5,w-2*O-1,h-2*O-1,c+5)}"/>`;
+    [[0,h*.3],[w-O-1,h*.3]].forEach(([x,y])=>{
+      g+=`<rect class="t" x="${x}" y="${y}" width="${O+1}" height="${h*.16}"/>`+
+         `<path class="tl" d="M${x<1?1.5:w-1.5} ${y+h*.2} v${h*.1}"/>`;});
+    g+=`<path class="f" d="${tpath(I,I,iw,ih,c)}"/>`;
+    // the run follows the frame, including the 45deg turn into the indent, so it
+    // never pokes out past the corner
+    const y1i=I+ih*TQ.y, ki=ih*TQ.k, sti=Math.min(c*.62,ki*.4,18);
+    g+=`<path class="run" d="M${w-I-c+6} ${I} L${w-I} ${I+c-6}"/>`+
+       `<path class="run" d="M${w-I} ${I+c+10} V${y1i-sti} L${w-I-sti} ${y1i} H${w-I-ki*.5}"/>`;
+    el.querySelector("svg.fr").innerHTML=g;
+  }
+
+  let front=0;
+  const place=()=>{
+    cards.forEach((c,i)=>{
+      const slot=(i-front+cards.length)%cards.length;
+      c.classList.remove("s0","s1","s2"); c.classList.add("s"+slot);
+      c.setAttribute("aria-hidden", slot===0?"false":"true");
+    });
+    dots.forEach((d,i)=>d.classList.toggle("on",i===front));
+  };
+  const go=d=>{ front=(front+d+cards.length)%cards.length; place(); };
+  document.getElementById("wnext").addEventListener("click",()=>go(1));
+  document.getElementById("wprev").addEventListener("click",()=>go(-1));
+  cards.forEach((c,i)=>c.addEventListener("click",()=>{ if(i!==front){ front=i; place(); } }));
+  const wro=new ResizeObserver(es=>es.forEach(e=>drawTq(e.target)));
+  cards.forEach(c=>{const k=c.querySelector(".card");drawTq(k);wro.observe(k)});
+  addEventListener("load",()=>cards.forEach(c=>drawTq(c.querySelector(".card"))));
+  place();
+})();
+
+const hdr=document.getElementById("hdr");
+addEventListener("scroll",()=>hdr.classList.toggle("stuck",scrollY>12),{passive:true});
+/* the header is fixed, so anything that has to clear it needs its real height */
+const setHdrH=()=>document.documentElement.style.setProperty("--hdrh",hdr.offsetHeight+"px");
+setHdrH(); addEventListener("resize",setHdrH,{passive:true}); addEventListener("load",setHdrH);
+/* the bar goes dark whenever a film section is behind it */
+const filmSecs=[...document.querySelectorAll(".hero-film,.final-film")];
+const syncFilmHdr=()=>{const h=hdr.offsetHeight;
+  hdr.classList.toggle("on-film",filmSecs.some(s=>{const r=s.getBoundingClientRect();return r.top<h&&r.bottom>0;}));};
+syncFilmHdr(); addEventListener("scroll",syncFilmHdr,{passive:true}); addEventListener("resize",syncFilmHdr,{passive:true});
+
+/* HIGGSFIELD MEDIA: hero scrub + in-view loops */
+(function(){
+  const sec=document.getElementById("heroFilm"), v=document.getElementById("heroVid"), cue=document.getElementById("filmCue");
+  if(sec&&v){
+    if(reduce){ v.preload="metadata"; }
+    else{
+      let target=0,cur=0,dur=0;
+      const prog=()=>{const total=sec.offsetHeight-innerHeight;return total>0?Math.min(1,Math.max(0,-sec.getBoundingClientRect().top/total)):0};
+      v.addEventListener("loadedmetadata",()=>{dur=v.duration||0});
+      if(v.readyState>=1) dur=v.duration||0;
+      v.play().then(()=>v.pause()).catch(()=>{});
+      addEventListener("scroll",()=>{target=prog(); if(cue) cue.style.opacity=target>.04?0:1},{passive:true});
+      (function tick(){
+        if(dur){ cur+=(target-cur)*.14; const t=Math.min(dur-.05,cur*dur);
+          if(!v.seeking && Math.abs(v.currentTime-t)>.02) v.currentTime=t; }
+        requestAnimationFrame(tick);
+      })();
+    }
+  }
+  const loops=document.querySelectorAll("video[data-inview]");
+  if(reduce){ loops.forEach(x=>x.pause()); return; }
+  // Sticky/pinned backgrounds can sit still in the viewport while the page scrolls,
+  // so the observer alone can miss them. Re-check on scroll as well.
+  const onScreen=v=>{const r=v.getBoundingClientRect();return r.height>0&&r.bottom>0&&r.top<innerHeight;};
+  // A background <video> inside a sticky pin can decode without ever painting.
+  // Forcing one load() the first time it comes into view promotes the layer.
+  const start=v=>{
+    if(!v.dataset.primed){
+      v.dataset.primed="1";
+      v.load();
+      v.addEventListener("canplay",()=>v.play().catch(()=>{}),{once:true});
+    }
+    if(v.paused) v.play().catch(()=>{});
+  };
+  const syncLoops=()=>loops.forEach(v=>{
+    if(onScreen(v)) start(v);
+    else if(!v.paused) v.pause();
+  });
+  new IntersectionObserver(syncLoops,{threshold:0}).observe(document.body);
+  loops.forEach(v=>new IntersectionObserver(syncLoops,{threshold:0}).observe(v));
+  let loopTick=0, loopSettle;
+  addEventListener("scroll",()=>{
+    if(!loopTick){ loopTick=1; requestAnimationFrame(()=>{loopTick=0;syncLoops();}); }
+    // A pinned loop can be paused by one off-screen frame mid-scroll; without a
+    // pass after scrolling stops it would sit on a still frame forever.
+    clearTimeout(loopSettle); loopSettle=setTimeout(syncLoops,180);
+  },{passive:true});
+  addEventListener("resize",syncLoops,{passive:true});
+  syncLoops();
+})();
+</script>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo">
+  <button class="x" type="button" id="lbX" aria-label="Close photo">×</button>
+  <figure><img id="lbImg" src="" alt=""><figcaption id="lbCap"></figcaption></figure>
+</div>
+<script>
+(function(){
+  const lb=document.getElementById("lb"), img=document.getElementById("lbImg"),
+        cap=document.getElementById("lbCap"), x=document.getElementById("lbX");
+  let last=null;
+  const open=btn=>{ last=btn; const i=btn.querySelector("img");
+    img.src=btn.dataset.full; img.alt=i.alt; cap.textContent=i.alt;
+    lb.classList.add("on"); x.focus(); document.body.style.overflow="hidden"; };
+  const close=()=>{ lb.classList.remove("on"); document.body.style.overflow="";
+    if(last) last.focus(); };
+  document.querySelectorAll(".crew .av").forEach(b=>b.addEventListener("click",()=>open(b)));
+  x.addEventListener("click",close);
+  lb.addEventListener("click",e=>{ if(e.target===lb||e.target.tagName==="FIGURE") close(); });
+  addEventListener("keydown",e=>{ if(e.key==="Escape"&&lb.classList.contains("on")) close(); });
+})();
+</script>
