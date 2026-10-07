@@ -150,7 +150,7 @@
   .refer .kicker{margin:0;font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-t)}
   .refer .amt{margin:6px 0 2px;font-family:var(--display);font-size:76px;line-height:1;letter-spacing:.01em;
     background:linear-gradient(118deg,#fff 30%,#BFA3FF);-webkit-background-clip:text;background-clip:text;color:transparent}
-  .refer h2{margin:0;font-family:var(--display);font-weight:400;font-size:22px;letter-spacing:.04em;text-transform:uppercase;line-height:1.15}
+  .refer h2{margin:0;font-family:var(--display);font-weight:400;font-size:22px;letter-spacing:.04em;text-transform:uppercase;line-height:1.15;text-wrap:balance}
   .refer p{margin:6px 0 14px;font-size:15px;line-height:1.5;color:var(--muted)}
   .refer p b{color:#fff;font-weight:700}
   .refer .row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
@@ -163,6 +163,20 @@
     background:url(/assets/env-testimonials.jpg) 50% 0/cover no-repeat;opacity:.38;
     -webkit-mask-image:linear-gradient(180deg,transparent 0%,#000 22%,#000 72%,transparent 100%);
             mask-image:linear-gradient(180deg,transparent 0%,#000 22%,#000 72%,transparent 100%)}
+
+  /* phone widths: smaller icons and tighter gaps so titles stay on one line (2026.10.07) */
+  @media(max-width:430px){
+    .lk{gap:10px}
+    .lk .ic{width:20px;height:20px}
+    .lk .ic svg{width:20px;height:20px}
+    .lk.pri{padding:16px 16px}
+    .lk.pri .t{font-size:20px}
+    .lk .t{font-size:18px}
+    .refer h2{font-size:20px}
+    .refer .lk{padding:10px 8px;gap:7px}
+    .refer .lk .t{font-size:14px}
+    .refer .lk .ic,.refer .lk .ic svg{width:18px;height:18px}
+  }
   @media(prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 <!-- Meta Pixel Code -->
