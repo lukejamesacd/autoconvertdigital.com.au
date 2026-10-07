@@ -1734,3 +1734,28 @@ syncFilmHdr(); addEventListener("scroll",syncFilmHdr,{passive:true}); addEventLi
   addEventListener("keydown",e=>{ if(e.key==="Escape"&&lb.classList.contains("on")) close(); });
 })();
 </script>
+
+<style>
+  .ck{position:fixed;left:16px;bottom:16px;z-index:9999;max-width:440px;display:flex;align-items:center;gap:16px;padding:16px 18px;background:var(--dk-raise,#140D22);color:var(--dk-fg,#F2EFF7);border:1px solid var(--dk-line,#2C2342);font-family:var(--body,"Manrope",Arial,sans-serif);font-size:13.5px;line-height:1.5;box-shadow:0 12px 40px rgba(0,0,0,.45);clip-path:polygon(11px 0,100% 0,100% calc(100% - 11px),calc(100% - 11px) 100%,0 100%,0 11px)}
+  .ck[hidden]{display:none}
+  .ck p{margin:0;color:var(--dk-muted,#A79FB8)}
+  .ck a{color:var(--accent-t,#A986FF);text-underline-offset:3px}
+  .ck button{flex:none;font-family:var(--display,"Anton",Impact,sans-serif);font-size:13px;letter-spacing:.06em;text-transform:uppercase;padding:11px 16px;border:0;cursor:pointer;color:var(--btn-fg,#fff);background:var(--grad,#6E2CF4);clip-path:polygon(8px 0,100% 0,100% calc(100% - 8px),calc(100% - 8px) 100%,0 100%,0 8px)}
+  .ck button:focus-visible,.ck a:focus-visible{outline:2px solid var(--accent-t,#A986FF);outline-offset:3px}
+  @media(max-width:600px){.ck{left:12px;right:12px;bottom:12px;max-width:none}}
+</style>
+<div class="ck" id="ck" role="region" aria-label="Cookie notice" hidden>
+  <p>We use cookies to measure how the site is used. <a href="/privacy">Privacy policy</a></p>
+  <button type="button" id="ckok">Got it</button>
+</div>
+<script>
+(function(){
+  var k="acd_cookie_notice",b=document.getElementById("ck"),seen=false;
+  try{seen=localStorage.getItem(k)==="1"}catch(e){}
+  if(!seen)b.hidden=false;
+  document.getElementById("ckok").addEventListener("click",function(){
+    b.hidden=true;
+    try{localStorage.setItem(k,"1")}catch(e){}
+  });
+})();
+</script>
